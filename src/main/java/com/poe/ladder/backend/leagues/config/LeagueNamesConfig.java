@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ConfigurationProperties(prefix = "leagues")
-public class LeagueNameConfig {
+public class LeagueNamesConfig {
 	
 	private List<String> currentLeagues;
 

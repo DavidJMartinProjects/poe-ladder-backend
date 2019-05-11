@@ -3,7 +3,7 @@ leagues:
     - Synthesis
     - Hardcore Synthesis
     - SSF Synthesis
-    - SSF Synthesis HC
+    - SSF Synthesis HC    
 
 datatables:
    leaderboard:
@@ -27,3 +27,29 @@ datatables:
           - Character
           - Asc
           - time
+          
+http:
+   request:            
+      headers:
+         userAgentParam: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36
+         userAgent: user-agent
+         Accept-Encoding: gzip deflate
+         Accept-Language:  en-US en
+         Upgrade-Insecure-Requests: 1
+      cookies: 
+          - __cfduid=d26f0e1ca08b926e10a926dcda9302cfa1546206260
+          - POESESSID=3a4fa1c3e399804bf49bef466270e484
+          - cf_clearance=b32a2a1c3b51d4bfde7de0cbf7fbc5015de28b0d-1546218127-300-150
+          - _ga=GA1.2.1564561921.1546218143
+          - _gid=GA1.2.350283217.1546218143
+       
+urls:
+   properties:
+      resultsLimit: 5
+      leaderboards:
+         delve_prefix: http://www.pathofexile.com/api/ladders?offset=0&limit=${urls.properties.resultsLimit}&id=
+         delve_postfix: '&type=league&sort=depthsolo&_=1546137921952'         
+         raceto100_prefix: http://api.pathofexile.com/ladders/
+         raceto100_postfix: ?limit=${urls.properties.resultsLimit}
+         uberlab_prefix: http://www.pathofexile.com/api/ladders?offset=0&limit=${urls.properties.resultsLimit}&id=
+         uberlab_postfix: '&type=labyrinth&difficulty=4'

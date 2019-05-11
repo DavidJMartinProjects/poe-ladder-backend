@@ -1,6 +1,6 @@
 package com.poe.ladder.backend.leaderboard.domain;
 
-public class LeaderboardDelve extends LeaderboardBase {
+public class DelveLeaderboardEntry extends LeaderboardEntry {
 	
 	private String depth;
 		

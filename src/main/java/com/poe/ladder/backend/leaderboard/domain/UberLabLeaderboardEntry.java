@@ -1,6 +1,6 @@
 package com.poe.ladder.backend.leaderboard.domain;
 
-public class LeaderboardUberLab extends LeaderboardBase {
+public class UberLabLeaderboardEntry extends LeaderboardEntry {
 	
 	String time;
 

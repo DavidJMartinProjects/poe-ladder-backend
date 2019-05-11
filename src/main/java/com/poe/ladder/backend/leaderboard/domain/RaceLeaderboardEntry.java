@@ -1,6 +1,6 @@
 package com.poe.ladder.backend.leaderboard.domain;
 
-public class LeaderboardRace extends LeaderboardBase {
+public class RaceLeaderboardEntry extends LeaderboardEntry {
 	
 	String level;
 

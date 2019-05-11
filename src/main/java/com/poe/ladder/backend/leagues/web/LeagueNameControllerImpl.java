@@ -16,7 +16,7 @@ public class LeagueNameControllerImpl implements LeagueNameController {
 
 	@RequestMapping("/current-leagues")
 	public List<String> getCurrentLeagues() {
-		return leagueNameService.getCurrentLeagues();
+		return leagueNameService.getLeagueNames();
 	}
 
 }

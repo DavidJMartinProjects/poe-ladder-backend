@@ -1,6 +1,6 @@
-package com.poe.ladder.backend.topfive.domain;
+package com.poe.ladder.backend.leaderboard.domain;
 
-public class TopFiveUberLab extends TopFiveBase {
+public class LeaderboardUberLab extends LeaderboardBase {
 	
 	String time;
 

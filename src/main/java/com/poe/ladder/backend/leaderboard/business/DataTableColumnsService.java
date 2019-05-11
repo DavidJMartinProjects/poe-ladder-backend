@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.topfive.business;
+package com.poe.ladder.backend.leaderboard.business;
 
 import java.util.List;
 

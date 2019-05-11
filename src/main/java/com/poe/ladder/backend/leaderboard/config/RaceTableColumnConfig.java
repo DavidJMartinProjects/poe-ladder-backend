@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.topfive.config;
+package com.poe.ladder.backend.leaderboard.config;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ConfigurationProperties(prefix = "datatables.topfive.uberlab")
-public class UberLabTableColumnConfig {
+@ConfigurationProperties(prefix = "datatables.leaderboard.raceto100")
+public class RaceTableColumnConfig {
 	
 	List<String> tableColumns;	
 

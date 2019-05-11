@@ -1,6 +1,6 @@
-package com.poe.ladder.backend.topfive.domain;
+package com.poe.ladder.backend.leaderboard.domain;
 
-public class TopFiveRace extends TopFiveBase {
+public class LeaderboardRace extends LeaderboardBase {
 	
 	String level;
 

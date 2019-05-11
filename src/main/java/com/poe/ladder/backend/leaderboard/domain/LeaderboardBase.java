@@ -1,6 +1,6 @@
-package com.poe.ladder.backend.topfive.domain;
+package com.poe.ladder.backend.leaderboard.domain;
 
-public class TopFiveBase {
+public class LeaderboardBase {
 	
 	private String rank; 
 	private String character;

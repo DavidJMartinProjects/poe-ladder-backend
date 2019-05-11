@@ -1,16 +1,16 @@
-package com.poe.ladder.backend.leaderboard.business;
+package com.poe.ladder.backend.leaderboard.table.business;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.poe.ladder.backend.leaderboard.config.DelveTableColumnConfig;
-import com.poe.ladder.backend.leaderboard.config.RaceTableColumnConfig;
-import com.poe.ladder.backend.leaderboard.config.UberLabTableColumnConfig;
+import com.poe.ladder.backend.leaderboard.table.config.DelveTableColumnConfig;
+import com.poe.ladder.backend.leaderboard.table.config.RaceTableColumnConfig;
+import com.poe.ladder.backend.leaderboard.table.config.UberLabTableColumnConfig;
 
 @Service
-public class DataTableColumnsServiceImpl implements DataTableColumnsService {
+public class TableColumnsServiceImpl implements TableColumnsService {
 	
 	@Autowired
 	DelveTableColumnConfig delveTableColumnConfig;

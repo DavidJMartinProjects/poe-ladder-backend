@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.leaderboard.config;
+package com.poe.ladder.backend.leaderboard.table.config;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ConfigurationProperties(prefix = "datatables.leaderboard.raceto100")
-public class RaceTableColumnConfig {
+@ConfigurationProperties(prefix = "datatables.leaderboard.uberlab")
+public class UberLabTableColumnConfig {
 	
 	List<String> tableColumns;	
 

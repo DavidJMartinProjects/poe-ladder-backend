@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.leaderboard.config;
+package com.poe.ladder.backend.leaderboard.table.config;
 
 import java.util.List;
 

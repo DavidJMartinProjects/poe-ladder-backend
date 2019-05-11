@@ -5,6 +5,7 @@ public class LeaderboardBase {
 	private String rank; 
 	private String character;
 	private String ascendancy;
+	private String leagueName;
 	
 	public String getRank() {
 		return rank;
@@ -24,9 +25,15 @@ public class LeaderboardBase {
 	public void setAscendancy(String ascendancy) {
 		this.ascendancy = ascendancy;
 	}
+	public String getLeagueName() {
+		return leagueName;
+	}
+	public void setLeagueName(String leagueName) {
+		this.leagueName = leagueName;
+	}
 	@Override
 	public String toString() {
-		return "TopFiveBase [rank=" + rank + ", character=" + character + ", ascendancy=" + ascendancy + "]";
+		return "LeaderboardBase [rank=" + rank + ", character=" + character + ", ascendancy=" + ascendancy + ", leagueName=" + leagueName + "]";
 	}
 	
 }

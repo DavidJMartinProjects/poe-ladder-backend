@@ -1,0 +1,16 @@
+leagues:
+   currentLeagues: 
+    - Synthesis
+    - Hardcore Synthesis
+    - SSF Synthesis
+    - SSF Synthesis HC
+
+
+datatables:
+   topfive:
+      delve: 
+         tableColumns:
+          - '#'
+          - Character
+          - Asc
+          - Dept

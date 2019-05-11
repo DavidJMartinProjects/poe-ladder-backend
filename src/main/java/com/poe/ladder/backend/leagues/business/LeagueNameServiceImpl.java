@@ -9,9 +9,7 @@ import com.poe.ladder.backend.leagues.config.LeagueNameConfig;
 
 @Service	
 public class LeagueNameServiceImpl implements LeagueNameService {
-	
-	private List<String> currentLeagues;
-	
+		
 	@Autowired
 	public LeagueNameConfig leagueNameConfig;
 
@@ -21,3 +19,4 @@ public class LeagueNameServiceImpl implements LeagueNameService {
 	}	
 
 }
+	

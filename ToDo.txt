@@ -1,0 +1,3 @@
+implement @ControllerAdvice for custom exception handling 
+	Add exception handling to Config Classes
+	- on getter methods, if list is null throw exception

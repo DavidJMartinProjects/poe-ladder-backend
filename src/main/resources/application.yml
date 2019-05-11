@@ -5,7 +5,6 @@ leagues:
     - SSF Synthesis
     - SSF Synthesis HC
 
-
 datatables:
    topfive:
       delve: 
@@ -14,3 +13,17 @@ datatables:
           - Character
           - Asc
           - Dept
+          
+      raceto100: 
+         tableColumns:
+          - '#'
+          - Character
+          - Asc
+          - level
+          
+      uberlab: 
+         tableColumns:
+          - '#'
+          - Character
+          - Asc
+          - time

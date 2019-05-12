@@ -1,9 +1,11 @@
 package com.poe.ladder.backend.leaderboard.domain;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@Entity
 public class BaseEntry {
 	
 	@Id
@@ -28,6 +30,12 @@ public class BaseEntry {
 	
 	@Column(name="level")
 	private String level;
+	
+	@Column(name="league")
+	private String league;
+	
+	@Column(name="leaderboard")
+	private String leaderboard;
 	
 	public String getRank() {
 		return rank;
@@ -65,10 +73,23 @@ public class BaseEntry {
 	public void setLevel(String level) {
 		this.level = level;
 	}
+	public String getLeague() {
+		return league;
+	}
+	public void setLeague(String league) {
+		this.league = league;
+	}
+	public String getLeaderboard() {
+		return leaderboard;
+	}
+	public void setLeaderboard(String leaderboard) {
+		this.leaderboard = leaderboard;
+	}
 	@Override
 	public String toString() {
-		return "BaseEntry [rank=" + rank + ", character=" + character + ", ascendancy=" + ascendancy + ", time=" + time
-				+ ", depth=" + depth + ", level=" + level + "]";
+		return "BaseEntry [id=" + id + ", rank=" + rank + ", character=" + character + ", ascendancy=" + ascendancy
+				+ ", time=" + time + ", depth=" + depth + ", level=" + level + ", league=" + league + ", leaderboard="
+				+ leaderboard + "]";
 	}
 	
 }

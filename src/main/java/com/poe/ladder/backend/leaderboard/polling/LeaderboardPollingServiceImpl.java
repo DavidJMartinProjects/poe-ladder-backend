@@ -9,17 +9,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.poe.ladder.backend.external.api.requests.LeaderboardApiRequestService;
-import com.poe.ladder.backend.external.api.requests.urls.LeaderboardApiUrlsConfig;
 import com.poe.ladder.backend.external.api.requests.urls.LeaderboardUrlsService;
 import com.poe.ladder.backend.external.api.response.domain.Entry;
 import com.poe.ladder.backend.external.api.response.mapper.LeaderboardMappingService;
-import com.poe.ladder.backend.leagues.business.LeagueNameService;
+import com.poe.ladder.backend.leaderboard.dao.LeaderboardRepository;
+import com.poe.ladder.backend.leaderboard.domain.BaseEntry;	
 	
 @Service
 public class LeaderboardPollingServiceImpl implements LeaderboardPollingService {		
-
-	@Autowired
-	LeagueNameService leagueNameService;
 
 	@Autowired
 	LeaderboardUrlsService leaderboardUrlsService;
@@ -28,10 +25,10 @@ public class LeaderboardPollingServiceImpl implements LeaderboardPollingService 
 	LeaderboardApiRequestService leaderboardApiRequestService;	
 
 	@Autowired
-	LeaderboardApiUrlsConfig leaderboardApiUrlsConfig;
+	LeaderboardMappingService leaderboardMappingService;		
 	
 	@Autowired
-	LeaderboardMappingService leaderboardMappingService;	
+	LeaderboardRepository leaderboardRepository;	
 
 	private List<Entry> apiResponseList;               
 	private List<Map<String, String>> leaderboardUrls;
@@ -47,27 +44,23 @@ public class LeaderboardPollingServiceImpl implements LeaderboardPollingService 
 		for (Map<String, String> urlsList : leaderboardUrls) {
 			for (Map.Entry<String, String> leagueUrl : urlsList.entrySet()) {
 				apiResponseList = requestLeaderboardFromPoeApi(leagueUrl.getValue());
-				mapApiResponseToEntity(apiResponseList, leagueUrl.getValue());
-//				persistEntityToDb();
-				sleepBeforeNextApiRequest();
+				List<BaseEntry> leaderboardEntities = mapApiResponseToEntityList(apiResponseList, leagueUrl.getValue(), leagueUrl.getKey());
+				persistEntityToDb(leaderboardEntities);
 			}			
 		}
 	}	
-	
+
 	private List<Entry> requestLeaderboardFromPoeApi(String value) {
 		return leaderboardApiRequestService.requestLeaderboardFromPoeApi(value);
 	}
 
-	private void mapApiResponseToEntity(List<Entry> apiResponseList, String requestUrl) {
-		leaderboardMappingService.mapApiResponseToEntity(apiResponseList, requestUrl);
+	private List<BaseEntry> mapApiResponseToEntityList(List<Entry> apiResponseList, String requestUrl, String leagueName) {
+		return leaderboardMappingService.mapApiResponseToEntity(apiResponseList, requestUrl, leagueName);
 	}
 
-	private void sleepBeforeNextApiRequest() {
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException ex) {
-			throw new RuntimeException("sleepBeforeNextApiRequest() encountered an InterruptedException : " + ex);
-		}
+	private void persistEntityToDb(List<BaseEntry> leaderboardEntries) {
+		leaderboardRepository.saveAll(leaderboardEntries);		
 	}
-
+	
 }
+	

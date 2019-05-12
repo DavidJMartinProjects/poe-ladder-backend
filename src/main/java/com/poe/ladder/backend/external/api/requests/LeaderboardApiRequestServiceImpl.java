@@ -31,14 +31,19 @@ public class LeaderboardApiRequestServiceImpl implements LeaderboardApiRequestSe
 
 	@Override
 	public List<Entry> requestLeaderboardFromPoeApi(String url)  {
+		sleepBeforeNextApiRequest();
 		ResponseEntity<ResponseEntry> leaderboardApiRequest = restTemplate.exchange(url, HttpMethod.GET, entity, ResponseEntry.class);
 		ResponseEntry leaderboardApiResponse = leaderboardApiRequest.getBody();
-		System.out.println("===================");
-		System.out.println("responseEntries : ");
-		System.out.println("===================");
-		List<Entry> leaderboardEntries = leaderboardApiResponse.getEntries();
-		leaderboardEntries.forEach(e -> System.out.println(e));				
-		return leaderboardEntries;
+		return leaderboardApiResponse.getEntries();
+	}
+	
+	private void sleepBeforeNextApiRequest() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException ex) {
+			throw new RuntimeException("sleepBeforeNextApiRequest() encountered an InterruptedException : " + ex);
+		}
 	}
 
 }
+	

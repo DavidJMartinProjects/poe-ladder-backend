@@ -62,7 +62,7 @@ public class LeaderboardUrlBuilder {
 	}
 	
 	private void buildUberLabUrls(String leagueName) {
-		String url = "" + urlsConfig.getRaceto100_prefix() + leagueName + urlsConfig.getRaceto100_postfix();		
+		String url = "" + urlsConfig.getUberlab_prefix() + leagueName + urlsConfig.getUberlab_postfix();		
 		uberLabUrls.put(leagueName, url);
 	}
 	

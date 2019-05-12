@@ -30,7 +30,9 @@ public class Entry {
     private Character character;
     @JsonProperty("account")
     private Account account;
-    @JsonIgnore
+    @JsonProperty("time")
+    private String time;    
+    @JsonProperty("additionalProperties")
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("rank")
@@ -82,6 +84,15 @@ public class Entry {
     public void setAccount(Account account) {
         this.account = account;
     }
+    
+    @JsonProperty("time")
+	public String getTime() {
+		return time;
+	}
+    @JsonProperty("time")
+	public void setTime(String time) {
+		this.time = time;
+	}
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {

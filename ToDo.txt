@@ -3,3 +3,6 @@ implement @ControllerAdvice for custom exception handling
 	- on getter methods, if list is null throw exception
 	
 * read in the required number of leaderboard entries from properties file
+
+
+handling cookies : https://www.baeldung.com/java-http-request

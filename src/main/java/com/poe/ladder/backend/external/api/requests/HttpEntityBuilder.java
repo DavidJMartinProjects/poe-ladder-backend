@@ -11,10 +11,10 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HttpRequestBuilder {	
+public class HttpEntityBuilder {	
 	
 	@Autowired
-	private HttpRequestPropertiesConfig httpRequestConfig;	
+	private HttpEntityPropertiesConfig httpRequestConfig;	
 	
 	private HttpHeaders httpHeaders = new HttpHeaders();
 	
@@ -30,11 +30,13 @@ public class HttpRequestBuilder {
 	private void setRequestHeaders() {	
 		httpHeaders.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));	
 		httpRequestConfig.getHeaders().forEach((key, value) -> {
-			httpHeaders.add(key, value);
+			httpHeaders.add(key,  value);
 		});
 		httpRequestConfig.getCookies().forEach((value) -> {
 			httpHeaders.add("Cookie", value);
 		});
+		System.out.println("headers : ");
+		System.out.println(httpHeaders.toString());
 	}
 
 }

@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 	
 @Configuration	
 @ConfigurationProperties(prefix = "http.request")
-public class HttpRequestPropertiesConfig {
+public class HttpEntityPropertiesConfig {
 	
 	private Map<String, String> headers;
 	private List<String> cookies;

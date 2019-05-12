@@ -1,3 +1,16 @@
+spring:   
+   jpa:
+     show-sql: true
+     hibernate:
+       ddl-auto: create   
+       
+   datasource:
+      platform: postgres
+      url: jdbc:postgresql://localhost:5432/poeladder
+      username: user
+      password: password
+      initialization-mode: always
+
 leagues:
    currentLeagues: 
     - Synthesis
@@ -31,8 +44,7 @@ datatables:
 http:
    request:            
       headers:
-         userAgentParam: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36
-         userAgent: user-agent
+         user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36
          Accept-Encoding: gzip deflate
          Accept-Language:  en-US en
          Upgrade-Insecure-Requests: 1

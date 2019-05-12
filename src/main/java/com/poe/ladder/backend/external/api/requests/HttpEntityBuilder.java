@@ -35,8 +35,6 @@ public class HttpEntityBuilder {
 		httpRequestConfig.getCookies().forEach((value) -> {
 			httpHeaders.add("Cookie", value);
 		});
-		System.out.println("headers : ");
-		System.out.println(httpHeaders.toString());
 	}
 
 }

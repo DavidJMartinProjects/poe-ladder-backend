@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.external.api.requests;
+package com.poe.ladder.backend.leaderboard.polling;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,22 +7,18 @@ import java.util.Map;
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
+import com.poe.ladder.backend.external.api.requests.LeaderboardApiRequestServiceImpl;
 import com.poe.ladder.backend.external.api.requests.urls.LeaderboardApiUrlsConfig;
 import com.poe.ladder.backend.external.api.requests.urls.LeaderboardUrlsService;
 import com.poe.ladder.backend.external.api.response.Entry;
-import com.poe.ladder.backend.external.api.response.ResponseEntry;
 import com.poe.ladder.backend.leaderboard.domain.LeaderboardEntryEntity;
+import com.poe.ladder.backend.leaderboard.domain.LeaderboardType;
 import com.poe.ladder.backend.leagues.business.LeagueNameService;
-
+	
 @Service
-public class LeaderboardPollingServiceImpl implements LeaderboardPollingService {
+public class LeaderboardPollingServiceImpl implements LeaderboardPollingService {	
 
 	@Autowired
 	LeagueNameService leagueNameService;
@@ -31,7 +27,7 @@ public class LeaderboardPollingServiceImpl implements LeaderboardPollingService 
 	LeaderboardUrlsService leaderboardUrlsService;
 
 	@Autowired
-	HttpEntityBuilder httpEntityBuilder;	
+	LeaderboardApiRequestServiceImpl leaderboardApiRequestServiceImpl;
 
 	@Autowired
 	LeaderboardApiUrlsConfig leaderboardApiUrlsConfig;
@@ -43,9 +39,6 @@ public class LeaderboardPollingServiceImpl implements LeaderboardPollingService 
 	private LeaderboardEntryEntity leaderboardEntity;
 	private LeaderboardType leaderboardType;
 	
-	private HttpEntity<String> entity;
-	private RestTemplate restTemplate;
-
 	public LeaderboardPollingServiceImpl() {
 		leaderBoardEntityList = new ArrayList<>();
 	}
@@ -53,8 +46,6 @@ public class LeaderboardPollingServiceImpl implements LeaderboardPollingService 
 	@PostConstruct
 	public void init() throws InterruptedException {
 		leaderboardUrls = leaderboardUrlsService.getLeaderboardUrls();
-		entity = httpEntityBuilder.getConfiguredHttpEntity();
-		restTemplate = new RestTemplate();
 		getLeaderboardRankings();
 	}
 
@@ -71,6 +62,10 @@ public class LeaderboardPollingServiceImpl implements LeaderboardPollingService 
 		}
 	}
 	
+	private List<Entry> requestLeaderboardFromPoeApi(String value) {
+		return leaderboardApiRequestServiceImpl.requestLeaderboardFromPoeApi(value);
+	}
+
 	private List<LeaderboardEntryEntity> mapApiResponseToEntity(LeaderboardType leaderboardType, List<Entry> apiResponseList) {
 		leaderBoardEntityList.clear();
 		leaderboardEntity = new LeaderboardEntryEntity();
@@ -101,22 +96,13 @@ public class LeaderboardPollingServiceImpl implements LeaderboardPollingService 
 		return LeaderboardType.UNKNOWN;
 	}
 
-	private List<Entry> requestLeaderboardFromPoeApi(String url)  {
-		ResponseEntity<ResponseEntry> leaderboardApiRequest = restTemplate.exchange(url, HttpMethod.GET, entity, ResponseEntry.class);
-		ResponseEntry leaderboardApiResponse = leaderboardApiRequest.getBody();
-		System.out.println("===================");
-		System.out.println("responseEntries : ");
-		System.out.println("===================");
-		List<Entry> leaderboardEntries = leaderboardApiResponse.getEntries();
-		leaderboardEntries.forEach(e -> System.out.println(e));				
-		return leaderboardEntries;
-	}
+
 
 	private void sleepBeforeNextApiRequest() {
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e1) {
-			throw new RuntimeException("pauseBeforeNextApiRequest() encountered an InterruptedException");
+			throw new RuntimeException("sleepBeforeNextApiRequest() encountered an InterruptedException");
 		}
 	}
 

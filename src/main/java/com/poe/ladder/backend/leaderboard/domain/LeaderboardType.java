@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.external.api.requests;
+package com.poe.ladder.backend.leaderboard.domain;
 
 public enum LeaderboardType {
 	DELVE, UBERLAB, RACETO100, UNKNOWN	

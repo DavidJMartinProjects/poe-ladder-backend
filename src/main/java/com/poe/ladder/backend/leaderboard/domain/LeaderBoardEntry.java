@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class BaseEntry {
+public class LeaderBoardEntry {
 	
 	@Id
 	@GeneratedValue

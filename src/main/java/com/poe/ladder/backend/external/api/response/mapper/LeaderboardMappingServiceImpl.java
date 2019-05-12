@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import com.poe.ladder.backend.external.api.requests.urls.LeaderboardApiUrlsConfig;
 import com.poe.ladder.backend.external.api.response.domain.Entry;
-import com.poe.ladder.backend.leaderboard.domain.BaseEntry;
+import com.poe.ladder.backend.leaderboard.domain.LeaderBoardEntry;
 import com.poe.ladder.backend.leaderboard.domain.LeaderboardType;
 import com.poe.ladder.backend.leagues.business.LeagueNameService;
 
@@ -21,18 +21,18 @@ public class LeaderboardMappingServiceImpl implements LeaderboardMappingService 
 	@Autowired
 	LeagueNameService leagueNameService;
 
-	private List<BaseEntry> leaderBoardEntityList;
-	private BaseEntry leaderboardEntity;
+	private List<LeaderBoardEntry> leaderBoardEntityList;
+	private LeaderBoardEntry leaderboardEntity;
 
 	public LeaderboardMappingServiceImpl() {
 		leaderBoardEntityList = new ArrayList<>();
 	}
 
-	public List<BaseEntry> mapApiResponseToEntity(List<Entry> apiResponseList, String requestUrl, String leagueName) {
+	public List<LeaderBoardEntry> mapApiResponseToEntity(List<Entry> apiResponseList, String requestUrl, String leagueName) {
 		leaderBoardEntityList.clear();		
 		LeaderboardType leaderboardType = determineLeaderboardType(requestUrl);
 		for (Entry responseEntry : apiResponseList) {
-			leaderboardEntity = new BaseEntry();
+			leaderboardEntity = new LeaderBoardEntry();
 			leaderboardEntity.setLeague(leagueName);
 			leaderboardEntity.setLeaderboard(leaderboardType.toString());
 			leaderboardEntity.setRank(responseEntry.getRank().toString());

@@ -1,10 +1,13 @@
 package com.poe.ladder.backend.leaderboard.polling;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import javax.annotation.PostConstruct;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +16,7 @@ import com.poe.ladder.backend.external.api.requests.urls.LeaderboardUrlsService;
 import com.poe.ladder.backend.external.api.response.domain.Entry;
 import com.poe.ladder.backend.external.api.response.mapper.LeaderboardMappingService;
 import com.poe.ladder.backend.leaderboard.dao.LeaderboardRepository;
-import com.poe.ladder.backend.leaderboard.domain.BaseEntry;	
+import com.poe.ladder.backend.leaderboard.domain.LeaderBoardEntry;	
 	
 @Service
 public class LeaderboardPollingServiceImpl implements LeaderboardPollingService {		
@@ -32,34 +35,35 @@ public class LeaderboardPollingServiceImpl implements LeaderboardPollingService 
 
 	private List<Entry> apiResponseList;               
 	private List<Map<String, String>> leaderboardUrls;
-
-	@PostConstruct
-	public void init() throws InterruptedException {
-		getLeaderboardRankings();
-	}
+	List<LeaderBoardEntry> leaderboardEntities = new ArrayList<>();
+	
+	private final static Logger LOG = LoggerFactory.getLogger(LeaderboardPollingServiceImpl.class);
 
 	@Override
 	public void getLeaderboardRankings() {
+		LOG.info("getLeaderboardRankings() : attempting to retrieve latest ladders from pathofexile.com");
 		leaderboardUrls = leaderboardUrlsService.getLeaderboardUrls();
 		for (Map<String, String> urlsList : leaderboardUrls) {
 			for (Map.Entry<String, String> leagueUrl : urlsList.entrySet()) {
 				apiResponseList = requestLeaderboardFromPoeApi(leagueUrl.getValue());
-				List<BaseEntry> leaderboardEntities = mapApiResponseToEntityList(apiResponseList, leagueUrl.getValue(), leagueUrl.getKey());
-				persistEntityToDb(leaderboardEntities);
+				leaderboardEntities.addAll(mapApiResponseToEntityList(apiResponseList, leagueUrl.getValue(), leagueUrl.getKey()));
 			}			
 		}
+		persistEntityToDb(leaderboardEntities);
 	}	
 
 	private List<Entry> requestLeaderboardFromPoeApi(String value) {
 		return leaderboardApiRequestService.requestLeaderboardFromPoeApi(value);
 	}
 
-	private List<BaseEntry> mapApiResponseToEntityList(List<Entry> apiResponseList, String requestUrl, String leagueName) {
+	private List<LeaderBoardEntry> mapApiResponseToEntityList(List<Entry> apiResponseList, String requestUrl, String leagueName) {
 		return leaderboardMappingService.mapApiResponseToEntity(apiResponseList, requestUrl, leagueName);
 	}
 
-	private void persistEntityToDb(List<BaseEntry> leaderboardEntries) {
-		leaderboardRepository.saveAll(leaderboardEntries);		
+	private void persistEntityToDb(List<LeaderBoardEntry> leaderboardEntries) {
+		LOG.info("persistEntityToDb() : saving leaderboard results to poe-ladder database.");
+		leaderboardRepository.deleteAll();
+		leaderboardRepository.saveAll(leaderboardEntries);
 	}
 	
 }

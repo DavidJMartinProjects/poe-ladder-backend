@@ -13,10 +13,14 @@ spring:
 
 leagues:
    currentLeagues: 
-    - Synthesis
-    - Hardcore Synthesis
-    - SSF Synthesis
-    - SSF Synthesis HC    
+    #- Synthesis
+    #- Hardcore Synthesis
+    #- SSF Synthesis
+    #- SSF Synthesis HC
+    - Synthesis Event (SRE001)
+    - Synthesis Event HC (SRE002)
+    - SSF Synthesis Event (SRE003)
+    - SSF Synthesis Event HC (SRE004)    
 
 datatables:
    leaderboard:

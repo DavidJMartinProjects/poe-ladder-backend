@@ -1,0 +1,5 @@
+to get list of event leagues
+http://api.pathofexile.com/leagues?type=event
+
+list of current leagues
+http://api.pathofexile.com/leagues?type=main

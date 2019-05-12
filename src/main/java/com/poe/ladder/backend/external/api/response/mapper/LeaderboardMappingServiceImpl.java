@@ -29,8 +29,9 @@ public class LeaderboardMappingServiceImpl implements LeaderboardMappingService 
 	}
 
 	public List<LeaderBoardEntry> mapApiResponseToEntity(List<Entry> apiResponseList, String requestUrl, String leagueName) {
-		leaderBoardEntityList.clear();		
+		leaderBoardEntityList = new ArrayList<>();		
 		LeaderboardType leaderboardType = determineLeaderboardType(requestUrl);
+		System.out.println("mapApiResponseToEntity().apiResponseList.size : " + apiResponseList.size());
 		for (Entry responseEntry : apiResponseList) {
 			leaderboardEntity = new LeaderBoardEntry();
 			leaderboardEntity.setLeague(leagueName);
@@ -47,6 +48,7 @@ public class LeaderboardMappingServiceImpl implements LeaderboardMappingService 
 			}
 			leaderBoardEntityList.add(leaderboardEntity);
 		}
+		System.out.println("mapApiResponseToEntity().leaderBoardEntityList.size : " + apiResponseList.size());
 		return leaderBoardEntityList;
 	}
 

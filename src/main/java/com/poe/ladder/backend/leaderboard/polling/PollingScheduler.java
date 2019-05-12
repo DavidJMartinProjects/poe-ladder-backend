@@ -16,7 +16,7 @@ public class PollingScheduler {
 	
 	private final static Logger LOG = LoggerFactory.getLogger(PollingScheduler.class);
 	
-	@Scheduled(initialDelay = 10000, fixedRate = 300000)
+	@Scheduled(initialDelay = 10000, fixedRate = 30000)
 	public void pollLeaderboards() {
 		LOG.info("pollLeaderboards() : leaderboard polling service initiated.");
 		try {

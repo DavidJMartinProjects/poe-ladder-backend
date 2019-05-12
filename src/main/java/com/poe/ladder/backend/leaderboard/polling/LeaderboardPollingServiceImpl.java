@@ -38,17 +38,24 @@ public class LeaderboardPollingServiceImpl implements LeaderboardPollingService 
 	List<LeaderBoardEntry> leaderboardEntities = new ArrayList<>();
 	
 	private final static Logger LOG = LoggerFactory.getLogger(LeaderboardPollingServiceImpl.class);
+	
+	@PostConstruct
+	public void init() {
+		leaderboardUrls = leaderboardUrlsService.getLeaderboardUrls();
+	}
 
 	@Override
-	public void getLeaderboardRankings() {
+	public void getLeaderboardRankings() {		
 		LOG.info("getLeaderboardRankings() : attempting to retrieve latest ladders from pathofexile.com");
-		leaderboardUrls = leaderboardUrlsService.getLeaderboardUrls();
+		leaderboardEntities = new ArrayList<>();
+		apiResponseList = new ArrayList<>();
 		for (Map<String, String> urlsList : leaderboardUrls) {
 			for (Map.Entry<String, String> leagueUrl : urlsList.entrySet()) {
 				apiResponseList = requestLeaderboardFromPoeApi(leagueUrl.getValue());
 				leaderboardEntities.addAll(mapApiResponseToEntityList(apiResponseList, leagueUrl.getValue(), leagueUrl.getKey()));
 			}			
 		}
+		LOG.info("getLeaderboardRanking.size() : saving "+leaderboardEntities.size()+" entries");	
 		persistEntityToDb(leaderboardEntities);
 	}	
 
@@ -62,7 +69,10 @@ public class LeaderboardPollingServiceImpl implements LeaderboardPollingService 
 
 	private void persistEntityToDb(List<LeaderBoardEntry> leaderboardEntries) {
 		LOG.info("persistEntityToDb() : saving leaderboard results to poe-ladder database.");
+		LOG.info("persistEntityToDb() : saving "+leaderboardEntries.size()+" entries");		
 		leaderboardRepository.deleteAll();
+		leaderboardRepository.flush();
+		System.out.println("leaderboardRepository.count() : " + leaderboardRepository.count());		
 		leaderboardRepository.saveAll(leaderboardEntries);
 	}
 	

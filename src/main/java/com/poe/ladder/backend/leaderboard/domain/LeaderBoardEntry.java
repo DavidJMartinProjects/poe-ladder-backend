@@ -88,6 +88,7 @@ public class LeaderBoardEntry {
 	public void setLeaderboard(String leaderboard) {
 		this.leaderboard = leaderboard;
 	}
+	
 	@Override
 	public String toString() {
 		return "BaseEntry [id=" + id + ", rank=" + rank + ", character=" + character + ", ascendancy=" + ascendancy

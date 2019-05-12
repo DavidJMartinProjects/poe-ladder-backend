@@ -7,55 +7,48 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "urls.properties.leaderboards")
 public class LeaderboardApiUrlsConfig {	
 	
-    String delve_prefix;
-    String delve_postfix;         
-    String raceto100_prefix;
-    String raceto100_postfix;
-    String uberlab_prefix;	
-    String uberlab_postfix;
+    String delvePrefix;
+    String delvePostfix;         
+    String raceto100Prefix;
+    String raceto100Postfix;
+    String uberlabPrefix;	
+    String uberlabPostfix;
     
-	public String getDelve_prefix() {
-		return delve_prefix;
+	public String getDelvePrefix() {
+		return delvePrefix;
 	}
-	public void setDelve_prefix(String delve_prefix) {
-		this.delve_prefix = delve_prefix;
+	public void setDelvePrefix(String delvePrefix) {
+		this.delvePrefix = delvePrefix;
 	}
-	public String getDelve_postfix() {
-		return delve_postfix;
+	public String getDelvePostfix() {
+		return delvePostfix;
 	}
-	public void setDelve_postfix(String delve_postfix) {
-		this.delve_postfix = delve_postfix;
+	public void setDelvePostfix(String delvePostfix) {
+		this.delvePostfix = delvePostfix;
 	}
-	public String getRaceto100_prefix() {
-		return raceto100_prefix;
+	public String getRaceto100Prefix() {
+		return raceto100Prefix;
 	}
-	public void setRaceto100_prefix(String raceto100_prefix) {
-		this.raceto100_prefix = raceto100_prefix;
+	public void setRaceto100Prefix(String raceto100Prefix) {
+		this.raceto100Prefix = raceto100Prefix;
 	}
-	public String getRaceto100_postfix() {
-		return raceto100_postfix;
+	public String getRaceto100Postfix() {
+		return raceto100Postfix;
 	}
-	public void setRaceto100_postfix(String raceto100_postfix) {
-		this.raceto100_postfix = raceto100_postfix;
+	public void setRaceto100Postfix(String raceto100Postfix) {
+		this.raceto100Postfix = raceto100Postfix;
 	}
-	public String getUberlab_prefix() {
-		return uberlab_prefix;
+	public String getUberlabPrefix() {
+		return uberlabPrefix;
 	}
-	public void setUberlab_prefix(String uberlab_prefix) {
-		this.uberlab_prefix = uberlab_prefix;
+	public void setUberlabPrefix(String uberlabPrefix) {
+		this.uberlabPrefix = uberlabPrefix;
 	}
-	public String getUberlab_postfix() {
-		return uberlab_postfix;
+	public String getUberlabPostfix() {
+		return uberlabPostfix;
 	}
-	public void setUberlab_postfix(String uberlab_postfix) {
-		this.uberlab_postfix = uberlab_postfix;
-	}
-	
-	@Override
-	public String toString() {
-		return "LeaderboardApiUrlsConfig [delve_prefix=" + delve_prefix + ", delve_postfix=" + delve_postfix
-				+ ", raceto100_prefix=" + raceto100_prefix + ", raceto100_postfix=" + raceto100_postfix
-				+ ", uberlab_prefix=" + uberlab_prefix + ", uberlab_postfix=" + uberlab_postfix + "]";
+	public void setUberlabPostfix(String uberlabPostfix) {
+		this.uberlabPostfix = uberlabPostfix;
 	}
     
 }	

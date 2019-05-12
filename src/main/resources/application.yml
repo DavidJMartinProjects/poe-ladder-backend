@@ -59,9 +59,9 @@ urls:
    properties:
       resultsLimit: 5
       leaderboards:
-         delve_prefix: http://www.pathofexile.com/api/ladders?offset=0&limit=${urls.properties.resultsLimit}&id=
-         delve_postfix: '&type=league&sort=depthsolo&_=1546137921952'         
-         raceto100_prefix: http://api.pathofexile.com/ladders/
-         raceto100_postfix: ?limit=${urls.properties.resultsLimit}
-         uberlab_prefix: http://www.pathofexile.com/api/ladders?offset=0&limit=${urls.properties.resultsLimit}&id=
-         uberlab_postfix: '&type=labyrinth&difficulty=4'
+         delvePrefix: http://www.pathofexile.com/api/ladders?offset=0&limit=${urls.properties.resultsLimit}&id=
+         delvePostfix: '&type=league&sort=depthsolo&_=1546137921952'         
+         raceto100Prefix: http://api.pathofexile.com/ladders/
+         raceto100Postfix: ?limit=${urls.properties.resultsLimit}
+         uberlabPrefix: http://www.pathofexile.com/api/ladders?offset=0&limit=${urls.properties.resultsLimit}&id=
+         uberlabPostfix: '&type=labyrinth&difficulty=4'

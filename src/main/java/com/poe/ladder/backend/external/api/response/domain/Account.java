@@ -1,5 +1,5 @@
 
-package com.poe.ladder.backend.external.api.response;
+package com.poe.ladder.backend.external.api.response.domain;
 
 import java.util.HashMap;
 import java.util.Map;

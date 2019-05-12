@@ -57,17 +57,17 @@ public class LeaderboardUrlBuilder {
 	}
 	
 	private void buildDelveUrls(String leagueName) {
-		String url = "" + urlsConfig.getDelve_prefix() + leagueName + urlsConfig.getDelve_postfix();		
+		String url = "" + urlsConfig.getDelvePrefix() + leagueName + urlsConfig.getDelvePostfix();		
 		delveUrls.put(leagueName, url);
 	}
 	
 	private void buildUberLabUrls(String leagueName) {
-		String url = "" + urlsConfig.getUberlab_prefix() + leagueName + urlsConfig.getUberlab_postfix();		
+		String url = "" + urlsConfig.getUberlabPrefix() + leagueName + urlsConfig.getUberlabPostfix();		
 		uberLabUrls.put(leagueName, url);
 	}
 	
 	private void buildRaceTo100Urls(String leagueName) {
-		String url = "" + urlsConfig.getRaceto100_prefix() + leagueName + urlsConfig.getRaceto100_postfix();		
+		String url = "" + urlsConfig.getRaceto100Prefix() + leagueName + urlsConfig.getRaceto100Postfix();		
 		raceTo100Urls.put(leagueName, url);
 	}
 		

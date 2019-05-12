@@ -11,8 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.poe.ladder.backend.external.api.response.Entry;
-import com.poe.ladder.backend.external.api.response.ResponseEntry;
+import com.poe.ladder.backend.external.api.response.domain.Entry;
+import com.poe.ladder.backend.external.api.response.domain.ResponseEntry;
 
 @Service
 public class LeaderboardApiRequestServiceImpl implements LeaderboardApiRequestService {

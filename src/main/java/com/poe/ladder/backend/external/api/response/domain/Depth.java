@@ -1,8 +1,7 @@
 
-package com.poe.ladder.backend.external.api.response;
+package com.poe.ladder.backend.external.api.response.domain;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
@@ -13,36 +12,36 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "total",
-    "entries"
+    "default",
+    "solo"
 })
-public class ResponseEntry {
+public class Depth {
 
-    @JsonProperty("total")
-    private Double total;
-    @JsonProperty("entries")
-    private List<Entry> entries = null;
+    @JsonProperty("default")
+    private Integer _default;
+    @JsonProperty("solo")
+    private Integer solo;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    @JsonProperty("total")
-    public Double getTotal() {
-        return total;
+    @JsonProperty("default")
+    public Integer getDefault() {
+        return _default;
     }
 
-    @JsonProperty("total")
-    public void setTotal(Double total) {
-        this.total = total;
+    @JsonProperty("default")
+    public void setDefault(Integer _default) {
+        this._default = _default;
     }
 
-    @JsonProperty("entries")
-    public List<Entry> getEntries() {
-        return entries;
+    @JsonProperty("solo")
+    public Integer getSolo() {
+        return solo;
     }
 
-    @JsonProperty("entries")
-    public void setEntries(List<Entry> entries) {
-        this.entries = entries;
+    @JsonProperty("solo")
+    public void setSolo(Integer solo) {
+        this.solo = solo;
     }
 
     @JsonAnyGetter
@@ -57,10 +56,8 @@ public class ResponseEntry {
 
 	@Override
 	public String toString() {
-		return "ResponseEntry [total=" + total + ", entries=" + entries + ", additionalProperties="
-				+ additionalProperties + "]";
+		return "Depth [_default=" + _default + ", solo=" + solo + ", additionalProperties=" + additionalProperties
+				+ "]";
 	}
-    
-    
 
 }

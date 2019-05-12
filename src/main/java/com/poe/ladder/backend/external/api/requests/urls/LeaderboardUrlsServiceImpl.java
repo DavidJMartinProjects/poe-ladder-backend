@@ -11,6 +11,7 @@ public class LeaderboardUrlsServiceImpl implements LeaderboardUrlsService {
 
 	@Autowired
 	LeaderboardUrlBuilder leaderboardUrlBuilder;
+	
 	@Override
 	public List<Map<String, String>> getLeaderboardUrls() {
 		return leaderboardUrlBuilder.getLeaderBoardUrls();

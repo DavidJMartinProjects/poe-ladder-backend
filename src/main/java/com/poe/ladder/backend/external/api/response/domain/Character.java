@@ -24,7 +24,7 @@ public class Character {
     @JsonProperty("name")
     private String name;
     @JsonProperty("level")
-    private Double level;
+    private Integer level;
     @JsonProperty("class")
     private String _class;
     @JsonProperty("id")
@@ -47,12 +47,12 @@ public class Character {
     }
 
     @JsonProperty("level")
-    public Double getLevel() {
+    public Integer getLevel() {
         return level;
     }
 
     @JsonProperty("level")
-    public void setLevel(Double level) {
+    public void setLevel(Integer level) {
         this.level = level;
     }
 

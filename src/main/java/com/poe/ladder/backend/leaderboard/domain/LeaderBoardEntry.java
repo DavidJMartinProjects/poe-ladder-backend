@@ -62,7 +62,10 @@ public class LeaderBoardEntry {
 		return time;
 	}
 	public void setTime(String time) {
-		this.time = time;
+		Integer theTime = new Integer(time);
+		int minutes = theTime/60;
+		int seconds = theTime%60;
+		this.time = ""+minutes+"min "+seconds+"sec";
 	}
 	public String getDepth() {
 		return depth;

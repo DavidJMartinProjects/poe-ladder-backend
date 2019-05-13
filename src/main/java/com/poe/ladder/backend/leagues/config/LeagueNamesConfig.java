@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 public class LeagueNamesConfig {
 	
 	private List<String> currentLeagues;
+	private List<String> leagueNames;
 
 	public List<String> getCurrentLeagues() {
 		return currentLeagues;
@@ -17,6 +18,14 @@ public class LeagueNamesConfig {
 
 	public void setCurrentLeagues(List<String> currentLeagues) {
 		this.currentLeagues = currentLeagues;
+	}
+
+	public List<String> getLeagueNames() {
+		return leagueNames;
+	}
+
+	public void setLeagueNames(List<String> leagueNames) {
+		this.leagueNames = leagueNames;
 	}
 
 }	

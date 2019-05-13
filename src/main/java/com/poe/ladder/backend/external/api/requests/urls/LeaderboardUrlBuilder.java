@@ -37,7 +37,7 @@ public class LeaderboardUrlBuilder {
 
 	@PostConstruct
 	public void init() {
-		leagueNames = leagueNameService.getLeagueNames();
+		leagueNames = leagueNameService.getCurrentLeagues();
 		buildUrls();
 	}
 

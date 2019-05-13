@@ -29,7 +29,7 @@ public class LeaderBoardEntry {
 	private String time;
 	
 	@Column(name="depth")
-	private String depth;
+	private Integer depth;
 	
 	@Column(name="level")
 	private String level;
@@ -67,10 +67,10 @@ public class LeaderBoardEntry {
 		int seconds = theTime%60;
 		this.time = ""+minutes+"min "+seconds+"sec";
 	}
-	public String getDepth() {
+	public Integer getDepth() {
 		return depth;
 	}
-	public void setDepth(String depth) {
+	public void setDepth(Integer depth) {
 		this.depth = depth;
 	}
 	public String getLevel() {

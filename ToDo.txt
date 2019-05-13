@@ -1,8 +1,9 @@
 implement @ControllerAdvice for custom exception handling 
 	Add exception handling to Config Classes
 	- on getter methods, if list is null throw exception
+	- if database is down throw exception and implement message on frontend gui
 	
-* read in the required number of leaderboard entries from properties file
+	** implement dao service layer to abstract the repository implementation from the controller layer.
+	
 
 
-handling cookies : https://www.baeldung.com/java-http-request

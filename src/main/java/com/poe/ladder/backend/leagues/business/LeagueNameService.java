@@ -6,6 +6,7 @@ import com.poe.ladder.backend.leaderboard.domain.LeagueName;
 
 public interface LeagueNameService {	
 	public List<String> getCurrentLeagues();
-	public List<LeagueName>  getCurrentNames();;
+	public List<LeagueName>  getCurrentNames();
+	public List<String> getLeagueVariationsListByLeagueName(String leagueName);
 }
-	
+		

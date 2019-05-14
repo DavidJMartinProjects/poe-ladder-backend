@@ -31,6 +31,12 @@ leagues:
     - Synthesis
     - Synthesis Event
 
+activeleagues:
+   leagueVariations.[Synthesis]: Synthesis, Hardcore Synthesis, SSF Synthesis, SSF Synthesis HC
+   
+leaderboard:   
+   resultslimit: 5
+
 datatables:
    leaderboard:
       delve: 

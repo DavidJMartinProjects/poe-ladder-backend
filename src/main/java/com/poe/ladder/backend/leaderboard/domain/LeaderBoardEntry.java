@@ -19,6 +19,9 @@ public class LeaderBoardEntry {
 	@Column(name="rank")
 	private String rank; 
 	
+	@Column(name="account")
+	private String account; 
+	
 	@Column(name="character")
 	private String character;
 	
@@ -91,12 +94,11 @@ public class LeaderBoardEntry {
 	public void setLeaderboard(String leaderboard) {
 		this.leaderboard = leaderboard;
 	}
-	
-	@Override
-	public String toString() {
-		return "BaseEntry [id=" + id + ", rank=" + rank + ", character=" + character + ", ascendancy=" + ascendancy
-				+ ", time=" + time + ", depth=" + depth + ", level=" + level + ", league=" + league + ", leaderboard="
-				+ leaderboard + "]";
+	public String getAccount() {
+		return account;
+	}
+	public void setAccount(String account) {
+		this.account = account;
 	}
 	
 }

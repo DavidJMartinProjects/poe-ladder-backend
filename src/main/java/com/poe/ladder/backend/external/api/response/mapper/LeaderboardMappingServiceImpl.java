@@ -37,6 +37,7 @@ public class LeaderboardMappingServiceImpl implements LeaderboardMappingService 
 			leaderboardEntity.setLeaderboard(leaderboardType.toString());
 			leaderboardEntity.setRank(responseEntry.getRank().toString());
 			leaderboardEntity.setCharacter(responseEntry.getCharacter().getName());
+			leaderboardEntity.setAccount(responseEntry.getAccount().getName());
 			leaderboardEntity.setAscendancy((responseEntry.getCharacter().getClass_()));
 			if (leaderboardType == LeaderboardType.DELVE) {
 				leaderboardEntity.setDepth(responseEntry.getCharacter().getDepth().getSolo());

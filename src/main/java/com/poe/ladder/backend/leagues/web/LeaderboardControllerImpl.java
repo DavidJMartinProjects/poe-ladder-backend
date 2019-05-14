@@ -25,13 +25,20 @@ public class LeaderboardControllerImpl implements LeaderboardController {
 	@Autowired
 	LeaderboardResultsLimitConfig leaderboardResultsLimitConfig;		
 
-	@GetMapping("/leaderboard")
-	public List<LeaderBoardEntry> getDelveLeaderboard(@RequestParam String leagueName, @RequestParam String leaderboard) {
+	@GetMapping("/leaderboards")
+	public List<LeaderBoardEntry> getLeaderboards(@RequestParam String leagueName, @RequestParam String leaderboard) {
 		// make this a one liner and do processing at the dao layer
 		List<LeaderBoardEntry> leaderboardResults = new ArrayList<>();
 		for (String leagueVariation : leagueNameService.getLeagueVariationsListByLeagueName(leagueName)) {
 			leaderboardResults.addAll(leaderboardRepository.getLeaderboardEntryResults(leagueVariation, leaderboard, leaderboardResultsLimitConfig.getResultslimit()));	
 		}
+		return leaderboardResults;
+	}
+	
+	@GetMapping("/leaderboard-ladder")
+	public List<LeaderBoardEntry> getLeaderboardByLeagueVariation(@RequestParam String leagueName, @RequestParam String leaderboard) {
+		List<LeaderBoardEntry> leaderboardResults = new ArrayList<>();
+			leaderboardResults.addAll(leaderboardRepository.getLeaderboardLadderResults(leagueName, leaderboard));	
 		return leaderboardResults;
 	}
 

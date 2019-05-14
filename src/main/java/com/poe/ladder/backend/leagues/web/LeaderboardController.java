@@ -5,6 +5,6 @@ import java.util.List;
 import com.poe.ladder.backend.leaderboard.domain.LeaderBoardEntry;
 
 public interface LeaderboardController {
-	List<LeaderBoardEntry> getDelveLeaderboard(String leagueName, String leaderboard);
+	List<LeaderBoardEntry> getLeaderboards(String leagueName, String leaderboard);
 }
 	

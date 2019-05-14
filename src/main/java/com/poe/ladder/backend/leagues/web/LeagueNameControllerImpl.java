@@ -18,13 +18,15 @@ public class LeagueNameControllerImpl implements LeagueNameController {
 
 	@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping("/current-leagues")
-	public List<String> getCurrentLeagues() {
-		return leagueNameService.getCurrentLeagues();
+	public List<LeagueName> getCurrentLeagues() {
+		return leagueNameService.getLeagueVariationNames();		
+		
+		
 	}
 	
 	@RequestMapping("/league-names")
-	public List<LeagueName> getLeagueNames() {
-		return leagueNameService.getCurrentNames();
+	public List<LeagueName> getLeagueNames() {	
+		return leagueNameService.getCurrentLeagues();
 	}
 
 }

@@ -22,17 +22,30 @@ public class LeagueNameServiceImpl implements LeagueNameService {
 	LeagueNamesConfig leagueNamesConfig;
 
 	@Override
-	public List<String> getCurrentLeagues() {
-		return leagueNamesConfig.getCurrentLeagues();
+	public List<LeagueName> getCurrentLeagues() {		
+		Map<String, List<String>> leagueVariationMap = leagueVariationsConfig.getLeagueVariations();
+		List<LeagueName> leagueNamesList = new ArrayList<>();
+		for (Map.Entry<String, List<String>> leagueEntry : leagueVariationMap.entrySet()) {
+			leagueNamesList.add(new LeagueName(leagueEntry.getKey()));
+		}
+		if (leagueNamesList.size() == 0) {
+			throw new RuntimeException("RuntimeException encountered : League Variations not found for leagueName : ");
+		}
+		return leagueNamesList;
 	}
 
 	@Override
-	public List<LeagueName> getCurrentNames() {
-		List<LeagueName> leagueNames = new ArrayList<LeagueName>();
-		for (String leagueName : leagueNamesConfig.getLeagueNames()) {
-			leagueNames.add(new LeagueName(leagueName));
+	public List<LeagueName> getLeagueVariationNames() {
+		Map<String, List<String>> leagueVariationMap = leagueVariationsConfig.getLeagueVariations();
+		List<LeagueName> leagueVariationsList = new ArrayList<>();
+		for (Map.Entry<String, List<String>> leagueEntry : leagueVariationMap.entrySet()) {
+			for(String leagueVariation : leagueEntry.getValue())
+			leagueVariationsList.add(new LeagueName(leagueVariation));
 		}
-		return leagueNames;
+		if (leagueVariationsList.size() == 0) {
+			throw new RuntimeException("RuntimeException encountered : League Variations not found for leagueName : ");
+		}
+		return leagueVariationsList;
 	}
 
 	public List<String> getLeagueVariationsListByLeagueName(String leagueName) {

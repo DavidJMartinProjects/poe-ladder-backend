@@ -10,6 +10,7 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.poe.ladder.backend.leaderboard.domain.LeagueName;
 import com.poe.ladder.backend.leagues.business.LeagueNameService;
 
 @Component
@@ -21,14 +22,14 @@ public class LeaderboardUrlBuilder {
 	@Autowired
 	LeaderboardApiUrlsConfig urlsConfig;
 	
-	private List<String> leagueNames;
+	private List<LeagueName> leagueNames;
 	private Map<String, String> delveUrls;
 	private Map<String, String> uberLabUrls;
 	private Map<String, String> raceTo100Urls;
 	private List<Map<String, String>> leaderBoardUrls; 
 	
 	public LeaderboardUrlBuilder() {
-		leagueNames = new ArrayList<String>();
+		leagueNames = new ArrayList<>();
 		delveUrls = new HashMap<String, String>();
 		raceTo100Urls = new HashMap<String, String>();
 		uberLabUrls = new HashMap<String, String>();
@@ -37,15 +38,15 @@ public class LeaderboardUrlBuilder {
 
 	@PostConstruct
 	public void init() {
-		leagueNames = leagueNameService.getCurrentLeagues();
+		leagueNames = leagueNameService.getLeagueVariationNames();
 		buildUrls();
 	}
 
 	private void buildUrls() {
-		for (String leagueName : leagueNames) {
-			buildDelveUrls(leagueName);
-			buildUberLabUrls(leagueName);
-			buildRaceTo100Urls(leagueName);
+		for (LeagueName leagueName : leagueNames) {
+			buildDelveUrls(leagueName.getLeagueName());
+			buildUberLabUrls(leagueName.getLeagueName());
+			buildRaceTo100Urls(leagueName.getLeagueName());
 		}
 	}
 	

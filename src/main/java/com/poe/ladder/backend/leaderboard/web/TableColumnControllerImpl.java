@@ -15,17 +15,17 @@ public class TableColumnControllerImpl implements TableColumnController {
 	TableColumnsService dataTableColumnsService;
 
 	@GetMapping("leaderboard-columns-delve")
-	public List<String> getDelveTableColumns() {		
+	public List<TableColumn> getDelveTableColumns() {		
 		return dataTableColumnsService.getDelveTableColumns();
 	}
 	
 	@GetMapping("leaderboard-columns-uberlab")
-	public List<String> getUberLabTableColumns() {		
+	public List<TableColumn> getUberLabTableColumns() {		
 		return dataTableColumnsService.getUberLabTableColumns();
 	}
 	
 	@GetMapping("leaderboard-columns-raceto100")
-	public List<String> getRaceTo100TableColumns() {		
+	public List<TableColumn> getRaceTo100TableColumns() {		
 		return dataTableColumnsService.getRaceTo100TableColumns();
 	}
 

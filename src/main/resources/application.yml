@@ -44,6 +44,7 @@ datatables:
       delve: 
          tableColumns:
           - '#'
+          - Account
           - Character
           - Asc
           - Dept
@@ -51,16 +52,18 @@ datatables:
       raceto100: 
          tableColumns:
           - '#'
+          - Account
           - Character
           - Asc
-          - level
+          - Level
           
       uberlab: 
          tableColumns:
           - '#'
+          - Account
           - Character
           - Asc
-          - time
+          - Time
           
 http:
    request:            

@@ -16,5 +16,9 @@ public class LeaderboardUrlsServiceImpl implements LeaderboardUrlsService {
 	public List<Map<String, String>> getLeaderboardUrls() {
 		return leaderboardUrlBuilder.getLeaderBoardUrls();
 	}
+	
+	public String getCustomLeagueUrl() {
+		return leaderboardUrlBuilder.getCustomLeagueUrl();
+	}
 
 }

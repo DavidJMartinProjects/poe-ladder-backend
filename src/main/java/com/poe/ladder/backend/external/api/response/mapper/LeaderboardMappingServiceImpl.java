@@ -43,7 +43,7 @@ public class LeaderboardMappingServiceImpl implements LeaderboardMappingService 
 				leaderboardEntity.setDepth(responseEntry.getCharacter().getDepth().getSolo());
 			} else if (leaderboardType == LeaderboardType.UBERLAB) {
 				leaderboardEntity.setTime(responseEntry.getTime());
-			} else if (leaderboardType == LeaderboardType.RACETO100) {
+			} else {
 				leaderboardEntity.setLevel(responseEntry.getCharacter().getLevel().toString());
 			}
 			leaderBoardEntityList.add(leaderboardEntity);

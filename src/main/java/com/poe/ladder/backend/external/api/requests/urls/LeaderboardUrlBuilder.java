@@ -27,6 +27,7 @@ public class LeaderboardUrlBuilder {
 	private Map<String, String> uberLabUrls;
 	private Map<String, String> raceTo100Urls;
 	private List<Map<String, String>> leaderBoardUrls; 
+	private String customLeagueUrl;
 	
 	public LeaderboardUrlBuilder() {
 		leagueNames = new ArrayList<>();
@@ -71,6 +72,10 @@ public class LeaderboardUrlBuilder {
 		String url = "" + urlsConfig.getRaceto100Prefix() + leagueName + urlsConfig.getRaceto100Postfix();		
 		raceTo100Urls.put(leagueName, url);
 	}
-		
+
+	public String getCustomLeagueUrl() {
+		return urlsConfig.getCustomLeaguePrefix();
+	}
+
 }
 		

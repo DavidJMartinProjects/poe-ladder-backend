@@ -16,5 +16,6 @@ public interface LeaderboardRepository extends JpaRepository<LeaderBoardEntry, L
 
 	@Query(value="SELECT * FROM leader_board_entry WHERE league=?1 AND leaderboard=?2 LIMIT 100", nativeQuery = true)
 	List<LeaderBoardEntry> getLeaderboardLadderResults(String leagueName, String leaderboard);
+	
 }	
 									

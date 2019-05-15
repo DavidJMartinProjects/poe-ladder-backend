@@ -23,6 +23,9 @@ public class LeaderboardControllerImpl implements LeaderboardController {
 	LeagueNameService leagueNameService;
 	
 	@Autowired
+	CustomLeagueService customLeagueService;
+	
+	@Autowired
 	LeaderboardResultsLimitConfig leaderboardResultsLimitConfig;		
 
 	@GetMapping("/leaderboards")
@@ -40,6 +43,11 @@ public class LeaderboardControllerImpl implements LeaderboardController {
 		List<LeaderBoardEntry> leaderboardResults = new ArrayList<>();
 			leaderboardResults.addAll(leaderboardRepository.getLeaderboardLadderResults(leagueName, leaderboard));	
 		return leaderboardResults;
+	}
+	
+	@GetMapping("/custom-league")
+	public List<LeaderBoardEntry> getCustomLeagueLeaderboard(@RequestParam String leagueName) {
+		return customLeagueService.getCustomLeagueLeaderboard(leagueName);
 	}
 
 }	

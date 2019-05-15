@@ -13,6 +13,7 @@ public class LeaderboardApiUrlsConfig {
     String raceto100Postfix;
     String uberlabPrefix;	
     String uberlabPostfix;
+    String customLeaguePrefix;
     
 	public String getDelvePrefix() {
 		return delvePrefix;
@@ -50,5 +51,11 @@ public class LeaderboardApiUrlsConfig {
 	public void setUberlabPostfix(String uberlabPostfix) {
 		this.uberlabPostfix = uberlabPostfix;
 	}
-    
+	public String getCustomLeaguePrefix() {
+		return customLeaguePrefix;
+	}
+	public void setCustomLeaguePrefix(String customLeaguePrefix) {
+		this.customLeaguePrefix = customLeaguePrefix;
+	}
+	
 }	

@@ -5,4 +5,5 @@ import java.util.Map;
 
 public interface LeaderboardUrlsService {
 	List<Map<String, String>> getLeaderboardUrls();
+	String getCustomLeagueUrl();
 }

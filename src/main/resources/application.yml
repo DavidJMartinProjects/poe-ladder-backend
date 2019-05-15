@@ -89,3 +89,4 @@ urls:
          raceto100Postfix: ?limit=${urls.properties.resultsLimit}
          uberlabPrefix: http://www.pathofexile.com/api/ladders?offset=0&limit=${urls.properties.resultsLimit}&id=
          uberlabPostfix: '&type=labyrinth&difficulty=4'
+         customLeaguePrefix: http://www.pathofexile.com/api/ladders?offset=0&limit=200&id=

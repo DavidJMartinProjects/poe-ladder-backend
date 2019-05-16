@@ -20,8 +20,14 @@ public class LeaderBoardEntry {
 	private String rank; 
 	
 	@Column(name="account")
-	private String account; 
-	
+	private String account;
+
+	@Column(name="online")
+	private String online;
+
+	@Column(name="dead")
+	private String dead;
+
 	@Column(name="character")
 	private String character;
 	
@@ -117,6 +123,42 @@ public class LeaderBoardEntry {
 	}
 	public void setProgress(String progress) {
 		this.progress = progress;
+	}
+
+	public String getOnline() {
+		return online;
+	}
+
+	public void setOnline(String online) {
+		this.online = online;
+	}
+
+	public String getDead() {
+		return dead;
+	}
+
+	public void setDead(String dead) {
+		this.dead = dead;
+	}
+
+	@Override
+	public String toString() {
+		return "LeaderBoardEntry{" +
+				"id=" + id +
+				", rank='" + rank + '\'' +
+				", account='" + account + '\'' +
+				", online='" + online + '\'' +
+				", dead='" + dead + '\'' +
+				", character='" + character + '\'' +
+				", ascendancy='" + ascendancy + '\'' +
+				", time='" + time + '\'' +
+				", depth=" + depth +
+				", level='" + level + '\'' +
+				", experience='" + experience + '\'' +
+				", progress='" + progress + '\'' +
+				", league='" + league + '\'' +
+				", leaderboard='" + leaderboard + '\'' +
+				'}';
 	}
 
 }

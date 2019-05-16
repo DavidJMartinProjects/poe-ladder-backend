@@ -23,7 +23,10 @@ public class LeaderboardMappingServiceImpl implements LeaderboardMappingService 
 	LeagueNameService leagueNameService;
 	
 	@Autowired
-	ProgressBarService progressBarService;	
+	ProgressBarService progressBarService;
+
+	@Autowired
+	FormatUtil formatUtil;
 
 	private List<LeaderBoardEntry> leaderBoardEntityList;
 	private LeaderBoardEntry leaderboardEntity;
@@ -42,16 +45,22 @@ public class LeaderboardMappingServiceImpl implements LeaderboardMappingService 
 			leaderboardEntity.setRank(responseEntry.getRank().toString());
 			leaderboardEntity.setCharacter(responseEntry.getCharacter().getName());
 			leaderboardEntity.setAccount(responseEntry.getAccount().getName());
+			leaderboardEntity.setOnline(responseEntry.getOnline().toString());
+
 			leaderboardEntity.setAscendancy((responseEntry.getCharacter().getClass_()));				
 			if (leaderboardType == LeaderboardType.DELVE) {
 				leaderboardEntity.setDepth(responseEntry.getCharacter().getDepth().getSolo());
 			} else if (leaderboardType == LeaderboardType.UBERLAB) {
 				leaderboardEntity.setTime(responseEntry.getTime());
 			} else {
+				leaderboardEntity.setDead(responseEntry.getDead().toString());
 				leaderboardEntity.setLevel(responseEntry.getCharacter().getLevel().toString());
-				leaderboardEntity.setExperience(responseEntry.getCharacter().getExperience().toString());
-				String levelProgress = progressBarService.getProgressPercentage(leaderboardEntity.getLevel(), leaderboardEntity.getExperience());
-				leaderboardEntity.setProgress(levelProgress);				
+				String experience = responseEntry.getCharacter().getExperience().toString();
+				String level = leaderboardEntity.getLevel();
+				String levelProgress = progressBarService.getProgressPercentage(level, experience);
+				leaderboardEntity.setProgress(levelProgress);
+				String formattedXp = formatExperience(experience);
+				leaderboardEntity.setExperience(formattedXp);
 			}
 			leaderBoardEntityList.add(leaderboardEntity);
 		}
@@ -67,5 +76,9 @@ public class LeaderboardMappingServiceImpl implements LeaderboardMappingService 
 			return LeaderboardType.RACETO100;
 		}
 		return LeaderboardType.UNKNOWN;
+	}
+
+	private String formatExperience(String xp) {
+		return formatUtil.formatNumber(xp);
 	}
 }

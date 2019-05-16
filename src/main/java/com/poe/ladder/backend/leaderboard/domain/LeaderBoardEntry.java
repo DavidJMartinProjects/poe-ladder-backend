@@ -37,6 +37,12 @@ public class LeaderBoardEntry {
 	@Column(name="level")
 	private String level;
 	
+	@Column(name="experience")
+	private String experience;
+	
+	@Column(name="progress")
+	private String progress;
+	
 	@Column(name="league")
 	private String league;
 	
@@ -100,5 +106,17 @@ public class LeaderBoardEntry {
 	public void setAccount(String account) {
 		this.account = account;
 	}
-	
+	public String getExperience() {
+		return experience;
+	}
+	public void setExperience(String experience) {
+		this.experience = experience;
+	}
+	public String getProgress() {
+		return progress;
+	}
+	public void setProgress(String progress) {
+		this.progress = progress;
+	}
+
 }

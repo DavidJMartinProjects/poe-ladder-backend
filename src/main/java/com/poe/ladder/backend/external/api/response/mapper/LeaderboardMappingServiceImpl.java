@@ -10,6 +10,7 @@ import com.poe.ladder.backend.external.api.requests.urls.LeaderboardApiUrlsConfi
 import com.poe.ladder.backend.external.api.response.domain.Entry;
 import com.poe.ladder.backend.leaderboard.domain.LeaderBoardEntry;
 import com.poe.ladder.backend.leaderboard.domain.LeaderboardType;
+import com.poe.ladder.backend.leaderboard.progressbar.ProgressBarService;
 import com.poe.ladder.backend.leagues.business.LeagueNameService;
 
 @Component
@@ -20,6 +21,9 @@ public class LeaderboardMappingServiceImpl implements LeaderboardMappingService 
 
 	@Autowired
 	LeagueNameService leagueNameService;
+	
+	@Autowired
+	ProgressBarService progressBarService;	
 
 	private List<LeaderBoardEntry> leaderBoardEntityList;
 	private LeaderBoardEntry leaderboardEntity;
@@ -38,13 +42,16 @@ public class LeaderboardMappingServiceImpl implements LeaderboardMappingService 
 			leaderboardEntity.setRank(responseEntry.getRank().toString());
 			leaderboardEntity.setCharacter(responseEntry.getCharacter().getName());
 			leaderboardEntity.setAccount(responseEntry.getAccount().getName());
-			leaderboardEntity.setAscendancy((responseEntry.getCharacter().getClass_()));
+			leaderboardEntity.setAscendancy((responseEntry.getCharacter().getClass_()));				
 			if (leaderboardType == LeaderboardType.DELVE) {
 				leaderboardEntity.setDepth(responseEntry.getCharacter().getDepth().getSolo());
 			} else if (leaderboardType == LeaderboardType.UBERLAB) {
 				leaderboardEntity.setTime(responseEntry.getTime());
 			} else {
 				leaderboardEntity.setLevel(responseEntry.getCharacter().getLevel().toString());
+				leaderboardEntity.setExperience(responseEntry.getCharacter().getExperience().toString());
+				String levelProgress = progressBarService.getProgressPercentage(leaderboardEntity.getLevel(), leaderboardEntity.getExperience());
+				leaderboardEntity.setProgress(levelProgress);				
 			}
 			leaderBoardEntityList.add(leaderboardEntity);
 		}

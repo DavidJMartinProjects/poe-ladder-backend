@@ -38,7 +38,8 @@ public class LeaderboardApiRequestServiceImpl implements LeaderboardApiRequestSe
 	public List<Entry> requestLeaderboardFromPoeApi(String url)  {
 		sleepBeforeNextApiRequest();
 		LOG.info("requestLeaderboardFromPoeApi() : performing httprequest to {}", url);
-		ResponseEntity<ResponseEntry> leaderboardApiRequest = restTemplate.exchange(url, HttpMethod.GET, entity, ResponseEntry.class);
+		ResponseEntity<ResponseEntry> leaderboardApiRequest =
+			restTemplate.exchange(url, HttpMethod.GET, entity, ResponseEntry.class);
 		ResponseEntry leaderboardApiResponse = leaderboardApiRequest.getBody();
 		return leaderboardApiResponse.getEntries();
 	}

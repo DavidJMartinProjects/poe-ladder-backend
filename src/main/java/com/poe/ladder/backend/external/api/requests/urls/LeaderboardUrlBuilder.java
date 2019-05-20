@@ -31,10 +31,10 @@ public class LeaderboardUrlBuilder {
 	
 	public LeaderboardUrlBuilder() {
 		leagueNames = new ArrayList<>();
-		delveUrls = new HashMap<String, String>();
-		raceTo100Urls = new HashMap<String, String>();
-		uberLabUrls = new HashMap<String, String>();
-		leaderBoardUrls = new ArrayList<Map<String,String>>();
+		delveUrls = new HashMap<>();
+		raceTo100Urls = new HashMap<>();
+		uberLabUrls = new HashMap<>();
+		leaderBoardUrls = new ArrayList<>();
 	}
 
 	@PostConstruct

@@ -1,6 +1,5 @@
 package com.poe.ladder.backend.leaderboard.dao;
 
-import java.util.Collection;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -18,4 +17,4 @@ public interface LeaderboardRepository extends JpaRepository<LeaderBoardEntry, L
 	List<LeaderBoardEntry> getLeaderboardLadderResults(String leagueName, String leaderboard);
 	
 }	
-									
+										

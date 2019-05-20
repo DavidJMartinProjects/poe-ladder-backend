@@ -1,12 +1,9 @@
 package com.poe.ladder.backend.leagues.config;
 
 import java.util.List;
-import java.util.Map;
-
-import javax.annotation.PostConstruct;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Configuration;	
 
 @Configuration
 @ConfigurationProperties(prefix = "leagues")

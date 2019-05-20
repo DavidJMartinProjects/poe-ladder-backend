@@ -56,7 +56,6 @@ public class LeagueNameServiceImpl implements LeagueNameService {
 				leagueVariationsList = leagueEntry.getValue();
 			}
 		}
-
 		if (leagueVariationsList.size() == 0) {
 			throw new RuntimeException("RuntimeException encountered : League Variations not found for leagueName : " + leagueName);
 		}

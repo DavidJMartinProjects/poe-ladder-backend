@@ -39,7 +39,7 @@ public class TableColumnsServiceImpl implements TableColumnsService {
 	}	
 	
 	private List<TableColumn> tableColumnMapper(List<String> columnsList) {
-		List<TableColumn> tableColumnList = new ArrayList<TableColumn>();
+		List<TableColumn> tableColumnList = new ArrayList<>();
 		for (String column :  columnsList) {
 			tableColumnList.add(new TableColumn(column));
 		}

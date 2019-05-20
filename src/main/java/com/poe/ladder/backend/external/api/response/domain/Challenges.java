@@ -45,6 +45,5 @@ public class Challenges {
 	public String toString() {
 		return "Challenges [total=" + total + ", additionalProperties=" + additionalProperties + "]";
 	}
-    
 
 }

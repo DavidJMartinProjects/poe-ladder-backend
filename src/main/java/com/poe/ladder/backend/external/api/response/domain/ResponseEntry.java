@@ -60,7 +60,5 @@ public class ResponseEntry {
 		return "ResponseEntry [total=" + total + ", entries=" + entries + ", additionalProperties="
 				+ additionalProperties + "]";
 	}
-    
-    
 
 }

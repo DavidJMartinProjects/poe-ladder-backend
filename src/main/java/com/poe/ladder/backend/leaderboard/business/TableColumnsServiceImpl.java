@@ -3,9 +3,12 @@ package com.poe.ladder.backend.leaderboard.business;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.poe.ladder.backend.external.api.response.mapper.LeaderboardMappingServiceImpl;
 import com.poe.ladder.backend.leaderboard.config.DelveTableColumnConfig;
 import com.poe.ladder.backend.leaderboard.config.RaceTableColumnConfig;
 import com.poe.ladder.backend.leaderboard.config.UberLabTableColumnConfig;
@@ -22,19 +25,24 @@ public class TableColumnsServiceImpl implements TableColumnsService {
 	
 	@Autowired
 	UberLabTableColumnConfig uberLabTableColumnConfig;
+	
+	private static final Logger LOG = LoggerFactory.getLogger(LeaderboardMappingServiceImpl.class);
 
 	@Override
 	public List<TableColumn> getDelveTableColumns() {
+		LOG.info("TableColumnsServiceImpl: retrieving table columns for delve leaderboard.");
 		return tableColumnMapper(delveTableColumnConfig.getTableColumns());
 	}
 
 	@Override
 	public List<TableColumn> getRaceTo100TableColumns() {
+		LOG.info("TableColumnsServiceImpl: retrieving table columns for raceTo100 leaderboard.");
 		return tableColumnMapper(raceTableColumnConfig.getTableColumns());
 	}
 
 	@Override
 	public List<TableColumn> getUberLabTableColumns() {
+		LOG.info("TableColumnsServiceImpl: retrieving table columns for uberlab leaderboard.");
 		return tableColumnMapper(uberLabTableColumnConfig.getTableColumns());
 	}	
 	

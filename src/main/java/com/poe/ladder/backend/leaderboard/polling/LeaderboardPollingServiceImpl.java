@@ -35,8 +35,7 @@ public class LeaderboardPollingServiceImpl implements LeaderboardPollingService 
 
 	private List<Entry> apiResponseList;               
 	private List<Map<String, String>> leaderboardUrls;
-	List<LeaderBoardEntry> leaderboardEntities = new ArrayList<>();
-	
+	private List<LeaderBoardEntry> leaderboardEntities = new ArrayList<>();	
 	private final static Logger LOG = LoggerFactory.getLogger(LeaderboardPollingServiceImpl.class);
 	
 	@PostConstruct

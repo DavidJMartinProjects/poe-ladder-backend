@@ -7,9 +7,12 @@ import java.util.Map;
 
 import javax.annotation.PostConstruct;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.poe.ladder.backend.external.api.requests.LeaderboardApiRequestServiceImpl;
 import com.poe.ladder.backend.leaderboard.domain.LeagueName;
 import com.poe.ladder.backend.leagues.business.LeagueNameService;
 
@@ -26,8 +29,9 @@ public class LeaderboardUrlBuilder {
 	private Map<String, String> delveUrls;
 	private Map<String, String> uberLabUrls;
 	private Map<String, String> raceTo100Urls;
-	private List<Map<String, String>> leaderBoardUrls; 
-	private String customLeagueUrl;
+	private List<Map<String, String>> leaderBoardUrls;	
+	
+	private static final Logger LOG = LoggerFactory.getLogger(LeaderboardUrlBuilder.class);
 	
 	public LeaderboardUrlBuilder() {
 		leagueNames = new ArrayList<>();
@@ -44,6 +48,7 @@ public class LeaderboardUrlBuilder {
 	}
 
 	private void buildUrls() {
+		LOG.info("buildUrls(): request received to build leaderboard Urls");
 		for (LeagueName leagueName : leagueNames) {
 			buildDelveUrls(leagueName.getLeagueName());
 			buildUberLabUrls(leagueName.getLeagueName());
@@ -52,6 +57,7 @@ public class LeaderboardUrlBuilder {
 	}
 	
 	public List<Map<String, String>> getLeaderBoardUrls() {
+		LOG.info("getLeaderBoardUrls(): request received to retrieve leaderboard Urls");
 		leaderBoardUrls.add(delveUrls);
 		leaderBoardUrls.add(uberLabUrls);
 		leaderBoardUrls.add(raceTo100Urls);

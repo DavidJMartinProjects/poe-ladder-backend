@@ -18,6 +18,7 @@ public class HttpEntityBuilder {
 	
 	private HttpHeaders httpHeaders = new HttpHeaders();
 	
+	
 	@PostConstruct
 	public void init() {
 		setRequestHeaders();		

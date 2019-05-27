@@ -1,0 +1,92 @@
+spring:   
+   jpa:
+     show-sql: true
+     hibernate:
+       ddl-auto: create   
+       
+   datasource:
+      platform: postgres
+      url: jdbc:postgresql://localhost:5432/poeladder
+      username: user
+      password: password
+      initialization-mode: always
+
+leagues:
+   currentLeagues: 
+    #- Standard
+    #- Hardcore
+    #- SSF Standard
+    #- SSF Hardcore
+    - Synthesis
+    - Hardcore Synthesis
+    - SSF Synthesis
+    - SSF Synthesis HC
+    - Synthesis Event (SRE001)
+    - Synthesis Event HC (SRE002)
+    - SSF Synthesis Event (SRE003)
+    - SSF Synthesis Event HC (SRE004)  
+    
+   leagueNames:
+    - Standard
+    - Synthesis
+    - Synthesis Event
+
+activeleagues:
+   leagueVariations.[Standard]: Standard, Hardcore, SSF Standard, SSF Hardcore
+   leagueVariations.[Synthesis]: Synthesis, Hardcore Synthesis, SSF Synthesis, SSF Synthesis HC
+   leagueVariations.[Synthesis Event]: Synthesis Event (SRE001), Synthesis Event HC (SRE002), SSF Synthesis Event (SRE003), SSF Synthesis Event HC (SRE004)
+      
+leaderboard:   
+   resultslimit: 5
+
+datatables:
+   leaderboard:
+      delve: 
+         tableColumns:
+          - '#'
+          - Account
+          - Character
+          - Asc
+          - Dept
+          
+      raceto100: 
+         tableColumns:
+          - '#'
+          - Account
+          - Character
+          - Asc
+          - Level
+          
+      uberlab: 
+         tableColumns:
+          - '#'
+          - Account
+          - Character
+          - Asc
+          - Time
+          
+http:
+   request:            
+      headers:
+         user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36
+         Accept-Encoding: gzip deflate
+         Accept-Language:  en-US en
+         Upgrade-Insecure-Requests: 1
+      cookies: 
+          - __cfduid=d26f0e1ca08b926e10a926dcda9302cfa1546206260
+          - POESESSID=3a4fa1c3e399804bf49bef466270e484
+          - cf_clearance=b32a2a1c3b51d4bfde7de0cbf7fbc5015de28b0d-1546218127-300-150
+          - _ga=GA1.2.1564561921.1546218143
+          - _gid=GA1.2.350283217.1546218143
+       
+urls:
+   properties:
+      resultsLimit: 100
+      leaderboards:
+         delvePrefix: http://www.pathofexile.com/api/ladders?offset=0&limit=${urls.properties.resultsLimit}&id=
+         delvePostfix: '&type=league&sort=depthsolo&_=1546137921952'         
+         raceto100Prefix: http://api.pathofexile.com/ladders/
+         raceto100Postfix: ?limit=${urls.properties.resultsLimit}
+         uberlabPrefix: http://www.pathofexile.com/api/ladders?offset=0&limit=${urls.properties.resultsLimit}&id=
+         uberlabPostfix: '&type=labyrinth&difficulty=4'
+         customLeaguePrefix: http://www.pathofexile.com/api/ladders?offset=0&limit=200&id=

@@ -8,8 +8,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.poe.ladder.backend.external.api.requests.LeaderboardApiRequestServiceImpl;
-
 @Service
 public class LeaderboardUrlsServiceImpl implements LeaderboardUrlsService {
 	
@@ -30,3 +28,4 @@ public class LeaderboardUrlsServiceImpl implements LeaderboardUrlsService {
 	}
 
 }
+	

@@ -1,7 +1,6 @@
 package com.poe.ladder.backend.leagues.business;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -32,7 +31,7 @@ public class LeagueNameServiceImpl implements LeagueNameService {
 			throw new RuntimeException("RuntimeException encountered : League Variations not found for leagueName : ");
 		}
 		return leagueNamesList;
-	}
+	}	
 
 	@Override
 	public List<LeagueName> getLeagueVariationNames() {

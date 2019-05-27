@@ -15,7 +15,6 @@ import org.springframework.web.client.RestTemplate;
 
 import com.poe.ladder.backend.external.api.response.domain.Entry;
 import com.poe.ladder.backend.external.api.response.domain.ResponseEntry;
-import com.poe.ladder.backend.leaderboard.polling.PollingScheduler;
 
 @Service
 public class LeaderboardApiRequestServiceImpl implements LeaderboardApiRequestService {
@@ -50,7 +49,7 @@ public class LeaderboardApiRequestServiceImpl implements LeaderboardApiRequestSe
 		} catch (InterruptedException ex) {
 			throw new RuntimeException("sleepBeforeNextApiRequest() encountered an InterruptedException : " + ex);
 		}
-	}
+	}	
 
 }
 	

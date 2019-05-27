@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.poe.ladder.backend.external.api.requests.urls.LeaderboardApiUrlsConfig;
-import com.poe.ladder.backend.external.api.requests.urls.LeaderboardUrlsServiceImpl;
 import com.poe.ladder.backend.external.api.response.domain.Entry;
 import com.poe.ladder.backend.leaderboard.domain.LeaderBoardEntry;
 import com.poe.ladder.backend.leaderboard.domain.LeaderboardType;
@@ -89,6 +88,6 @@ public class LeaderboardMappingServiceImpl implements LeaderboardMappingService 
 
 	private String formatExperience(String xp) {
 		return formatUtil.formatStringToDouble(xp);
-	}
+	}	
 	
 }

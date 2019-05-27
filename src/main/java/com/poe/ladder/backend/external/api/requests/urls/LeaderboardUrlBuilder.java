@@ -1,6 +1,6 @@
 package com.poe.ladder.backend.external.api.requests.urls;
 
-import java.util.ArrayList;
+import java.util.ArrayList;	
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +12,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.poe.ladder.backend.external.api.requests.LeaderboardApiRequestServiceImpl;
 import com.poe.ladder.backend.leaderboard.domain.LeagueName;
 import com.poe.ladder.backend.leagues.business.LeagueNameService;
 

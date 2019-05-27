@@ -18,7 +18,7 @@ public class ProgressBarServiceImplTest {
 	ProgressBarServiceImpl progressBarServiceImpl;
 
 	@Test
-	public void testGetProgressPercentage() {
+	public void whenGetProgressPercentageIsCalledWithValidParameters_ThenTheExpectedProgressPercentageIsReturned() {
 		String progess = progressBarServiceImpl.getProgressPercentage("1", "262");		
 		assertEquals("49.9%", progess);
 	}

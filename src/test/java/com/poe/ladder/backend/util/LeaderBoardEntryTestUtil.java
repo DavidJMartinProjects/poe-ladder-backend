@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.leagues.web;
+package com.poe.ladder.backend.util;
 
 import java.util.ArrayList;
 import java.util.List;

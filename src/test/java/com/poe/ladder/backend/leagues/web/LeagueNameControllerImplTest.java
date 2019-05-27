@@ -24,19 +24,19 @@ public class LeagueNameControllerImplTest {
     private MockMvc mockMvc;	
 	
 	@Test
-	public void whenGetRequestToCurrentLeagues_ThenTheExpectedStatusCodeIsReturned() throws Exception {
+	public void whenGetRequestToCurrentLeaguesUrl_ThenTheExpectedStatusCodeIsReturned() throws Exception {
 		this.mockMvc.perform(get("/current-leagues"))
 		.andExpect(status().isOk());		
 	}
 	
 	@Test
-	public void whenGetRequestToCurrentLeagues_ThenTheExpectedNumberOfLeagueNamesAreReturned() throws Exception {
+	public void whenGetRequestToCurrentLeaguesUrl_ThenTheExpectedNumberOfLeagueNamesAreReturned() throws Exception {
 		this.mockMvc.perform(get("/current-leagues"))
 		.andExpect(jsonPath("$", hasSize(12)));			
 	}
 	
 	@Test
-	public void whenGetRequestToCurrentLeagues_ThenTheExpectedDefaultLeagueNamesAreReturned() throws Exception {
+	public void whenGetRequestToCurrentLeaguesUrl_ThenTheExpectedDefaultLeagueNamesAreReturned() throws Exception {
 		this.mockMvc.perform(get("/current-leagues"))
 		.andExpect(jsonPath("$[0].leagueName").value("Standard"))
 		.andExpect(jsonPath("$[1].leagueName").value("Hardcore"))
@@ -45,3 +45,4 @@ public class LeagueNameControllerImplTest {
 	}
 	
 }	
+	

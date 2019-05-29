@@ -46,9 +46,6 @@ public class LeaderBoardEntry {
 	@Column(name="depth")
 	private Integer depth;
 	
-	@Column(name="depth_difference")
-	private Integer depthDifference;
-	
 	@Column(name="level")
 	private String level;
 	
@@ -142,7 +139,6 @@ public class LeaderBoardEntry {
 	public void setOnline(String online) {
 		this.online = online;
 	}
-
 	public String getDead() {
 		return dead;
 	}
@@ -161,12 +157,6 @@ public class LeaderBoardEntry {
 	public void setRankDifference(String rankDifference) {
 		this.rankDifference = rankDifference;
 	}
-	public Integer getDepthDifference() {
-		return depthDifference;
-	}
-	public void setDepthDifference(Integer depthDifference) {
-		this.depthDifference = depthDifference;
-	}
 	public String getExperienceDifference() {
 		return experienceDifference;
 	}
@@ -178,10 +168,9 @@ public class LeaderBoardEntry {
 	public String toString() {
 		return "LeaderBoardEntry [id=" + id + ", characterId=" + characterId + ", rank=" + rank + ", rankDifference="
 				+ rankDifference + ", account=" + account + ", online=" + online + ", dead=" + dead + ", character="
-				+ character + ", ascendancy=" + ascendancy + ", time=" + time + ", depth=" + depth
-				+ ", depthDifference=" + depthDifference + ", level=" + level + ", experience=" + experience
-				+ ", experienceDifference=" + experienceDifference + ", progress=" + progress + ", league=" + league
-				+ ", leaderboard=" + leaderboard + "]";
+				+ character + ", ascendancy=" + ascendancy + ", time=" + time + ", depth=" + depth + ", level=" + level
+				+ ", experience=" + experience + ", experienceDifference=" + experienceDifference + ", progress="
+				+ progress + ", league=" + league + ", leaderboard=" + leaderboard + "]";
 	}
 
 }

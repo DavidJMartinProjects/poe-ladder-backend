@@ -29,11 +29,11 @@ public class LeagueComparisonServiceImplTest {
 	@Autowired
 	LeagueComparisonService leagueComparisonService;
 	
-	LeaderBoardEntry oldLeagueEntry = new LeaderBoardEntry();
-	LeaderBoardEntry newLeagueEntry = new LeaderBoardEntry();
-	
 	List<LeaderBoardEntry> oldLeagueEntryList = new ArrayList<>();
 	List<LeaderBoardEntry> newLeagueEntryList = new ArrayList<>();
+	
+	LeaderBoardEntry oldLeagueEntry = new LeaderBoardEntry();
+	LeaderBoardEntry newLeagueEntry = new LeaderBoardEntry();
 	
 	@Before
 	public void init() {

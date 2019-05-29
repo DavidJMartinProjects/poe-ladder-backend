@@ -6,9 +6,10 @@ spring:
        
    datasource:
       platform: postgres
-      url: jdbc:postgresql://localhost:5432/poeladder
-      username: user
-      password: password
+      #url: jdbc:postgresql://localhost:5432/poeladder
+      url: jdbc:postgresql://attlhossmwcecz:4f830446408da1c1fe28d31aa2fc4f63c2eca5480aed19bd54250064616a1e34@ec2-54-75-235-28.eu-west-1.compute.amazonaws.com:5432/d9jqntbvalrscg
+      username: attlhossmwcecz
+      password: 5432
       initialization-mode: always
 
 leagues:

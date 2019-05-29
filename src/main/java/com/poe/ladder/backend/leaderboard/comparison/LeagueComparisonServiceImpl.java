@@ -26,7 +26,7 @@ public class LeagueComparisonServiceImpl implements LeagueComparisonService {
 					comparedLeagueList.add(newLeagueDataEntry);
 				}
 			}				
-		}					
+		}			    		
 		return comparedLeagueList;		
 	}
 	

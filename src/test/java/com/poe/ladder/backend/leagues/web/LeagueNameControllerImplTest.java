@@ -19,7 +19,7 @@ import com.poe.ladder.backend.application.PoeLadderBackendApplication;
 @SpringBootTest(classes={PoeLadderBackendApplication.class})
 @AutoConfigureMockMvc	
 public class LeagueNameControllerImplTest {
-	
+	  
     @Autowired	
     private MockMvc mockMvc;	
 	

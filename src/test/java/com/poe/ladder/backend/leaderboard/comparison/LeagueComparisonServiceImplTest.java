@@ -53,7 +53,7 @@ public class LeagueComparisonServiceImplTest {
 		newLeagueEntry.setCharacterId(TEST_CHARACTER_ID);
 		newLeagueEntry.setLeague(TEST_LEAGUE_NAME);
 		newLeagueEntry.setLeaderboard(TEST_LEADERBOARD);
-		newLeagueEntry.setRank("8");		
+		newLeagueEntry.setRank("8");			
 		newLeagueEntry.setExperience("100,200,000");	
 		newLeagueEntryList.add(newLeagueEntry);
 	}

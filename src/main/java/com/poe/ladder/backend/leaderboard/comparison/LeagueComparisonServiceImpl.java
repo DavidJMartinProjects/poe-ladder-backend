@@ -36,18 +36,18 @@ public class LeagueComparisonServiceImpl implements LeagueComparisonService {
 		comparedleagueEntry.setExperienceDifference(calcXpDifference(oldLeagueDataEntry, newLeagueDataEntry));
 		return comparedleagueEntry;
 	}
-
-	private String calcRankDifference(LeaderBoardEntry oldEntry, LeaderBoardEntry newEntry) {
-		return calculateDifference(newEntry.getRank(), oldEntry.getRank());
-	}	
 	
 	private String calcXpDifference(LeaderBoardEntry oldXp, LeaderBoardEntry newXp) {
 		String oldXpAsString = removeCommasFromXpValue(oldXp.getExperience());
 		String newXpAsString = removeCommasFromXpValue(newXp.getExperience());
-		return calculateDifference(oldXpAsString, newXpAsString);		
+		return performCalculation(oldXpAsString, newXpAsString);		
 	}
 	
-	private String calculateDifference(String oldValue, String newValue) {
+	private String calcRankDifference(LeaderBoardEntry oldEntry, LeaderBoardEntry newEntry) {
+		return performCalculation(newEntry.getRank(), oldEntry.getRank());
+	}	
+	
+	private String performCalculation(String oldValue, String newValue) {
 		Long oldValueAsLong = Long.parseLong(oldValue);
 		Long newValueAsLong = Long.parseLong(newValue);
 		Long difference = newValueAsLong - oldValueAsLong;		

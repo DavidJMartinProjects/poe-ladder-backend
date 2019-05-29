@@ -12,11 +12,11 @@ import com.poe.ladder.backend.leaderboard.domain.LeaderBoardEntry;
 @Service
 public class LeagueComparisonServiceImpl implements LeagueComparisonService {
 	
-	private List<LeaderBoardEntry> comparedLeagueList;	
 	private final static Logger LOG = LoggerFactory.getLogger(LeagueComparisonServiceImpl.class);
 	
 	public List<LeaderBoardEntry> compareLeague(List<LeaderBoardEntry> oldLeagueData, List<LeaderBoardEntry> newLeagueData) {
-		LOG.info("compareLeague called : attempting to compare league data to determine rank differences.");
+		LOG.info("compareLeague called : attempting to compare league data to determine rank differences for league : {} - {}", newLeagueData.get(0).getLeague(), newLeagueData.get(0).getLeaderboard());
+		List<LeaderBoardEntry> comparedLeagueList = new ArrayList<>();
 		for (LeaderBoardEntry newLeagueDataEntry : newLeagueData) {
 			for (LeaderBoardEntry oldLeagueDataEntry : oldLeagueData) {
 				comparedLeagueList = new ArrayList<>(newLeagueData);

@@ -19,6 +19,8 @@ import com.poe.ladder.backend.leaderboard.domain.LeaderBoardEntry;
 @SpringBootTest( classes = PoeLadderBackendApplication.class)	
 public class LeagueComparisonServiceImplTest {
 	
+	private static final String TEST_LEADERBOARD = "test_leaderboard";
+	private static final String TEST_LEAGUE_NAME = "test_leagueName";
 	private static final String TEST_CHARACTER_ID = "abc_123";
 	private static final String TEST_CHARACTER_NAME = "test_characterName";
 	private static final String TEST_ACCOUNT_NAME = "test_accountName";
@@ -39,6 +41,8 @@ public class LeagueComparisonServiceImplTest {
 		oldLeagueEntry.setAscendancy(TEST_ASCENDANCY);
 		oldLeagueEntry.setCharacter(TEST_CHARACTER_NAME);
 		oldLeagueEntry.setCharacterId(TEST_CHARACTER_ID);
+		oldLeagueEntry.setLeague(TEST_LEAGUE_NAME);
+		oldLeagueEntry.setLeaderboard(TEST_LEADERBOARD);
 		oldLeagueEntry.setRank("10");		
 		oldLeagueEntry.setExperience("100,000,000");	
 		oldLeagueEntryList.add(oldLeagueEntry);
@@ -47,6 +51,8 @@ public class LeagueComparisonServiceImplTest {
 		newLeagueEntry.setAscendancy(TEST_ASCENDANCY);
 		newLeagueEntry.setCharacter(TEST_CHARACTER_NAME);
 		newLeagueEntry.setCharacterId(TEST_CHARACTER_ID);
+		newLeagueEntry.setLeague(TEST_LEAGUE_NAME);
+		newLeagueEntry.setLeaderboard(TEST_LEADERBOARD);
 		newLeagueEntry.setRank("8");		
 		newLeagueEntry.setExperience("100,200,000");	
 		newLeagueEntryList.add(newLeagueEntry);

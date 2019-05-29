@@ -16,8 +16,8 @@ public class LeaderBoardEntry {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name="char_id")
-	private String characterId; 
+	@Column(name="char_id")   
+	private String characterId;   
 	
 	@Column(name="rank")
 	private String rank; 

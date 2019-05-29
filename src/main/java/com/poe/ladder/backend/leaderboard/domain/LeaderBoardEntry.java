@@ -16,8 +16,14 @@ public class LeaderBoardEntry {
 	@Column(name="id")
 	private long id;
 	
+	@Column(name="char_id")
+	private String characterId; 
+	
 	@Column(name="rank")
 	private String rank; 
+	
+	@Column(name="rank_difference")
+	private String rankDifference; 
 	
 	@Column(name="account")
 	private String account;
@@ -40,11 +46,17 @@ public class LeaderBoardEntry {
 	@Column(name="depth")
 	private Integer depth;
 	
+	@Column(name="depth_difference")
+	private Integer depthDifference;
+	
 	@Column(name="level")
 	private String level;
 	
-	@Column(name="experience")
+	@Column(name="xp")
 	private String experience;
+	
+	@Column(name="xp_difference")
+	private String experienceDifference;
 	
 	@Column(name="progress")
 	private String progress;
@@ -124,11 +136,9 @@ public class LeaderBoardEntry {
 	public void setProgress(String progress) {
 		this.progress = progress;
 	}
-
 	public String getOnline() {
 		return online;
 	}
-
 	public void setOnline(String online) {
 		this.online = online;
 	}
@@ -136,29 +146,42 @@ public class LeaderBoardEntry {
 	public String getDead() {
 		return dead;
 	}
-
 	public void setDead(String dead) {
 		this.dead = dead;
 	}
-
+	public String getCharacterId() {
+		return characterId;
+	}
+	public void setCharacterId(String characterId) {
+		this.characterId = characterId;
+	}
+	public String getRankDifference() {
+		return rankDifference;
+	}
+	public void setRankDifference(String rankDifference) {
+		this.rankDifference = rankDifference;
+	}
+	public Integer getDepthDifference() {
+		return depthDifference;
+	}
+	public void setDepthDifference(Integer depthDifference) {
+		this.depthDifference = depthDifference;
+	}
+	public String getExperienceDifference() {
+		return experienceDifference;
+	}
+	public void setExperienceDifference(String experienceDifference) {
+		this.experienceDifference = experienceDifference;
+	}
+	
 	@Override
 	public String toString() {
-		return "LeaderBoardEntry{" +
-				"id=" + id +
-				", rank='" + rank + '\'' +
-				", account='" + account + '\'' +
-				", online='" + online + '\'' +
-				", dead='" + dead + '\'' +
-				", character='" + character + '\'' +
-				", ascendancy='" + ascendancy + '\'' +
-				", time='" + time + '\'' +
-				", depth=" + depth +
-				", level='" + level + '\'' +
-				", experience='" + experience + '\'' +
-				", progress='" + progress + '\'' +
-				", league='" + league + '\'' +
-				", leaderboard='" + leaderboard + '\'' +
-				'}';
+		return "LeaderBoardEntry [id=" + id + ", characterId=" + characterId + ", rank=" + rank + ", rankDifference="
+				+ rankDifference + ", account=" + account + ", online=" + online + ", dead=" + dead + ", character="
+				+ character + ", ascendancy=" + ascendancy + ", time=" + time + ", depth=" + depth
+				+ ", depthDifference=" + depthDifference + ", level=" + level + ", experience=" + experience
+				+ ", experienceDifference=" + experienceDifference + ", progress=" + progress + ", league=" + league
+				+ ", leaderboard=" + leaderboard + "]";
 	}
 
 }

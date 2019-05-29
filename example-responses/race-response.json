@@ -1,0 +1,2462 @@
+// 20190529101454
+// http://api.pathofexile.com/ladders/Synthesis?limit=100
+
+{
+  "total": 15000,
+  "cached_since": "2019-05-29T09:14:04+00:00",
+  "entries": [
+    {
+      "rank": 1,
+      "dead": false,
+      "online": true,
+      "character": {
+        "name": "PaZam_NomicMVP",
+        "level": 100,
+        "class": "Inquisitor",
+        "id": "f1158219af277161c831df72f8e3a1e9932927ea53229336d92e57dee5b0e203",
+        "experience": 4250334444,
+        "depth": {
+          "default": 192,
+          "solo": 192
+        }
+      },
+      "account": {
+        "name": "xPazam",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "pazam"
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Chuba_NomicMVP",
+        "level": 100,
+        "class": "Deadeye",
+        "id": "9b6351df5e24468df86fd15f09c746727775adcb22eb10a6238803f94fc0f74a",
+        "experience": 4250334444,
+        "depth": {
+          "default": 600,
+          "solo": 600
+        }
+      },
+      "account": {
+        "name": "chuba19",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "blubbakachuba"
+        }
+      }
+    },
+    {
+      "rank": 3,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Bane_NomicMVP",
+        "level": 100,
+        "class": "Elementalist",
+        "id": "70ceeb5beddae89502bb88b4fb3b99ef905663f970ea03b77fa4a2b7bcb6e250",
+        "experience": 4250334444
+      },
+      "account": {
+        "name": "1BaneBoy",
+        "realm": "pc",
+        "challenges": {
+          "total": 26
+        },
+        "twitch": {
+          "name": "baneboy"
+        }
+      }
+    },
+    {
+      "rank": 4,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Dodi_NomicMVP",
+        "level": 100,
+        "class": "Ascendant",
+        "id": "c9ed1125d348f079c4f34117b949a3df2d9547269b621d06bb3f606aed3459d9",
+        "experience": 4250334444
+      },
+      "account": {
+        "name": "Dodipoe",
+        "realm": "pc",
+        "challenges": {
+          "total": 20
+        },
+        "twitch": {
+          "name": "mynameisdodi"
+        }
+      }
+    },
+    {
+      "rank": 5,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Para_Synthesis",
+        "level": 100,
+        "class": "Deadeye",
+        "id": "e199f2cda2e1373716bbb3976ed79b7e098f01a0379b5b20c74f6f955f928a96",
+        "experience": 4250334444,
+        "depth": {
+          "default": 152,
+          "solo": 152
+        }
+      },
+      "account": {
+        "name": "Parahai",
+        "realm": "pc",
+        "challenges": {
+          "total": 15
+        },
+        "twitch": {
+          "name": "parahai"
+        }
+      }
+    },
+    {
+      "rank": 6,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Falling_Synthesis",
+        "level": 100,
+        "class": "Occultist",
+        "id": "e00c512b8f33c80f3fcfdbd8f57db79af4552d24313bae2b4f55117189441c99",
+        "experience": 4250334444
+      },
+      "account": {
+        "name": "Heavenz",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        }
+      }
+    },
+    {
+      "rank": 7,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "redsameri_PoEsports",
+        "level": 100,
+        "class": "Guardian",
+        "id": "754da6c2c2310d2143eddb502d65e3777dddd557a11c67e417d27d1f69e92cb3",
+        "experience": 4250334444
+      },
+      "account": {
+        "name": "redsameri",
+        "realm": "pc",
+        "challenges": {
+          "total": 18
+        },
+        "twitch": {
+          "name": "redsameri"
+        }
+      }
+    },
+    {
+      "rank": 8,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "TeamVelocity_Zet",
+        "level": 100,
+        "class": "Ascendant",
+        "id": "076a6c5a3b1e3b175c1240e938707dee0f2095da93ff2e80499fcd3e70a49721",
+        "experience": 4250334444,
+        "depth": {
+          "default": 602,
+          "solo": 0
+        }
+      },
+      "account": {
+        "name": "piratkuk",
+        "realm": "pc",
+        "challenges": {
+          "total": 36
+        },
+        "twitch": {
+          "name": "zetpro"
+        }
+      }
+    },
+    {
+      "rank": 9,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Manni_Handcaster",
+        "level": 100,
+        "class": "Trickster",
+        "id": "116b81b85ef6040a725670698fb3d8f91e9048aab38058a1cdbaf9f45d0f92a7",
+        "experience": 4250334444,
+        "depth": {
+          "default": 525,
+          "solo": 525
+        }
+      },
+      "account": {
+        "name": "comoestoy",
+        "realm": "pc",
+        "challenges": {
+          "total": 37
+        },
+        "twitch": {
+          "name": "manni2"
+        }
+      }
+    },
+    {
+      "rank": 10,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Fayde_monkaS",
+        "level": 100,
+        "class": "Ascendant",
+        "id": "324b71917b0edf1efecbc709736014dcd4e6df074c48a111201fce1ae96f717b",
+        "experience": 4250334444,
+        "depth": {
+          "default": 2,
+          "solo": 0
+        }
+      },
+      "account": {
+        "name": "HeyImFayde",
+        "realm": "pc",
+        "challenges": {
+          "total": 12
+        }
+      }
+    },
+    {
+      "rank": 11,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "zululHHFarmer",
+        "level": 100,
+        "class": "Deadeye",
+        "id": "c3d9a13b585d8e84adb4f479de0cee7acfb19163e395a46d8173b7f40d220bbb",
+        "experience": 4250334444,
+        "depth": {
+          "default": 88,
+          "solo": 88
+        }
+      },
+      "account": {
+        "name": "Poefarm_1",
+        "realm": "pc",
+        "challenges": {
+          "total": 12
+        }
+      }
+    },
+    {
+      "rank": 12,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Evan_PoEsports",
+        "level": 100,
+        "class": "Occultist",
+        "id": "e7ca4021b5bcd4e9bd9e02c11c69d2fd300e75d8afb8181ebb88c055fa5c0e12",
+        "experience": 4250334444
+      },
+      "account": {
+        "name": "Grantador",
+        "realm": "pc",
+        "challenges": {
+          "total": 14
+        },
+        "twitch": {
+          "name": "yawgnorw"
+        }
+      }
+    },
+    {
+      "rank": 13,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "CaveretienSynth",
+        "level": 100,
+        "class": "Raider",
+        "id": "848c406701161c4e8e44b2fdfcfe1d931bc306f6f7a6d0e301e1f57153a0a333",
+        "experience": 4250334444,
+        "depth": {
+          "default": 1000,
+          "solo": 1000
+        }
+      },
+      "account": {
+        "name": "r9duc",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "caveretien"
+        }
+      }
+    },
+    {
+      "rank": 14,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "BOTTOM___TEXT",
+        "level": 100,
+        "class": "Deadeye",
+        "id": "aa5bb305e7208626f65a13d70ee966f9ef22b77b31e1d6dbb76d3101401ad209",
+        "experience": 4250334444,
+        "depth": {
+          "default": 600,
+          "solo": 600
+        }
+      },
+      "account": {
+        "name": "1322837",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "im1322837"
+        }
+      }
+    },
+    {
+      "rank": 15,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "LeaxaInMyMouth",
+        "level": 100,
+        "class": "Ascendant",
+        "id": "7956dde7babf3255f11d69b2dc3ce03408fe07b6ae5d4ff240fd02de088c00c9",
+        "experience": 4250334444
+      },
+      "account": {
+        "name": "Ragingbeerd",
+        "realm": "pc",
+        "challenges": {
+          "total": 36
+        },
+        "twitch": {
+          "name": "rickayqq"
+        }
+      }
+    },
+    {
+      "rank": 16,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "BOO_WTF",
+        "level": 100,
+        "class": "Occultist",
+        "id": "8afaa351c7bb6b98b87aa2bad37e3ba4081be4fbc99b28366e35d7bd8e2a5aca",
+        "experience": 4250334444,
+        "depth": {
+          "default": 1909,
+          "solo": 1909
+        }
+      },
+      "account": {
+        "name": "Mikle",
+        "realm": "pc",
+        "challenges": {
+          "total": 12
+        }
+      }
+    },
+    {
+      "rank": 17,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Buendner_Bergaffe",
+        "level": 100,
+        "class": "Ascendant",
+        "id": "51d1aa73621ef63090e2dff7df6883149e25576f5b5c568246551de1b70f096f",
+        "experience": 4250334444,
+        "depth": {
+          "default": 580,
+          "solo": 0
+        }
+      },
+      "account": {
+        "name": "Balko",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        }
+      }
+    },
+    {
+      "rank": 18,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "PraiseKingOfUruk",
+        "level": 100,
+        "class": "Ascendant",
+        "id": "f6e32c8b721bfc0437475a9961b76854f9f6e5f144da53f7db818797e2c6fa24",
+        "experience": 4250334444,
+        "depth": {
+          "default": 2,
+          "solo": 0
+        }
+      },
+      "account": {
+        "name": "Towlg",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        }
+      }
+    },
+    {
+      "rank": 19,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "NTX_NepNep",
+        "level": 100,
+        "class": "Ascendant",
+        "id": "4ca059f2fed1425ab9c6e94f7010aad04ba59e51022d93065a5c3fc351a36876",
+        "experience": 4250334444,
+        "depth": {
+          "default": 400,
+          "solo": 0
+        }
+      },
+      "account": {
+        "name": "Nottiex",
+        "realm": "pc",
+        "challenges": {
+          "total": 21
+        },
+        "twitch": {
+          "name": "nottiex"
+        }
+      }
+    },
+    {
+      "rank": 20,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "TwoBoobsOneSupp",
+        "level": 100,
+        "class": "Occultist",
+        "id": "d3413f7bfe1d4adf1e091d35197bdb63ecc2eebac2636b00c4d3a52886a2c94d",
+        "experience": 4250334444,
+        "depth": {
+          "default": 654,
+          "solo": 654
+        }
+      },
+      "account": {
+        "name": "brave_b0obs",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        }
+      }
+    },
+    {
+      "rank": 21,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Ontop_Synthesis",
+        "level": 100,
+        "class": "Raider",
+        "id": "6f9c875059ac26b9b7db15420abd3af00e582a2aeea08dfdc75de3d2311e7268",
+        "experience": 4250334444,
+        "depth": {
+          "default": 601,
+          "solo": 601
+        }
+      },
+      "account": {
+        "name": "maydie13",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "ontop13"
+        }
+      }
+    },
+    {
+      "rank": 22,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Tzn_Leatherman",
+        "level": 100,
+        "class": "Occultist",
+        "id": "5da0f231ccc665293b0a5dafbc301146a299838fbb364f47cb3e61602a7bbd3e",
+        "experience": 4250334444,
+        "depth": {
+          "default": 446,
+          "solo": 0
+        }
+      },
+      "account": {
+        "name": "TheTzn",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "thetzn"
+        }
+      }
+    },
+    {
+      "rank": 23,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "RickayInMyMouth",
+        "level": 100,
+        "class": "Deadeye",
+        "id": "d2827231d1f563977b06b1755cba8707297b97676e53d1d8105f80e4633ec132",
+        "experience": 4250334444,
+        "depth": {
+          "default": 382,
+          "solo": 218
+        }
+      },
+      "account": {
+        "name": "Leaxa7",
+        "realm": "pc",
+        "challenges": {
+          "total": 36
+        },
+        "twitch": {
+          "name": "leaxa"
+        }
+      }
+    },
+    {
+      "rank": 24,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Cut",
+        "level": 100,
+        "class": "Hierophant",
+        "id": "7060a034b8a18cf0881ab3b09178d1402a46186b2f31002fede0fc137a546b32",
+        "experience": 4250334444,
+        "depth": {
+          "default": 414,
+          "solo": 414
+        }
+      },
+      "account": {
+        "name": "ggEASYY",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "nikoliini"
+        }
+      }
+    },
+    {
+      "rank": 25,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "kayl_FEST",
+        "level": 100,
+        "class": "Elementalist",
+        "id": "86f8fc18f54d00efcd61392cf0a1d21b9a2dbb5d87f8b8251642169fd1c29762",
+        "experience": 4250334444,
+        "depth": {
+          "default": 600,
+          "solo": 600
+        }
+      },
+      "account": {
+        "name": "wahlin",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        }
+      }
+    },
+    {
+      "rank": 26,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "DuelistPoo",
+        "level": 100,
+        "class": "Gladiator",
+        "id": "cee21ffc2c6757367e8ea6c9fe2085a7fb8058e31c390b8f4202ff132a0d5ea8",
+        "experience": 4250334444,
+        "depth": {
+          "default": 508,
+          "solo": 508
+        }
+      },
+      "account": {
+        "name": "n00ba1",
+        "realm": "pc",
+        "challenges": {
+          "total": 36
+        },
+        "twitch": {
+          "name": "megap00p"
+        }
+      }
+    },
+    {
+      "rank": 27,
+      "dead": false,
+      "online": true,
+      "character": {
+        "name": "xBuzGibix",
+        "level": 100,
+        "class": "Occultist",
+        "id": "649896c0df6264f907818fd0f4d5ee40d5180f79e5c0c49e3a6be243a3c01373",
+        "experience": 4250334444,
+        "depth": {
+          "default": 1170,
+          "solo": 1170
+        }
+      },
+      "account": {
+        "name": "XAntorX",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        }
+      }
+    },
+    {
+      "rank": 28,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "jimmy_jetpack",
+        "level": 100,
+        "class": "Necromancer",
+        "id": "76e9226b7a2fd9f9e73c4752d354017e5460314fa94ea4ad294b6eb1da3c4c7e",
+        "experience": 4250334444,
+        "depth": {
+          "default": 309,
+          "solo": 309
+        }
+      },
+      "account": {
+        "name": "swoozers",
+        "realm": "pc",
+        "challenges": {
+          "total": 22
+        },
+        "twitch": {
+          "name": "lubbic"
+        }
+      }
+    },
+    {
+      "rank": 29,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "subaru_______",
+        "level": 100,
+        "class": "Inquisitor",
+        "id": "7e3c1c5bd656c805445cfb0be4fc41a4b7de419ee3e7cf4207eb2ad8259f4556",
+        "experience": 4250334444,
+        "depth": {
+          "default": 21,
+          "solo": 0
+        }
+      },
+      "account": {
+        "name": "thenoahman",
+        "realm": "pc",
+        "challenges": {
+          "total": 18
+        }
+      }
+    },
+    {
+      "rank": 30,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "cornbreadsmallbrainman",
+        "level": 100,
+        "class": "Juggernaut",
+        "id": "f3f586608653094867e8e59c9b9edcd1e47af49169e734bfb38ec0218deebdf9",
+        "experience": 4250334444,
+        "depth": {
+          "default": 283,
+          "solo": 283
+        }
+      },
+      "account": {
+        "name": "derpin3",
+        "realm": "pc",
+        "challenges": {
+          "total": 10
+        }
+      }
+    },
+    {
+      "rank": 31,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Tikkaidk",
+        "level": 100,
+        "class": "Occultist",
+        "id": "392410df41931cefdb9979bd14ee506203b61b333fbd24ff33e7828847fa85cc",
+        "experience": 4250334444,
+        "depth": {
+          "default": 39,
+          "solo": 0
+        }
+      },
+      "account": {
+        "name": "Tikka7",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "tikkasd"
+        }
+      }
+    },
+    {
+      "rank": 32,
+      "dead": false,
+      "online": true,
+      "character": {
+        "name": "AzulBlazeBrrrrrrrrrrrah",
+        "level": 100,
+        "class": "Elementalist",
+        "id": "0f89812ec89c027a7d81f045645e51819a34b24160502a57dd6d4a819e1f9472",
+        "experience": 4250334444,
+        "depth": {
+          "default": 397,
+          "solo": 392
+        }
+      },
+      "account": {
+        "name": "fwz3",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "fwz3"
+        }
+      }
+    },
+    {
+      "rank": 33,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Blackpawx",
+        "level": 100,
+        "class": "Occultist",
+        "id": "563847624b5bb26477a42296f71477dc4a147d17518dfe6c990e5b1597b6eb15",
+        "experience": 4250334444,
+        "depth": {
+          "default": 255,
+          "solo": 255
+        }
+      },
+      "account": {
+        "name": "BlackpawYB",
+        "realm": "pc",
+        "challenges": {
+          "total": 20
+        }
+      }
+    },
+    {
+      "rank": 34,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Sarkasmos_WhosePort",
+        "level": 100,
+        "class": "Trickster",
+        "id": "9daadfe937db2358f9071ee7056c97ee73eb4e94f0b3718ba7bb038a440e6bdd",
+        "experience": 4250334444,
+        "depth": {
+          "default": 293,
+          "solo": 293
+        }
+      },
+      "account": {
+        "name": "Sarkasmos",
+        "realm": "pc",
+        "challenges": {
+          "total": 37
+        },
+        "twitch": {
+          "name": "sarkasmoslol"
+        }
+      }
+    },
+    {
+      "rank": 35,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Brumz_Synthesis",
+        "level": 100,
+        "class": "Trickster",
+        "id": "496fcf03fab381eab70f6d37667cbbdb2b7c7e86e068f3d7a88c38fb4103b638",
+        "experience": 4250334444,
+        "depth": {
+          "default": 347,
+          "solo": 347
+        }
+      },
+      "account": {
+        "name": "brumz7",
+        "realm": "pc",
+        "challenges": {
+          "total": 31
+        }
+      }
+    },
+    {
+      "rank": 36,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "HandCastingIntensifies",
+        "level": 100,
+        "class": "Occultist",
+        "id": "b1b814a03a499dabafbf05083d59bfd14cab53103733f91f35449b9c0be40289",
+        "experience": 4250334444,
+        "depth": {
+          "default": 1287,
+          "solo": 1287
+        }
+      },
+      "account": {
+        "name": "iceman33927",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "therealslyboogie"
+        }
+      }
+    },
+    {
+      "rank": 37,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Sacrety_Synthesis",
+        "level": 100,
+        "class": "Elementalist",
+        "id": "5fa1a74ce2bda998e5ee859ad637f3619b14544bdb6be338ba86ac5332aedadc",
+        "experience": 4250334444,
+        "depth": {
+          "default": 358,
+          "solo": 358
+        }
+      },
+      "account": {
+        "name": "Sacrety",
+        "realm": "pc",
+        "challenges": {
+          "total": 28
+        }
+      }
+    },
+    {
+      "rank": 38,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "__VOC",
+        "level": 100,
+        "class": "Occultist",
+        "id": "d960930eada927b671ecef9a2aefc4ef0b066669f5ee9428569a94f1d0e61fa0",
+        "experience": 4250334444,
+        "depth": {
+          "default": 199,
+          "solo": 199
+        }
+      },
+      "account": {
+        "name": "Jentry",
+        "realm": "pc",
+        "challenges": {
+          "total": 19
+        },
+        "twitch": {
+          "name": "jentry"
+        }
+      }
+    },
+    {
+      "rank": 39,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "NanachiQ",
+        "level": 100,
+        "class": "Ascendant",
+        "id": "964cf7f4f9746bb61acded27ca7d4cca37824eb21e76994c38520a7d09cdcabd",
+        "experience": 4250334444,
+        "depth": {
+          "default": 2,
+          "solo": 0
+        }
+      },
+      "account": {
+        "name": "aomine909",
+        "realm": "pc",
+        "challenges": {
+          "total": 21
+        },
+        "twitch": {
+          "name": "tolyasiq"
+        }
+      }
+    },
+    {
+      "rank": 40,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "last_nospellmeta",
+        "level": 100,
+        "class": "Champion",
+        "id": "a75730bdd25df1cf4e8623cf2c74375090aed1d5cb825c00f1ab489c004cc943",
+        "experience": 4250334444,
+        "depth": {
+          "default": 600,
+          "solo": 600
+        }
+      },
+      "account": {
+        "name": "lastsamurai119",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        }
+      }
+    },
+    {
+      "rank": 41,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "MizSupports",
+        "level": 100,
+        "class": "Ascendant",
+        "id": "9dd32f116350ff8bc341c6de8c57f1f2090c0092e52c833aae4c4e942d3f7f2e",
+        "experience": 4250334444,
+        "depth": {
+          "default": 2,
+          "solo": 0
+        }
+      },
+      "account": {
+        "name": "Miz",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "miz__"
+        }
+      }
+    },
+    {
+      "rank": 42,
+      "dead": false,
+      "online": true,
+      "character": {
+        "name": "dowirak",
+        "level": 100,
+        "class": "Ascendant",
+        "id": "59a6a24dc9fe7653dfb0dbf788b4c91ecb43a5dbe05ab74dfc6b8215c13e7e28",
+        "experience": 4250334444,
+        "depth": {
+          "default": 72,
+          "solo": 0
+        }
+      },
+      "account": {
+        "name": "top1",
+        "realm": "pc",
+        "challenges": {
+          "total": 36
+        },
+        "twitch": {
+          "name": "hatanon"
+        }
+      }
+    },
+    {
+      "rank": 43,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "rofldid",
+        "level": 100,
+        "class": "Guardian",
+        "id": "a06342d64a8a361949d0fdc9b550542a5a62e03ea49c670f0ac283c918b20c4e",
+        "experience": 4250334444,
+        "depth": {
+          "default": 2,
+          "solo": 0
+        }
+      },
+      "account": {
+        "name": "Uniqueexe",
+        "realm": "pc",
+        "challenges": {
+          "total": 14
+        }
+      }
+    },
+    {
+      "rank": 44,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "PepegaWWW",
+        "level": 100,
+        "class": "Elementalist",
+        "id": "87ac617f8669416042b53279444ed5c292ed8796b9b7a662f704ddeb4cb698c1",
+        "experience": 4250334444,
+        "depth": {
+          "default": 288,
+          "solo": 288
+        }
+      },
+      "account": {
+        "name": "noway55",
+        "realm": "pc",
+        "challenges": {
+          "total": 17
+        }
+      }
+    },
+    {
+      "rank": 45,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Soukke_Ma_Doukke",
+        "level": 100,
+        "class": "Trickster",
+        "id": "81398f5e26ddbb5102c72a303dabd989aee6673b419fc4f0471b5b52577fa4b0",
+        "experience": 4250334444,
+        "depth": {
+          "default": 399,
+          "solo": 344
+        }
+      },
+      "account": {
+        "name": "soukke",
+        "realm": "pc",
+        "challenges": {
+          "total": 36
+        }
+      }
+    },
+    {
+      "rank": 46,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "GokuItsRaining",
+        "level": 100,
+        "class": "Trickster",
+        "id": "3725d8e4c90b49e5ba2b1a8773d009dda539b0cf1adaeaeaefb34cdeb6abe7b1",
+        "experience": 4250334444,
+        "depth": {
+          "default": 441,
+          "solo": 441
+        }
+      },
+      "account": {
+        "name": "typicaldemon",
+        "realm": "pc",
+        "challenges": {
+          "total": 36
+        },
+        "twitch": {
+          "name": "typicaldemon2"
+        }
+      }
+    },
+    {
+      "rank": 47,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Soukis",
+        "level": 100,
+        "class": "Elementalist",
+        "id": "35b3babb98a647cc8eed14eab36269c12c98a0f471a651eba89b17fafe918e6d",
+        "experience": 4250334444,
+        "depth": {
+          "default": 600,
+          "solo": 600
+        }
+      },
+      "account": {
+        "name": "i3rutus",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        }
+      }
+    },
+    {
+      "rank": 48,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "MosambikLevaTri",
+        "level": 100,
+        "class": "Trickster",
+        "id": "c7d667c6dac9e12c189ea73f31398b2e0f1ca516ef622b772f6a463f8b563002",
+        "experience": 4250334444,
+        "depth": {
+          "default": 349,
+          "solo": 349
+        }
+      },
+      "account": {
+        "name": "Lepsutin",
+        "realm": "pc",
+        "challenges": {
+          "total": 36
+        },
+        "twitch": {
+          "name": "lepsutin"
+        }
+      }
+    },
+    {
+      "rank": 49,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Jaahson",
+        "level": 100,
+        "class": "Trickster",
+        "id": "83f3a268ab69bc93ddf627ab732925686738cd0f523a1e186d7eb29c8703fbb7",
+        "experience": 4250334444,
+        "depth": {
+          "default": 416,
+          "solo": 416
+        }
+      },
+      "account": {
+        "name": "Alyxs",
+        "realm": "pc",
+        "challenges": {
+          "total": 37
+        }
+      }
+    },
+    {
+      "rank": 50,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Falling__Synthesis",
+        "level": 100,
+        "class": "Deadeye",
+        "id": "2918b6745ede8326f105a014324306d4e7098aa9b4984fdb2d1528d3c6e99ef4",
+        "experience": 4250334444,
+        "depth": {
+          "default": 129,
+          "solo": 129
+        }
+      },
+      "account": {
+        "name": "Heavenz",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        }
+      }
+    },
+    {
+      "rank": 51,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Nutri_Nips",
+        "level": 100,
+        "class": "Occultist",
+        "id": "af4caa024905f3f588e67db61d7df551a32652a48d9944c7433684bfdfc6402b",
+        "experience": 4250334444,
+        "depth": {
+          "default": 285,
+          "solo": 285
+        }
+      },
+      "account": {
+        "name": "Powerpuffin",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        }
+      }
+    },
+    {
+      "rank": 52,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "MementalistWO",
+        "level": 100,
+        "class": "Occultist",
+        "id": "37e3a9de62e3e76cc601a6c3849fee0f353fcc983dcaddbf2a221b6cd12fcaa8",
+        "experience": 4250334444,
+        "depth": {
+          "default": 326,
+          "solo": 326
+        }
+      },
+      "account": {
+        "name": "kaunet",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "kaunet23"
+        }
+      }
+    },
+    {
+      "rank": 53,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "GOSENG_BLEED_SUNDER",
+        "level": 100,
+        "class": "Champion",
+        "id": "b495b0a3d12e5a13862c19c9774baa0cc3153fd73a75c018271642db845369d5",
+        "experience": 4250334444,
+        "depth": {
+          "default": 963,
+          "solo": 963
+        }
+      },
+      "account": {
+        "name": "kkts123",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "kkts123"
+        }
+      }
+    },
+    {
+      "rank": 54,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "GiveMePiscatorBack",
+        "level": 100,
+        "class": "Pathfinder",
+        "id": "d1f555d7e15c567b23eef68bcabe5fc8b88d34e553d0969d1dc2098937e72299",
+        "experience": 4250334444,
+        "depth": {
+          "default": 288,
+          "solo": 288
+        }
+      },
+      "account": {
+        "name": "BiologicalOrganism",
+        "realm": "pc",
+        "challenges": {
+          "total": 37
+        },
+        "twitch": {
+          "name": "arclerris"
+        }
+      }
+    },
+    {
+      "rank": 55,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "VasyaChoppa",
+        "level": 100,
+        "class": "Champion",
+        "id": "401de48e3ef96a9fbaf1033fc2c2599d101c94e58251a5c1bd8a59fca8d765e6",
+        "experience": 4250334444,
+        "depth": {
+          "default": 2,
+          "solo": 0
+        }
+      },
+      "account": {
+        "name": "iDielord",
+        "realm": "pc",
+        "challenges": {
+          "total": 18
+        },
+        "twitch": {
+          "name": "rainwrath"
+        }
+      }
+    },
+    {
+      "rank": 56,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "melbacurses",
+        "level": 100,
+        "class": "Occultist",
+        "id": "fa984999a47fadff17faed17e7be905008d8e5de6bf1934bf68aa558b355cec8",
+        "experience": 4250334444,
+        "depth": {
+          "default": 135,
+          "solo": 0
+        }
+      },
+      "account": {
+        "name": "emfan",
+        "realm": "pc",
+        "challenges": {
+          "total": 10
+        }
+      }
+    },
+    {
+      "rank": 57,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "WaWaBot",
+        "level": 100,
+        "class": "Guardian",
+        "id": "76e7d4d242f25d6a29f73fc399e0ebdc77d61434eab2c5792cb637afef38f542",
+        "experience": 4250334444,
+        "depth": {
+          "default": 353,
+          "solo": 0
+        }
+      },
+      "account": {
+        "name": "Hommeinstruit",
+        "realm": "pc",
+        "challenges": {
+          "total": 37
+        },
+        "twitch": {
+          "name": "wolfmanlefou2"
+        }
+      }
+    },
+    {
+      "rank": 58,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Oceda_SYN",
+        "level": 100,
+        "class": "Deadeye",
+        "id": "a046de720e16df3f4a4b5b79894016db7ecc83bdb437e0f48bd6a48ed2806829",
+        "experience": 4250334444,
+        "depth": {
+          "default": 341,
+          "solo": 341
+        }
+      },
+      "account": {
+        "name": "ggOceda",
+        "realm": "pc",
+        "challenges": {
+          "total": 21
+        },
+        "twitch": {
+          "name": "oceda513"
+        }
+      }
+    },
+    {
+      "rank": 59,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "waveofouchies",
+        "level": 100,
+        "class": "Assassin",
+        "id": "675e447448f11b2e0198424c1261a45168e7a6de1d972cedc9516655f6e45493",
+        "experience": 4250334444,
+        "depth": {
+          "default": 401,
+          "solo": 401
+        }
+      },
+      "account": {
+        "name": "ArdyBacardi",
+        "realm": "pc",
+        "challenges": {
+          "total": 37
+        }
+      }
+    },
+    {
+      "rank": 60,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "_EK_Quisitor_",
+        "level": 100,
+        "class": "Inquisitor",
+        "id": "77bf3438179916290d3f352af78933f474e67c6f46174fc456f1917e1d555f45",
+        "experience": 4250334444,
+        "depth": {
+          "default": 600,
+          "solo": 600
+        }
+      },
+      "account": {
+        "name": "Contractor",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "elquark"
+        }
+      }
+    },
+    {
+      "rank": 61,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Hamato__Yoshi",
+        "level": 100,
+        "class": "Juggernaut",
+        "id": "fc3027ae930aca221794f4d789f0c8ec1fd3a10be3f46546fb9a7f97d3975362",
+        "experience": 4250334444,
+        "depth": {
+          "default": 881,
+          "solo": 881
+        }
+      },
+      "account": {
+        "name": "Ninjavanish83",
+        "realm": "pc",
+        "challenges": {
+          "total": 31
+        },
+        "twitch": {
+          "name": "ninjavanish83"
+        }
+      }
+    },
+    {
+      "rank": 62,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Carryani",
+        "level": 100,
+        "class": "Trickster",
+        "id": "5ef4c089626e637fc1b5b4a5b4082973f99a8f007f0a31fc7a847d89fcf78c4a",
+        "experience": 4250334444,
+        "depth": {
+          "default": 303,
+          "solo": 303
+        }
+      },
+      "account": {
+        "name": "SpicyaWolf",
+        "realm": "pc",
+        "challenges": {
+          "total": 21
+        },
+        "twitch": {
+          "name": "muhaisenpai"
+        }
+      }
+    },
+    {
+      "rank": 63,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "MargoSynthesized",
+        "level": 100,
+        "class": "Juggernaut",
+        "id": "00dc34fa30474c88841fbd78528d436121d5151c3dd3343507892c9f376fc8ef",
+        "experience": 4250334444,
+        "depth": {
+          "default": 523,
+          "solo": 523
+        }
+      },
+      "account": {
+        "name": "masteeer",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "masteeeer"
+        }
+      }
+    },
+    {
+      "rank": 64,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "PhilNineteenNinetyThree",
+        "level": 100,
+        "class": "Occultist",
+        "id": "581dd58f7c7f56c05d82434dc99b81b8573592e0792fa4bc2040b21c147c4670",
+        "experience": 4250334444,
+        "depth": {
+          "default": 602,
+          "solo": 602
+        }
+      },
+      "account": {
+        "name": "Toono_o",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "theresnopausemom"
+        }
+      }
+    },
+    {
+      "rank": 65,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "LoStGrOOveR",
+        "level": 100,
+        "class": "Occultist",
+        "id": "170bc8579cd829d35f85caf1a67e351bb2a0f5c5251aee75c887fbb5436d66f6",
+        "experience": 4250334444,
+        "depth": {
+          "default": 600,
+          "solo": 600
+        }
+      },
+      "account": {
+        "name": "LoStGr00ver",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        }
+      }
+    },
+    {
+      "rank": 66,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Titans_NaPenekSel",
+        "level": 100,
+        "class": "Berserker",
+        "id": "792dbf0e7512e813845e95b83dfa43c451eb65fe8ac60a2f2d711d46d7cb38d8",
+        "experience": 4250334444,
+        "depth": {
+          "default": 267,
+          "solo": 267
+        }
+      },
+      "account": {
+        "name": "TitansFury121",
+        "realm": "pc",
+        "challenges": {
+          "total": 28
+        }
+      }
+    },
+    {
+      "rank": 67,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "NIkaidou_Shinku",
+        "level": 100,
+        "class": "Occultist",
+        "id": "1bf969dc0721f4323eca3b162bbfbb0e2884fc6b617b66d72b3910dea999dccc",
+        "experience": 4250334444,
+        "depth": {
+          "default": 406,
+          "solo": 406
+        }
+      },
+      "account": {
+        "name": "alsiel",
+        "realm": "pc",
+        "challenges": {
+          "total": 37
+        }
+      }
+    },
+    {
+      "rank": 68,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Ninja_Mozambae",
+        "level": 100,
+        "class": "Elementalist",
+        "id": "33f9d5f1eb2858b3e757ccd573131329d61797fa861afd86beb0c7566acdc815",
+        "experience": 4250334444,
+        "depth": {
+          "default": 303,
+          "solo": 303
+        }
+      },
+      "account": {
+        "name": "NinjaKidnapper",
+        "realm": "pc",
+        "challenges": {
+          "total": 37
+        },
+        "twitch": {
+          "name": "everlastw"
+        }
+      }
+    },
+    {
+      "rank": 69,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "LeauRizPewPew",
+        "level": 100,
+        "class": "Occultist",
+        "id": "74b318d8805fa4e2460fb7980cb0e76ae0732fe7998675ddd15fab74f84d118a",
+        "experience": 4250334444,
+        "depth": {
+          "default": 446,
+          "solo": 446
+        }
+      },
+      "account": {
+        "name": "xJeSTeRo",
+        "realm": "pc",
+        "challenges": {
+          "total": 36
+        }
+      }
+    },
+    {
+      "rank": 70,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "TheSabotage_HotRide",
+        "level": 100,
+        "class": "Pathfinder",
+        "id": "dc01b04809a43490e69bed6a48d2250c155e5d882d6cc61826fc9cf7ec963fde",
+        "experience": 4250334444,
+        "depth": {
+          "default": 312,
+          "solo": 312
+        }
+      },
+      "account": {
+        "name": "braz1k",
+        "realm": "pc",
+        "challenges": {
+          "total": 24
+        },
+        "twitch": {
+          "name": "braz1k"
+        }
+      }
+    },
+    {
+      "rank": 71,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "FreeExpLeechMyLoot",
+        "level": 100,
+        "class": "Hierophant",
+        "id": "1461d0c22fff46f72fdb5dfbb51c079a4f37f753ba2b2b19751312eb0841f01d",
+        "experience": 4250334444
+      },
+      "account": {
+        "name": "99prosorc",
+        "realm": "pc",
+        "challenges": {
+          "total": 17
+        },
+        "twitch": {
+          "name": "fstd3"
+        }
+      }
+    },
+    {
+      "rank": 72,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "CuroDy",
+        "level": 100,
+        "class": "Elementalist",
+        "id": "9890a112f423d46367e393895d828cbf9c95e13c5fd576bbbc58ebf18dc20fca",
+        "experience": 4250334444,
+        "depth": {
+          "default": 601,
+          "solo": 601
+        }
+      },
+      "account": {
+        "name": "amazingsoft168",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        }
+      }
+    },
+    {
+      "rank": 73,
+      "dead": false,
+      "online": true,
+      "character": {
+        "name": "AcerbicTomato",
+        "level": 100,
+        "class": "Deadeye",
+        "id": "78eb5e50b075053a67a45759fc1385d739acc2aa52945c32a02b9bb5b5f4e1b8",
+        "experience": 4250334444,
+        "depth": {
+          "default": 490,
+          "solo": 490
+        }
+      },
+      "account": {
+        "name": "rowfy",
+        "realm": "pc",
+        "challenges": {
+          "total": 38
+        }
+      }
+    },
+    {
+      "rank": 74,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Coolber_Synthesis",
+        "level": 100,
+        "class": "Raider",
+        "id": "c2f8e04f787daadff8cc6b8d24f13dd6e12e6efaec8c82824351c709c53347fd",
+        "experience": 4250334444,
+        "depth": {
+          "default": 449,
+          "solo": 449
+        }
+      },
+      "account": {
+        "name": "Coolber",
+        "realm": "pc",
+        "challenges": {
+          "total": 37
+        },
+        "twitch": {
+          "name": "grasshopper1861"
+        }
+      }
+    },
+    {
+      "rank": 75,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Wunterurb",
+        "level": 100,
+        "class": "Elementalist",
+        "id": "58874d23faf1649a9f40d24b0905bceeb836ee1e2db59f75662d6330035d0138",
+        "experience": 4250334444,
+        "depth": {
+          "default": 286,
+          "solo": 286
+        }
+      },
+      "account": {
+        "name": "gustafklasson",
+        "realm": "pc",
+        "challenges": {
+          "total": 16
+        },
+        "twitch": {
+          "name": "guttelito2k"
+        }
+      }
+    },
+    {
+      "rank": 76,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Synthesis_ManaGuard",
+        "level": 100,
+        "class": "Guardian",
+        "id": "cde811f91a2f67c792df3af1f892a8e35121523c1fe923453d354478a2f4f426",
+        "experience": 4250334444
+      },
+      "account": {
+        "name": "aquatron",
+        "realm": "pc",
+        "challenges": {
+          "total": 16
+        }
+      }
+    },
+    {
+      "rank": 77,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "ToFarAwayLands",
+        "level": 100,
+        "class": "Elementalist",
+        "id": "5457584109d77755d81b2f3f551577097da57f20db3f6bd1b2a8d15898eda5ed",
+        "experience": 4250334444,
+        "depth": {
+          "default": 600,
+          "solo": 600
+        }
+      },
+      "account": {
+        "name": "TheKingInRed",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "har0har0"
+        }
+      }
+    },
+    {
+      "rank": 78,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Chill_Approach",
+        "level": 100,
+        "class": "Occultist",
+        "id": "c476e4893b2eddd17f42cd4d10f74449cd8d80aeae6c4ca57c365f59f4404fb7",
+        "experience": 4250334444,
+        "depth": {
+          "default": 562,
+          "solo": 562
+        }
+      },
+      "account": {
+        "name": "FoolTank",
+        "realm": "pc",
+        "challenges": {
+          "total": 38
+        },
+        "twitch": {
+          "name": "akr1tonz"
+        }
+      }
+    },
+    {
+      "rank": 79,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "summerisbitch",
+        "level": 100,
+        "class": "Elementalist",
+        "id": "822912c3f1834fcf284487c53e86f1f79ac6317a96084ba77a3e8ab077bb9cbb",
+        "experience": 4250334444,
+        "depth": {
+          "default": 372,
+          "solo": 372
+        }
+      },
+      "account": {
+        "name": "SpoonJuggler",
+        "realm": "pc",
+        "challenges": {
+          "total": 33
+        }
+      }
+    },
+    {
+      "rank": 80,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Zaeixj",
+        "level": 100,
+        "class": "Occultist",
+        "id": "33d22b1b5f79602a25c4c1cd0657e3632f869afa45957a3ebbb1bceb7d1be13b",
+        "experience": 4250334444,
+        "depth": {
+          "default": 276,
+          "solo": 276
+        }
+      },
+      "account": {
+        "name": "Artoasdf",
+        "realm": "pc",
+        "challenges": {
+          "total": 17
+        }
+      }
+    },
+    {
+      "rank": 81,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "NaughtyJJ_",
+        "level": 100,
+        "class": "Necromancer",
+        "id": "a0f5ba0a7dffc15904335ed50b1fc742e591fa4d6694aed3ced827e0400f7f18",
+        "experience": 4250334444,
+        "depth": {
+          "default": 271,
+          "solo": 271
+        }
+      },
+      "account": {
+        "name": "Naught1JJ",
+        "realm": "pc",
+        "challenges": {
+          "total": 28
+        },
+        "twitch": {
+          "name": "naughtyjj_"
+        }
+      }
+    },
+    {
+      "rank": 82,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "mishapluspodvoh",
+        "level": 100,
+        "class": "Champion",
+        "id": "71f0741aabd62068248bb8d811fca261eb4ed2a50eb6c86280bd63b8968e2ecd",
+        "experience": 4250334444,
+        "depth": {
+          "default": 295,
+          "solo": 295
+        }
+      },
+      "account": {
+        "name": "monekeykea",
+        "realm": "pc",
+        "challenges": {
+          "total": 30
+        },
+        "twitch": {
+          "name": "monkeykea"
+        }
+      }
+    },
+    {
+      "rank": 83,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "PolloSynthesis",
+        "level": 100,
+        "class": "Necromancer",
+        "id": "e520b9aa8abe4fdba95d86c9c3ff193feb398c3bb23019f1ce4c825f393acb22",
+        "experience": 4250334444,
+        "depth": {
+          "default": 141,
+          "solo": 141
+        }
+      },
+      "account": {
+        "name": "PolloStrike",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "pollostrike"
+        }
+      }
+    },
+    {
+      "rank": 84,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "mutualistic",
+        "level": 100,
+        "class": "Occultist",
+        "id": "d7a32ed90fe23a12ceb3fb30b5bb3551219e2a6fe6295214c2f9a1fa22480f7c",
+        "experience": 4250334444,
+        "depth": {
+          "default": 265,
+          "solo": 265
+        }
+      },
+      "account": {
+        "name": "ShermanDiablo",
+        "realm": "pc",
+        "challenges": {
+          "total": 34
+        },
+        "twitch": {
+          "name": "shermanhour"
+        }
+      }
+    },
+    {
+      "rank": 85,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "thisisntdivision",
+        "level": 100,
+        "class": "Trickster",
+        "id": "8b2b7429da15e619b3dd2388ea0a39557fb655e02a796ca1fa60ca8f8f773a76",
+        "experience": 4250334444
+      },
+      "account": {
+        "name": "Arafia",
+        "realm": "pc",
+        "challenges": {
+          "total": 27
+        },
+        "twitch": {
+          "name": "arafia"
+        }
+      }
+    },
+    {
+      "rank": 86,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Mogelpackung",
+        "level": 100,
+        "class": "Trickster",
+        "id": "61779483222e5b6db014b18bbceb5d40dbead69f15102181ea4c22d4304daddd",
+        "experience": 4250334444,
+        "depth": {
+          "default": 389,
+          "solo": 389
+        }
+      },
+      "account": {
+        "name": "IamValfar",
+        "realm": "pc",
+        "challenges": {
+          "total": 37
+        },
+        "twitch": {
+          "name": "valfar11"
+        }
+      }
+    },
+    {
+      "rank": 87,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "AKANE_DontBuffManaCost",
+        "level": 100,
+        "class": "Ascendant",
+        "id": "fb707bdc6d6aca3c6e203ee3743c038c5ae814c26df86fb8fb2fd1774109ef5a",
+        "experience": 4250334444,
+        "depth": {
+          "default": 455,
+          "solo": 455
+        }
+      },
+      "account": {
+        "name": "HukamiN",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "akn_rts"
+        }
+      }
+    },
+    {
+      "rank": 88,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "zoofive",
+        "level": 100,
+        "class": "Ascendant",
+        "id": "e4dc77c697b36a9ceddcdef05cd4152e93439fa4228a88494479a793933dbb5b",
+        "experience": 4250334444,
+        "depth": {
+          "default": 679,
+          "solo": 679
+        }
+      },
+      "account": {
+        "name": "zoo5",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "zoo_addict"
+        }
+      }
+    },
+    {
+      "rank": 89,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "_Kestas",
+        "level": 100,
+        "class": "Elementalist",
+        "id": "c2d47cbe9faa6df03ca95dac73523e8f696bf94118565b69cb3487d6e72e33d6",
+        "experience": 4250334444,
+        "depth": {
+          "default": 204,
+          "solo": 191
+        }
+      },
+      "account": {
+        "name": "bybas",
+        "realm": "pc",
+        "challenges": {
+          "total": 19
+        },
+        "twitch": {
+          "name": "ltfolk"
+        }
+      }
+    },
+    {
+      "rank": 90,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "karaluch_hoa",
+        "level": 100,
+        "class": "Gladiator",
+        "id": "fcfe734e6688026f1aa84b5533ae23696c8096eda571287d619154e0e22b5d55",
+        "experience": 4250334444,
+        "depth": {
+          "default": 925,
+          "solo": 917
+        }
+      },
+      "account": {
+        "name": "ciociagosia",
+        "realm": "pc",
+        "challenges": {
+          "total": 16
+        }
+      }
+    },
+    {
+      "rank": 91,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "nkzaa",
+        "level": 100,
+        "class": "Elementalist",
+        "id": "80bc7891c83330cc3914bcfdbb5defd9d2e5739bd65e86c1e1dd685ad1cc05ea",
+        "experience": 4250334444,
+        "depth": {
+          "default": 307,
+          "solo": 300
+        }
+      },
+      "account": {
+        "name": "Pyykn",
+        "realm": "pc",
+        "challenges": {
+          "total": 22
+        }
+      }
+    },
+    {
+      "rank": 92,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "titliggerbakmeg",
+        "level": 100,
+        "class": "Elementalist",
+        "id": "e2944e274a1a110c7058501012b412f8cfc152125c7c05b9b704cf50a52cf365",
+        "experience": 4250334444,
+        "depth": {
+          "default": 355,
+          "solo": 355
+        }
+      },
+      "account": {
+        "name": "surreal1994",
+        "realm": "pc",
+        "challenges": {
+          "total": 36
+        },
+        "twitch": {
+          "name": "excessutarrenmill"
+        }
+      }
+    },
+    {
+      "rank": 93,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Palsteron_Synthesis",
+        "level": 100,
+        "class": "Pathfinder",
+        "id": "ba3489e22db4d298fab975cd9df19224089e9e298a88ae9991b4ded3dde8fdcd",
+        "experience": 4250334444,
+        "depth": {
+          "default": 354,
+          "solo": 354
+        }
+      },
+      "account": {
+        "name": "Palsteron",
+        "realm": "pc",
+        "challenges": {
+          "total": 21
+        },
+        "twitch": {
+          "name": "palsteron"
+        }
+      }
+    },
+    {
+      "rank": 94,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "masltS",
+        "level": 100,
+        "class": "Trickster",
+        "id": "8c6ec8edb46fec77b056dca2c071eb9569a47129a0f8e6f5e2d13885d77712bf",
+        "experience": 4250334444,
+        "depth": {
+          "default": 600,
+          "solo": 600
+        }
+      },
+      "account": {
+        "name": "maslt342",
+        "realm": "pc",
+        "challenges": {
+          "total": 37
+        },
+        "twitch": {
+          "name": "maslt"
+        }
+      }
+    },
+    {
+      "rank": 95,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "YudokunaYuri",
+        "level": 100,
+        "class": "Occultist",
+        "id": "3509a933098e83005b945b333a12ef7ac564a4f232ed108eed91ed8d56d67f33",
+        "experience": 4250334444,
+        "depth": {
+          "default": 471,
+          "solo": 471
+        }
+      },
+      "account": {
+        "name": "Chezie",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        }
+      }
+    },
+    {
+      "rank": 96,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "AlyThePJGod",
+        "level": 100,
+        "class": "Pathfinder",
+        "id": "4ddbc0da89ee7820aa6b5d168ad8749b1d51a15b148d28cdbecda7a7cde5fa83",
+        "experience": 4250334444,
+        "depth": {
+          "default": 237,
+          "solo": 237
+        }
+      },
+      "account": {
+        "name": "sunblader122",
+        "realm": "pc",
+        "challenges": {
+          "total": 21
+        },
+        "twitch": {
+          "name": "yaboialy"
+        }
+      }
+    },
+    {
+      "rank": 97,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Murfdawgg_Syn",
+        "level": 100,
+        "class": "Gladiator",
+        "id": "5f7d3063f9988e68b0a1ebf1afb04e7eb54f798afe0c41f42a1b29b09c6859e3",
+        "experience": 4250334444,
+        "depth": {
+          "default": 479,
+          "solo": 479
+        }
+      },
+      "account": {
+        "name": "Murfdawgg",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "murfdawgg"
+        }
+      }
+    },
+    {
+      "rank": 98,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "Solution_FlowerPower",
+        "level": 100,
+        "class": "Occultist",
+        "id": "fbf770f1a7d66e7f259e8a877bf273d82bb6eca4d2f1f73703931bd1eca2479e",
+        "experience": 4250334444,
+        "depth": {
+          "default": 35,
+          "solo": 0
+        }
+      },
+      "account": {
+        "name": "Radde130",
+        "realm": "pc",
+        "challenges": {
+          "total": 19
+        },
+        "twitch": {
+          "name": "the_radde"
+        }
+      }
+    },
+    {
+      "rank": 99,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "GiveYouJustTheTooltip",
+        "level": 100,
+        "class": "Ascendant",
+        "id": "94f5fd00541f9999b994a8b9922765403e46274afd770eb0c0800c4caab7fc60",
+        "experience": 4250334444,
+        "depth": {
+          "default": 607,
+          "solo": 0
+        }
+      },
+      "account": {
+        "name": "Zamdall",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        }
+      }
+    },
+    {
+      "rank": 100,
+      "dead": false,
+      "online": false,
+      "character": {
+        "name": "seciakWOrb",
+        "level": 100,
+        "class": "Elementalist",
+        "id": "67fd96123a62222c9ab56528b8ec19bb0a99edc11d08fe75ed8fac42cee79f78",
+        "experience": 4250334444,
+        "depth": {
+          "default": 603,
+          "solo": 600
+        }
+      },
+      "account": {
+        "name": "seciak",
+        "realm": "pc",
+        "challenges": {
+          "total": 40
+        },
+        "twitch": {
+          "name": "seciak"
+        }
+      }
+    }
+  ]
+}

@@ -65,6 +65,7 @@ public class LeaderboardMappingServiceImpl implements LeaderboardMappingService 
 		leaderboardEntity.setLeague(leagueName);
 		leaderboardEntity.setLeaderboard(leaderboardType.toString());
 		leaderboardEntity.setRank(responseEntry.getRank().toString());
+		leaderboardEntity.setCharacterId(responseEntry.getCharacter().getId());
 		leaderboardEntity.setCharacter(responseEntry.getCharacter().getName());
 		leaderboardEntity.setAccount(responseEntry.getAccount().getName());
 		leaderboardEntity.setOnline(responseEntry.getOnline().toString());

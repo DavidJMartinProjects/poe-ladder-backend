@@ -1,0 +1,90 @@
+// 20190529095628
+// http://www.pathofexile.com/api/ladders?offset=0&limit=100&id=Synthesis%20Event%20HC%20(SRE002)&type=labyrinth&difficulty=4
+
+{
+  "total": 3,
+  "title": "Labyrinth - Synthesis Event HC (SRE002) (Eternal)",
+  "startTime": 1559088000,
+  "entries": [
+    {
+      "online": false,
+      "rank": 1,
+      "time": 785,
+      "character": {
+        "name": "Calebfoe_Ten",
+        "level": null,
+        "class": "Trickster",
+        "id": "ec6278a15d218f136aa2b2a9f89db71ca9afecef70392093b2827732a7b390d7",
+        "experience": null
+      },
+      "account": {
+        "name": "calebfoe",
+        "realm": "pc",
+        "guild": {
+          "id": "348702",
+          "name": "8",
+          "tag": "EIGHT8",
+          "createdAt": "2016-06-18T05:57:18Z",
+          "statusMessage": "A guild made by a Tier:8 player EIGHT8"
+        },
+        "challenges": {
+          "total": 10
+        },
+        "twitch": {
+          "name": "calebfoe"
+        }
+      }
+    },
+    {
+      "online": true,
+      "rank": 2,
+      "time": 1730,
+      "character": {
+        "name": "___Giola____",
+        "level": null,
+        "class": "Chieftain",
+        "id": "c931c05d8470f5dcae52f0bae631096ad2130c4646c3087e53e142080e72c621",
+        "experience": null
+      },
+      "account": {
+        "name": "G1ola",
+        "realm": "pc",
+        "guild": {
+          "id": "285057",
+          "name": "FUBAR",
+          "tag": "CÜM",
+          "createdAt": "2015-08-23T09:27:00Z",
+          "statusMessage": "Corrupt Misery, Dread, Scorn, or Envy"
+        },
+        "challenges": {
+          "total": 17
+        },
+        "twitch": {
+          "name": "giola"
+        }
+      }
+    },
+    {
+      "online": false,
+      "rank": 3,
+      "time": 2597,
+      "character": {
+        "name": "GDONNN",
+        "level": null,
+        "class": "Chieftain",
+        "id": "78d5d098e1a3caab21a1630ec0dd8a7cd84bf5c0628d15ffae2434057cda5eb2",
+        "experience": null
+      },
+      "account": {
+        "name": "GORDyyyyyyy",
+        "realm": "pc",
+        "challenges": {
+          "total": 13
+        },
+        "twitch": {
+          "name": "g_d0n"
+        }
+      }
+    }
+  ]
+}

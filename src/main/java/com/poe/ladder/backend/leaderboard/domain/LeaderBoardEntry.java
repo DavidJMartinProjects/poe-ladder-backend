@@ -3,6 +3,7 @@ package com.poe.ladder.backend.leaderboard.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -11,10 +12,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @JsonInclude(JsonInclude.Include.NON_NULL)	
 public class LeaderBoardEntry {
 	
-	@Id
-	@GeneratedValue
-	@Column(name="id")
-	private long id;
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long id;
 	
 	@Column(name="char_id")
 	private String characterId; 
@@ -34,7 +34,7 @@ public class LeaderBoardEntry {
 	@Column(name="dead")
 	private String dead;
 
-	@Column(name="character")
+	@Column(name="characterName")
 	private String character;
 	
 	@Column(name="ascendancy")

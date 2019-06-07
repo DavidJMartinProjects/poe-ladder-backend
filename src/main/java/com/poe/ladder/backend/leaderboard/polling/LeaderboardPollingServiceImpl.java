@@ -9,6 +9,7 @@ import javax.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 
 import com.poe.ladder.backend.external.api.requests.LeaderboardApiRequestService;
@@ -35,7 +36,6 @@ public class LeaderboardPollingServiceImpl implements LeaderboardPollingService 
 
 	private List<Entry> apiResponseList;               
 	private List<Map<String, String>> leaderboardUrls;
-	private List<LeaderBoardEntry> leaderboardEntities = new ArrayList<>();	
 	private final static Logger LOG = LoggerFactory.getLogger(LeaderboardPollingServiceImpl.class);
 	
 	@PostConstruct
@@ -46,7 +46,7 @@ public class LeaderboardPollingServiceImpl implements LeaderboardPollingService 
 	@Override
 	public void getLeaderboardRankings() {		
 		LOG.info("getLeaderboardRankings() : attempting to retrieve latest ladders from pathofexile.com");
-		leaderboardEntities.clear();		
+		List<LeaderBoardEntry> leaderboardEntities = new ArrayList<>();			
 		for (Map<String, String> urlsList : leaderboardUrls) {
 			for (Map.Entry<String, String> leagueUrl : urlsList.entrySet()) {
 				apiResponseList = requestLeaderboardFromPoeApi(leagueUrl.getValue());
@@ -55,6 +55,7 @@ public class LeaderboardPollingServiceImpl implements LeaderboardPollingService 
 		}
 		persistEntityToDb(leaderboardEntities);
 	}	
+
 
 	private List<Entry> requestLeaderboardFromPoeApi(String value) {
 		return leaderboardApiRequestService.requestLeaderboardFromPoeApi(value);

@@ -35,8 +35,7 @@ leagues:
 
 activeleagues:
    leagueVariations.[Standard]: Standard, Hardcore, SSF Standard, SSF Hardcore
-   leagueVariations.[Synthesis]: Synthesis, Hardcore Synthesis, SSF Synthesis, SSF Synthesis HC
-   leagueVariations.[Synthesis Event]: Synthesis Event (SRE001), Synthesis Event HC (SRE002), SSF Synthesis Event (SRE003), SSF Synthesis Event HC (SRE004)
+   leagueVariations.[Legion]: Legion, Hardcore Legion, SSF Legion, SSF Legion HC  
       
 leaderboard:   
    resultslimit: 5

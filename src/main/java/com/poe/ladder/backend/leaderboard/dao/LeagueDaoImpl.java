@@ -20,7 +20,7 @@ public class LeagueDaoImpl implements LeagueDao {
 
 	@Override
 	public List<LeaderBoardEntry> getLeaderboardLadderResults(String leagueName, String leaderboard) {
-		logger.info("getLeaderboardLadderResults() called with params : leagueName = {} and leaderboard = {}", leagueName, leaderboard);
+		logger.info("getLeaderboardLadderResults() : DAO called : request params : leagueName = {} and leaderboard = {}", leagueName, leaderboard);
 		return leagueService.getLeaderboards(leagueName, leaderboard);
 	}	
 	

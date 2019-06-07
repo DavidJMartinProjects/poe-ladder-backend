@@ -1,5 +1,6 @@
 package com.poe.ladder.backend.external.api.requests;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -35,12 +36,18 @@ public class LeaderboardApiRequestServiceImpl implements LeaderboardApiRequestSe
 
 	@Override
 	public List<Entry> requestLeaderboardFromPoeApi(String url)  {
+		List<Entry> responseList = new ArrayList<Entry>();
+		try {
 		sleepBeforeNextApiRequest();
 		LOG.info("requestLeaderboardFromPoeApi() : performing httprequest to {}", url);
 		ResponseEntity<ResponseEntry> leaderboardApiRequest =
 			restTemplate.exchange(url, HttpMethod.GET, entity, ResponseEntry.class);
 		ResponseEntry leaderboardApiResponse = leaderboardApiRequest.getBody();
-		return leaderboardApiResponse.getEntries();
+		responseList = leaderboardApiResponse.getEntries();
+		} catch (Exception ex) {
+			LOG.info("poe api response error.");
+		}
+		return responseList;
 	}
 	
 	private void sleepBeforeNextApiRequest() {

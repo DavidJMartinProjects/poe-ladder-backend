@@ -15,8 +15,8 @@ import com.poe.ladder.backend.external.api.requests.LeaderboardApiRequestService
 import com.poe.ladder.backend.external.api.requests.urls.LeaderboardUrlsService;
 import com.poe.ladder.backend.external.api.response.domain.Entry;
 import com.poe.ladder.backend.external.api.response.mapper.LeaderboardMappingService;
-import com.poe.ladder.backend.leaderboard.dao.LeaderboardRepository;
-import com.poe.ladder.backend.leaderboard.domain.LeaderBoardEntry;	
+import com.poe.ladder.backend.leaderboard.domain.LeaderBoardEntry;
+import com.poe.ladder.backend.leaderboard.repository.LeaderboardRepository;		
 	
 @Service
 public class LeaderboardPollingServiceImpl implements LeaderboardPollingService {		

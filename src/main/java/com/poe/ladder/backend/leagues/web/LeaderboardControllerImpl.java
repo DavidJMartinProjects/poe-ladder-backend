@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.poe.ladder.backend.leaderboard.dao.LeaderboardRepository;
+import com.poe.ladder.backend.leaderboard.dao.LeagueDaoImpl;
 import com.poe.ladder.backend.leaderboard.domain.LeaderBoardEntry;
+import com.poe.ladder.backend.leaderboard.repository.LeaderboardRepository;
 import com.poe.ladder.backend.leagues.business.LeagueNameService;
 import com.poe.ladder.backend.leagues.config.LeaderboardResultsLimitConfig;
 
@@ -18,6 +19,9 @@ public class LeaderboardControllerImpl implements LeaderboardController {
 	
 	@Autowired
 	LeaderboardRepository leaderboardRepository;
+	
+	@Autowired
+	LeagueDaoImpl leagueDaoImpl;	
 	
 	@Autowired
 	LeagueNameService leagueNameService;
@@ -30,19 +34,12 @@ public class LeaderboardControllerImpl implements LeaderboardController {
 
 	@GetMapping("/leaderboards")
 	public List<LeaderBoardEntry> getLeaderboards(@RequestParam String leagueName, @RequestParam String leaderboard) {
-		// make this a one liner and do processing at the dao layer
-		List<LeaderBoardEntry> leaderboardResults = new ArrayList<>();
-		for (String leagueVariation : leagueNameService.getLeagueVariationsListByLeagueName(leagueName)) {
-			leaderboardResults.addAll(leaderboardRepository.getLeaderboardEntryResults(leagueVariation, leaderboard, leaderboardResultsLimitConfig.getResultslimit()));	
-		}
-		return leaderboardResults;
+		return leagueDaoImpl.getLeaderboardLadderResults(leagueName, leaderboard);
 	}
 	
 	@GetMapping("/leaderboard-ladder")
 	public List<LeaderBoardEntry> getLeaderboardByLeagueVariation(@RequestParam String leagueName, @RequestParam String leaderboard) {
-		List<LeaderBoardEntry> leaderboardResults = new ArrayList<>();
-			leaderboardResults.addAll(leaderboardRepository.getLeaderboardLadderResults(leagueName, leaderboard));	
-		return leaderboardResults;
+			return leaderboardRepository.getLeaderboardLadderResults(leagueName, leaderboard);	
 	}
 	
 	@GetMapping("/custom-league")

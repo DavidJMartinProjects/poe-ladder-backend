@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.leaderboard.dao;
+package com.poe.ladder.backend.leaderboard.repository;
 
 import java.util.List;
 

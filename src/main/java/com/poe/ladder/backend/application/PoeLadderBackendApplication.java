@@ -15,9 +15,10 @@ import org.springframework.web.filter.CorsFilter;
 	"com.poe.ladder.backend", 
 	"com.poe.ladder.backend.leaderboard",
 	"com.poe.ladder.backend.external.api", 
-	"com.poe.ladder.backend.external.api.response" 
+	"com.poe.ladder.backend.external.api.response",	
+	"com.poe.ladder.backend.leaderboard.repository"
 })
-@EnableJpaRepositories("com.poe.ladder.backend.leaderboard.dao")
+@EnableJpaRepositories("com.poe.ladder.backend.leaderboard.repository")
 @EntityScan("com.poe.ladder.backend.leaderboard.domain")
 public class PoeLadderBackendApplication {
 

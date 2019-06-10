@@ -10,10 +10,11 @@ import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
 
 @Repository
 public interface LeaderboardRepository extends JpaRepository<LeaderBoardEntity, Long> {
-	@Query(value="SELECT * FROM leader_board_entry WHERE league=?1 AND leaderboard=?2 ORDER BY rank LIMIT ?3", nativeQuery = true)
+	
+	@Query(value="SELECT * FROM leader_board_entity WHERE league=?1 AND leaderboard=?2 LIMIT ?3", nativeQuery = true)
 	List<LeaderBoardEntity> getLeaderboardEntryResults(String leagueVariation, String leaderboard, int limit);
 
-	@Query(value="SELECT * FROM leader_board_entry WHERE league=?1 AND leaderboard=?2 ORDER BY rank LIMIT 50", nativeQuery = true)
+	@Query(value="SELECT * FROM leader_board_entity WHERE league=?1 AND leaderboard=?2 LIMIT 50", nativeQuery = true)
 	List<LeaderBoardEntity> getLeaderboardLadderResults(String leagueName, String leaderboard);
 	
 }	

@@ -22,7 +22,7 @@ public class UpdateLeaderboardScheduler {
 	
 	@Scheduled(initialDelay = 10000, fixedRate = 180000)
 	public void pollLeaderboards() throws InterruptedException {
-		LOG.info("pollLeaderboards() : leaderboard polling service initiated.");
+		LOG.info("pollLeaderboards() : leaderboard polling service initiated.");  
 		try {
 			Runtime.getRuntime().gc();
 			leaderboardPollingService.getLeaderboardRankings();

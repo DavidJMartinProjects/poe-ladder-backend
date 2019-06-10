@@ -73,6 +73,9 @@ public class LeaderBoardEntity {
 	@Column(name="leaderboard")
 	private String leaderboard;
 	
+	public LeaderBoardEntity() {
+	}
+	
 	public LeaderBoardEntity(Long id, String characterId, String rank, String rankDifference, String account,
 			String online, String dead, String character, String ascendancy, String time, String timeDifference,
 			String timeFormatted, String depth, String depthDifference, String level, String experience,

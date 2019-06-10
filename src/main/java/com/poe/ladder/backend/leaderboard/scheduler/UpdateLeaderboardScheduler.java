@@ -20,8 +20,7 @@ public class UpdateLeaderboardScheduler {
 	
 	private final static Logger LOG = LoggerFactory.getLogger(UpdateLeaderboardScheduler.class);
 	
-//	@Scheduled(initialDelay = 10000, fixedRate = 600000)
-	@Scheduled(initialDelay = 10000, fixedRate = 180000)
+	@Scheduled(initialDelay = 10000, fixedRate = 600000)
 	public void pollLeaderboards() throws InterruptedException {
 		LOG.info("pollLeaderboards() : leaderboard polling service initiated.");
 		try {

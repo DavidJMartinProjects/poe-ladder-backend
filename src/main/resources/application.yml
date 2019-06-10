@@ -80,7 +80,7 @@ http:
        
 urls:
    properties:
-      resultsLimit: 50
+      resultsLimit: 100
       leaderboards:
          delvePrefix: http://www.pathofexile.com/api/ladders?offset=0&limit=${urls.properties.resultsLimit}&id=
          delvePostfix: '&type=league&sort=depthsolo&_=1546137921952'         

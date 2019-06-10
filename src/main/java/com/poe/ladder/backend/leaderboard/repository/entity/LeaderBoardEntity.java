@@ -73,6 +73,32 @@ public class LeaderBoardEntity {
 	@Column(name="leaderboard")
 	private String leaderboard;
 	
+	public LeaderBoardEntity(Long id, String characterId, String rank, String rankDifference, String account,
+			String online, String dead, String character, String ascendancy, String time, String timeDifference,
+			String timeFormatted, String depth, String depthDifference, String level, String experience,
+			String experienceDifference, String progress, String league, String leaderboard) {
+		super();
+		this.id = id;
+		this.characterId = characterId;
+		this.rank = rank;
+		this.rankDifference = "0";
+		this.account = account;
+		this.online = online;
+		this.dead = dead;
+		this.character = character;
+		this.ascendancy = ascendancy;
+		this.time = time;
+		this.timeDifference = timeDifference;
+		this.timeFormatted = timeFormatted;
+		this.depth = depth;
+		this.depthDifference = depthDifference;
+		this.level = level;
+		this.experience = experience;
+		this.experienceDifference = experienceDifference;
+		this.progress = progress;
+		this.league = league;
+		this.leaderboard = leaderboard;
+	}
 	public String getRank() {
 		return rank;
 	}

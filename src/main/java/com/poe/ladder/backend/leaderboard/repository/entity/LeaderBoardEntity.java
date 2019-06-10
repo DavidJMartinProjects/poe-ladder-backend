@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.leaderboard.domain;
+package com.poe.ladder.backend.leaderboard.repository.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 @Entity
 @JsonInclude(JsonInclude.Include.NON_NULL)	
-public class LeaderBoardEntry {
+public class LeaderBoardEntity {
 	
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -43,8 +43,17 @@ public class LeaderBoardEntry {
 	@Column(name="time")
 	private String time;
 	
+	@Column(name="time_difference")
+	private String timeDifference;
+	
+	@Column(name="time_formatted")
+	private String timeFormatted;
+	
 	@Column(name="depth")
-	private Integer depth;
+	private String depth;
+	
+	@Column(name="depth_difference")
+	private String depthDifference;
 	
 	@Column(name="level")
 	private String level;
@@ -86,15 +95,21 @@ public class LeaderBoardEntry {
 		return time;
 	}
 	public void setTime(String time) {
-		Integer theTime = new Integer(time);
+		this.time = time;
+	}	
+	public String getTimeFormatted() {
+		return timeFormatted;
+	}
+	public void setTimeFormatted(String timeInSeconds) {		
+		Integer theTime = new Integer(timeInSeconds);
 		int minutes = theTime/60;
 		int seconds = theTime%60;
-		this.time = ""+minutes+"min "+seconds+"sec";
+		this.timeFormatted = ""+minutes+"min "+seconds+"sec";
 	}
-	public Integer getDepth() {
+	public String getDepth() {
 		return depth;
 	}
-	public void setDepth(Integer depth) {
+	public void setDepth(String depth) {
 		this.depth = depth;
 	}
 	public String getLevel() {
@@ -163,14 +178,30 @@ public class LeaderBoardEntry {
 	public void setExperienceDifference(String experienceDifference) {
 		this.experienceDifference = experienceDifference;
 	}
+	public String getTimeDifference() {
+		return timeDifference;
+	}
+	public void setTimeDifference(String timeDifference) {
+		Integer theTime = new Integer(timeDifference);
+		int minutes = theTime/60;
+		int seconds = theTime%60;
+		this.timeDifference = ""+minutes+"min "+seconds+"sec";
+	}
+	public String getDepthDifference() {
+		return depthDifference;
+	}
+	public void setDepthDifference(String depthDifference) {
+		this.depthDifference = depthDifference;
+	}
 	
 	@Override
 	public String toString() {
-		return "LeaderBoardEntry [id=" + id + ", characterId=" + characterId + ", rank=" + rank + ", rankDifference="
+		return "LeaderBoardEntity [id=" + id + ", characterId=" + characterId + ", rank=" + rank + ", rankDifference="
 				+ rankDifference + ", account=" + account + ", online=" + online + ", dead=" + dead + ", character="
-				+ character + ", ascendancy=" + ascendancy + ", time=" + time + ", depth=" + depth + ", level=" + level
-				+ ", experience=" + experience + ", experienceDifference=" + experienceDifference + ", progress="
-				+ progress + ", league=" + league + ", leaderboard=" + leaderboard + "]";
-	}
+				+ character + ", ascendancy=" + ascendancy + ", time=" + time + ", timeDifference=" + timeDifference
+				+ ", depth=" + depth + ", depthDifference=" + depthDifference + ", level=" + level + ", experience="
+				+ experience + ", experienceDifference=" + experienceDifference + ", progress=" + progress + ", league="
+				+ league + ", leaderboard=" + leaderboard + "]";
+	}	
 
 }

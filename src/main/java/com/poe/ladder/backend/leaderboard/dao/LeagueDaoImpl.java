@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.poe.ladder.backend.leaderboard.business.LeagueService;
-import com.poe.ladder.backend.leaderboard.domain.LeaderBoardEntry;
+import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
 
 @Service	
 public class LeagueDaoImpl implements LeagueDao {
@@ -19,7 +19,7 @@ public class LeagueDaoImpl implements LeagueDao {
 	LeagueService leagueService;
 
 	@Override
-	public List<LeaderBoardEntry> getLeaderboardLadderResults(String leagueName, String leaderboard) {
+	public List<LeaderBoardEntity> getLeaderboardLadderResults(String leagueName, String leaderboard) {
 		logger.info("getLeaderboardLadderResults() : DAO called : request params : leagueName = {} and leaderboard = {}", leagueName, leaderboard);
 		return leagueService.getLeaderboards(leagueName, leaderboard);
 	}	

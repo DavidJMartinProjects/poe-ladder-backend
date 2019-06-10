@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.poe.ladder.backend.leaderboard.dao.LeagueDaoImpl;
-import com.poe.ladder.backend.leaderboard.domain.LeaderBoardEntry;
 import com.poe.ladder.backend.leaderboard.repository.LeaderboardRepository;
+import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
 import com.poe.ladder.backend.leagues.business.LeagueNameService;
 import com.poe.ladder.backend.leagues.config.LeaderboardResultsLimitConfig;
 
@@ -33,17 +33,17 @@ public class LeaderboardControllerImpl implements LeaderboardController {
 	LeaderboardResultsLimitConfig leaderboardResultsLimitConfig;		
 
 	@GetMapping("/leaderboards")
-	public List<LeaderBoardEntry> getLeaderboards(@RequestParam String leagueName, @RequestParam String leaderboard) {
+	public List<LeaderBoardEntity> getLeaderboards(@RequestParam String leagueName, @RequestParam String leaderboard) {
 		return leagueDaoImpl.getLeaderboardLadderResults(leagueName, leaderboard);
 	}
 	
 	@GetMapping("/leaderboard-ladder")
-	public List<LeaderBoardEntry> getLeaderboardByLeagueVariation(@RequestParam String leagueName, @RequestParam String leaderboard) {
+	public List<LeaderBoardEntity> getLeaderboardByLeagueVariation(@RequestParam String leagueName, @RequestParam String leaderboard) {
 			return leaderboardRepository.getLeaderboardLadderResults(leagueName, leaderboard);	
 	}
 	
 	@GetMapping("/custom-league")
-	public List<LeaderBoardEntry> getCustomLeagueLeaderboard(@RequestParam String leagueName) {
+	public List<LeaderBoardEntity> getCustomLeagueLeaderboard(@RequestParam String leagueName) {
 		return customLeagueService.getCustomLeagueLeaderboard(leagueName);
 	}
 

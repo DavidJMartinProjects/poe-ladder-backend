@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.leaderboard.polling;
+package com.poe.ladder.backend.leaderboard.scheduler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,18 +9,18 @@ import javax.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Service;
 
 import com.poe.ladder.backend.external.api.requests.LeaderboardApiRequestService;
 import com.poe.ladder.backend.external.api.requests.urls.LeaderboardUrlsService;
 import com.poe.ladder.backend.external.api.response.domain.Entry;
 import com.poe.ladder.backend.external.api.response.mapper.LeaderboardMappingService;
-import com.poe.ladder.backend.leaderboard.domain.LeaderBoardEntry;
-import com.poe.ladder.backend.leaderboard.repository.LeaderboardRepository;		
+import com.poe.ladder.backend.leaderboard.comparison.LeagueComparisonService;
+import com.poe.ladder.backend.leaderboard.repository.LeaderboardRepository;
+import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;		
 	
 @Service
-public class LeaderboardPollingServiceImpl implements LeaderboardPollingService {		
+public class UpdateLeaderboardServiceImpl implements UpdateLeaderboardService {		
 
 	@Autowired
 	LeaderboardUrlsService leaderboardUrlsService;
@@ -33,10 +33,13 @@ public class LeaderboardPollingServiceImpl implements LeaderboardPollingService 
 	
 	@Autowired
 	LeaderboardRepository leaderboardRepository;	
-
-	private List<Entry> apiResponseList;               
+	
+	@Autowired
+	LeagueComparisonService leagueComparisonService;
+	
+	private List<LeaderBoardEntity> previousLeaderboardEntities = new ArrayList<>();	
 	private List<Map<String, String>> leaderboardUrls;
-	private final static Logger LOG = LoggerFactory.getLogger(LeaderboardPollingServiceImpl.class);
+	private final static Logger LOG = LoggerFactory.getLogger(UpdateLeaderboardServiceImpl.class);
 	
 	@PostConstruct
 	public void init() {
@@ -46,26 +49,30 @@ public class LeaderboardPollingServiceImpl implements LeaderboardPollingService 
 	@Override
 	public void getLeaderboardRankings() {		
 		LOG.info("getLeaderboardRankings() : attempting to retrieve latest ladders from pathofexile.com");
-		List<LeaderBoardEntry> leaderboardEntities = new ArrayList<>();			
+		List<LeaderBoardEntity> latestLeaderboardEntities = new ArrayList<>();			
 		for (Map<String, String> urlsList : leaderboardUrls) {
-			for (Map.Entry<String, String> leagueUrl : urlsList.entrySet()) {
-				apiResponseList = requestLeaderboardFromPoeApi(leagueUrl.getValue());
-				leaderboardEntities.addAll(mapApiResponseToEntityList(apiResponseList, leagueUrl.getValue(), leagueUrl.getKey()));
+			for (Map.Entry<String, String> leagueUrl : urlsList.entrySet()) {				
+				List<Entry> apiResponseList = requestLeaderboardFromPoeApi(leagueUrl.getValue());
+				latestLeaderboardEntities.addAll(mapApiResponseToEntityList(apiResponseList, leagueUrl.getValue(), leagueUrl.getKey()));
 			}			
 		}
-		persistEntityToDb(leaderboardEntities);
+		if(!previousLeaderboardEntities.isEmpty()) {
+			latestLeaderboardEntities = leagueComparisonService.compareLeague(previousLeaderboardEntities, latestLeaderboardEntities);
+		} 
+		previousLeaderboardEntities = latestLeaderboardEntities;
+				
+		persistEntityToDb(latestLeaderboardEntities);
 	}	
-
 
 	private List<Entry> requestLeaderboardFromPoeApi(String value) {
 		return leaderboardApiRequestService.requestLeaderboardFromPoeApi(value);
 	}
 
-	private List<LeaderBoardEntry> mapApiResponseToEntityList(List<Entry> apiResponseList, String requestUrl, String leagueName) {
+	private List<LeaderBoardEntity> mapApiResponseToEntityList(List<Entry> apiResponseList, String requestUrl, String leagueName) {
 		return leaderboardMappingService.mapApiResponseToEntity(apiResponseList, requestUrl, leagueName);
 	}
 
-	private void persistEntityToDb(List<LeaderBoardEntry> leaderboardEntries) {
+	private void persistEntityToDb(List<LeaderBoardEntity> leaderboardEntries) {
 		LOG.info("persistEntityToDb() : saving leaderboard results to poe-ladder database.");
 		leaderboardRepository.deleteAll();
 		leaderboardRepository.flush();

@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import com.poe.ladder.backend.leaderboard.domain.LeaderBoardEntry;
 import com.poe.ladder.backend.leaderboard.repository.LeaderboardRepository;
+import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
 import com.poe.ladder.backend.leagues.business.LeagueNameService;
 import com.poe.ladder.backend.leagues.config.LeaderboardResultsLimitConfig;
 
@@ -30,9 +30,9 @@ public class LeagueServiceImpl implements LeagueService {
 
 	@Override
 	@Cacheable("leaderboards")
-	public List<LeaderBoardEntry> getLeaderboards(String leagueName, String leaderboard) {		
+	public List<LeaderBoardEntity> getLeaderboards(String leagueName, String leaderboard) {		
 		logger.info("getLeaderboards() : Calling DB.");
-		List<LeaderBoardEntry> leaderboardResults = new ArrayList<>();
+		List<LeaderBoardEntity> leaderboardResults = new ArrayList<>();
 		for (String leagueVariation : leagueNameService.getLeagueVariationsListByLeagueName(leagueName)) {
 			leaderboardResults.addAll(leaderboardRepository.getLeaderboardEntryResults(leagueVariation, leaderboard, leaderboardResultsLimitConfig.getResultslimit()));	
 		}

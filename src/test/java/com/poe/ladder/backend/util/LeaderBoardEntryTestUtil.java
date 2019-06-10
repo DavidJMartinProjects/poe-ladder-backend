@@ -3,13 +3,13 @@ package com.poe.ladder.backend.util;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.poe.ladder.backend.leaderboard.domain.LeaderBoardEntry;
+import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
 
 public class LeaderBoardEntryTestUtil {
 	
-	LeaderBoardEntry leaderBoardEntryOne = new LeaderBoardEntry();
-	LeaderBoardEntry leaderBoardEntryTwo = new LeaderBoardEntry();
-	LeaderBoardEntry leaderBoardEntryThree = new LeaderBoardEntry();	
+	LeaderBoardEntity leaderBoardEntryOne = new LeaderBoardEntity();
+	LeaderBoardEntity leaderBoardEntryTwo = new LeaderBoardEntity();
+	LeaderBoardEntity leaderBoardEntryThree = new LeaderBoardEntity();	
 		
 	public LeaderBoardEntryTestUtil() {
 		leaderBoardEntryOne.setAscendancy("Assassin");
@@ -46,8 +46,8 @@ public class LeaderBoardEntryTestUtil {
 		leaderBoardEntryOne.setRank("350");
 	}
 	
-	public List<LeaderBoardEntry> getLeaderboardEntries() {
-		List<LeaderBoardEntry> leaderboardentries =  new ArrayList<>();	
+	public List<LeaderBoardEntity> getLeaderboardEntries() {
+		List<LeaderBoardEntity> leaderboardentries =  new ArrayList<>();	
 		leaderboardentries.add(leaderBoardEntryOne);
 		leaderboardentries.add(leaderBoardEntryTwo);
 		leaderboardentries.add(leaderBoardEntryThree);	

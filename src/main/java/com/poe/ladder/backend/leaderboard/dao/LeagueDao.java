@@ -2,8 +2,8 @@ package com.poe.ladder.backend.leaderboard.dao;
 
 import java.util.List;
 
-import com.poe.ladder.backend.leaderboard.domain.LeaderBoardEntry;
+import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
 
 public interface LeagueDao {
-	List<LeaderBoardEntry> getLeaderboardLadderResults(String leagueName, String leaderboard);	
+	List<LeaderBoardEntity> getLeaderboardLadderResults(String leagueName, String leaderboard);	
 }

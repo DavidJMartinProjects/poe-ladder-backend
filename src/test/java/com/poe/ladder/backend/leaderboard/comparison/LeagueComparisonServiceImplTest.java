@@ -13,7 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.poe.ladder.backend.application.PoeLadderBackendApplication;
-import com.poe.ladder.backend.leaderboard.domain.LeaderBoardEntry;
+import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest( classes = PoeLadderBackendApplication.class)	
@@ -29,11 +29,11 @@ public class LeagueComparisonServiceImplTest {
 	@Autowired
 	LeagueComparisonService leagueComparisonService;
 	
-	List<LeaderBoardEntry> oldLeagueEntryList = new ArrayList<>();
-	List<LeaderBoardEntry> newLeagueEntryList = new ArrayList<>();
+	List<LeaderBoardEntity> oldLeagueEntryList = new ArrayList<>();
+	List<LeaderBoardEntity> newLeagueEntryList = new ArrayList<>();
 	
-	LeaderBoardEntry oldLeagueEntry = new LeaderBoardEntry();
-	LeaderBoardEntry newLeagueEntry = new LeaderBoardEntry();
+	LeaderBoardEntity oldLeagueEntry = new LeaderBoardEntity();
+	LeaderBoardEntity newLeagueEntry = new LeaderBoardEntity();
 	
 	@Before
 	public void init() {
@@ -60,13 +60,13 @@ public class LeagueComparisonServiceImplTest {
 	
 	@Test
 	public void whenCompareLeagueIsCalled_ThenTheExpectedCharacterRankDifferenceIsDetermined() {	
-		List<LeaderBoardEntry> comparedLeague = leagueComparisonService.compareLeague(oldLeagueEntryList, newLeagueEntryList);
+		List<LeaderBoardEntity> comparedLeague = leagueComparisonService.compareLeague(oldLeagueEntryList, newLeagueEntryList);
 		assertEquals("2", comparedLeague.get(0).getRankDifference());		
 	}
 	
 	@Test
 	public void whenCompareLeagueIsCalled_ThenTheExpectedCharacterExperienceDifferenceIsDetermined() {	
-		List<LeaderBoardEntry> comparedLeague = leagueComparisonService.compareLeague(oldLeagueEntryList, newLeagueEntryList);		
+		List<LeaderBoardEntity> comparedLeague = leagueComparisonService.compareLeague(oldLeagueEntryList, newLeagueEntryList);		
 		assertEquals("200000", comparedLeague.get(0).getExperienceDifference());
 	}
 

@@ -1,17 +1,15 @@
-#spring:   
-#   jpa:
-#     show-sql: true
-#     hibernate:
-#       ddl-auto: create   
-#       
-#   datasource:
-#      platform: postgres
-#      url: jdbc:postgresql://localhost:5432/poeladder
-#      username: user
-#      password: password
-#      initialization-mode: always
-
-
+spring:   
+   jpa:
+     show-sql: true
+     hibernate:
+       ddl-auto: create   
+       
+   datasource:
+      platform: postgres
+      url: jdbc:postgresql://localhost:5432/poeladder
+      username: user
+      password: password
+      initialization-mode: always
 
 leagues:
    currentLeagues: 

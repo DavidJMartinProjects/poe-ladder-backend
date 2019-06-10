@@ -20,7 +20,7 @@ import org.springframework.web.filter.CorsFilter;
 	"com.poe.ladder.backend.caching"
 })
 @EnableJpaRepositories("com.poe.ladder.backend.leaderboard.repository")
-@EntityScan("com.poe.ladder.backend.leaderboard.domain")
+@EntityScan("com.poe.ladder.backend.leaderboard.repository.entity")
 public class PoeLadderBackendApplication {
 
 	public static void main(String[] args) {

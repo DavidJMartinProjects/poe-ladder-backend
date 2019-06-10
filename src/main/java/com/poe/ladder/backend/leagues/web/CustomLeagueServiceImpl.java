@@ -8,7 +8,7 @@ import com.poe.ladder.backend.external.api.requests.LeaderboardApiRequestService
 import com.poe.ladder.backend.external.api.requests.urls.LeaderboardUrlsService;
 import com.poe.ladder.backend.external.api.response.domain.Entry;
 import com.poe.ladder.backend.external.api.response.mapper.LeaderboardMappingServiceImpl;
-import com.poe.ladder.backend.leaderboard.domain.LeaderBoardEntry;
+import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
 
 @Component
 public class CustomLeagueServiceImpl implements CustomLeagueService {
@@ -23,7 +23,7 @@ public class CustomLeagueServiceImpl implements CustomLeagueService {
 	LeaderboardMappingServiceImpl leaderboardMappingServiceImpl;	
 
 	@Override
-	public List<LeaderBoardEntry> getCustomLeagueLeaderboard(String leagueName) {
+	public List<LeaderBoardEntity> getCustomLeagueLeaderboard(String leagueName) {
 		String url = leaderboardUrlsService.getCustomLeagueUrl() + leagueName;
 		List<Entry> apiResponseList = leaderboardApiRequestService.requestLeaderboardFromPoeApi(url);
 		return leaderboardMappingServiceImpl.mapApiResponseToEntity(apiResponseList, url, leagueName);

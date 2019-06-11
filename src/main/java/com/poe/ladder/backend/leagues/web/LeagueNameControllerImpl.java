@@ -19,7 +19,7 @@ public class LeagueNameControllerImpl implements LeagueNameController {
 	
 	@GetMapping
 	public String rootCheck() {
-		return "Welcome to poe-ladder-do.com";
+		return "Welcome to poe-ladder-db.com";
 	}
 
 	@CrossOrigin(origins = "http://localhost:4200")

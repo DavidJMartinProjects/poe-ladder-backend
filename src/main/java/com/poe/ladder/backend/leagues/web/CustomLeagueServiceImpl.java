@@ -4,6 +4,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.poe.ladder.backend.application.TimestampUtil;
 import com.poe.ladder.backend.external.api.requests.LeaderboardApiRequestService;
 import com.poe.ladder.backend.external.api.requests.urls.LeaderboardUrlsService;
 import com.poe.ladder.backend.external.api.response.domain.Entry;
@@ -26,7 +27,7 @@ public class CustomLeagueServiceImpl implements CustomLeagueService {
 	public List<LeaderBoardEntity> getCustomLeagueLeaderboard(String leagueName) {
 		String url = leaderboardUrlsService.getCustomLeagueUrl() + leagueName;
 		List<Entry> apiResponseList = leaderboardApiRequestService.requestLeaderboardFromPoeApi(url);
-		return leaderboardMappingServiceImpl.mapApiResponseToEntity(apiResponseList, url, leagueName);
+		return leaderboardMappingServiceImpl.mapApiResponseToEntity(apiResponseList, url, leagueName, TimestampUtil.getCurrentTimestamp());
 	}
 
 }

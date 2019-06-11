@@ -1,6 +1,9 @@
 package com.poe.ladder.backend.leaderboard.scheduler;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -11,6 +14,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.poe.ladder.backend.application.TimestampUtil;
 import com.poe.ladder.backend.external.api.requests.LeaderboardApiRequestService;
 import com.poe.ladder.backend.external.api.requests.urls.LeaderboardUrlsService;
 import com.poe.ladder.backend.external.api.response.domain.Entry;
@@ -62,14 +66,14 @@ public class UpdateLeaderboardServiceImpl implements UpdateLeaderboardService {
 		previousLeaderboardEntities = latestLeaderboardEntities;
 				
 		persistEntityToDb(latestLeaderboardEntities);
-	}	
+	}
 
 	private List<Entry> requestLeaderboardFromPoeApi(String value) {
 		return leaderboardApiRequestService.requestLeaderboardFromPoeApi(value);
 	}
 
 	private List<LeaderBoardEntity> mapApiResponseToEntityList(List<Entry> apiResponseList, String requestUrl, String leagueName) {
-		return leaderboardMappingService.mapApiResponseToEntity(apiResponseList, requestUrl, leagueName);
+		return leaderboardMappingService.mapApiResponseToEntity(apiResponseList, requestUrl, leagueName, TimestampUtil.getCurrentTimestamp());
 	}
 
 	private void persistEntityToDb(List<LeaderBoardEntity> leaderboardEntries) {

@@ -38,12 +38,12 @@ public class LeaderboardMappingServiceImpl implements LeaderboardMappingService 
 		leaderBoardEntityList = new ArrayList<>();
 	}
 
-	public List<LeaderBoardEntity> mapApiResponseToEntity(List<Entry> apiResponseList, String requestUrl, String leagueName) {
+	public List<LeaderBoardEntity> mapApiResponseToEntity(List<Entry> apiResponseList, String requestUrl, String leagueName, String timestamp) {
 		LOG.info("mapApiResponseToEntity(): request received to map api response to leaderboard entity");
 		leaderBoardEntityList.clear();		
 		LeaderboardType leaderboardType = determineLeaderboardType(requestUrl);
 		for (Entry responseEntry : apiResponseList) {
-			LeaderBoardEntity leaderboardEntity = mapToLeaderboardEntry(leagueName, leaderboardType, responseEntry);
+			LeaderBoardEntity leaderboardEntity = mapToLeaderboardEntry(leagueName, leaderboardType, responseEntry, timestamp);
 			leaderBoardEntityList.add(leaderboardEntity);
 		}
 		return leaderBoardEntityList;
@@ -60,8 +60,9 @@ public class LeaderboardMappingServiceImpl implements LeaderboardMappingService 
 		return LeaderboardType.UNKNOWN;
 	}
 	
-	private LeaderBoardEntity mapToLeaderboardEntry(String leagueName, LeaderboardType leaderboardType, Entry responseEntry) {
+	private LeaderBoardEntity mapToLeaderboardEntry(String leagueName, LeaderboardType leaderboardType, Entry responseEntry, String timestamp) {
 		LeaderBoardEntity leaderboardEntity = new LeaderBoardEntity();
+		leaderboardEntity.setTimeStamp(timestamp);
 		leaderboardEntity.setLeague(leagueName);
 		leaderboardEntity.setLeaderboard(leaderboardType.toString());
 		leaderboardEntity.setRank(responseEntry.getRank().toString());

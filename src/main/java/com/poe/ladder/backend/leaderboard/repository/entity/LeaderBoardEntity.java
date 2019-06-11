@@ -73,13 +73,16 @@ public class LeaderBoardEntity {
 	@Column(name="leaderboard")
 	private String leaderboard;
 	
+	@Column
+	private String timeStamp;
+	
 	public LeaderBoardEntity() {
 	}
 	
 	public LeaderBoardEntity(Long id, String characterId, String rank, String rankDifference, String account,
 			String online, String dead, String character, String ascendancy, String time, String timeDifference,
 			String timeFormatted, String depth, String depthDifference, String level, String experience,
-			String experienceDifference, String progress, String league, String leaderboard) {
+			String experienceDifference, String progress, String league, String leaderboard, String timeStamp) {
 		super();
 		this.id = id;
 		this.characterId = characterId;
@@ -101,6 +104,7 @@ public class LeaderBoardEntity {
 		this.progress = progress;
 		this.league = league;
 		this.leaderboard = leaderboard;
+		this.timeStamp = timeStamp;
 	}
 	public String getRank() {
 		return rank;
@@ -222,15 +226,23 @@ public class LeaderBoardEntity {
 	public void setDepthDifference(String depthDifference) {
 		this.depthDifference = depthDifference;
 	}
-	
+	public String getTimeStamp() {
+		return timeStamp;
+	}
+
+	public void setTimeStamp(String timeStamp) {
+		this.timeStamp = timeStamp;
+	}
+
 	@Override
 	public String toString() {
 		return "LeaderBoardEntity [id=" + id + ", characterId=" + characterId + ", rank=" + rank + ", rankDifference="
 				+ rankDifference + ", account=" + account + ", online=" + online + ", dead=" + dead + ", character="
 				+ character + ", ascendancy=" + ascendancy + ", time=" + time + ", timeDifference=" + timeDifference
-				+ ", depth=" + depth + ", depthDifference=" + depthDifference + ", level=" + level + ", experience="
-				+ experience + ", experienceDifference=" + experienceDifference + ", progress=" + progress + ", league="
-				+ league + ", leaderboard=" + leaderboard + "]";
-	}	
+				+ ", timeFormatted=" + timeFormatted + ", depth=" + depth + ", depthDifference=" + depthDifference
+				+ ", level=" + level + ", experience=" + experience + ", experienceDifference=" + experienceDifference
+				+ ", progress=" + progress + ", league=" + league + ", leaderboard=" + leaderboard + ", timeStamp="
+				+ timeStamp + "]";
+	}
 
 }

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.poe.ladder.backend.leaderboard.dao.LeagueDaoImpl;
+import com.poe.ladder.backend.leaderboard.dao.LeagueDao;
 import com.poe.ladder.backend.leaderboard.repository.LeaderboardRepository;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
 import com.poe.ladder.backend.leagues.business.LeagueNameService;
@@ -20,7 +20,7 @@ public class LeaderboardControllerImpl implements LeaderboardController {
 	LeaderboardRepository leaderboardRepository;
 	
 	@Autowired
-	LeagueDaoImpl leagueDaoImpl;	
+	LeagueDao leagueDao;		
 	
 	@Autowired
 	LeagueNameService leagueNameService;
@@ -33,12 +33,12 @@ public class LeaderboardControllerImpl implements LeaderboardController {
 
 	@GetMapping("/leaderboards")
 	public List<LeaderBoardEntity> getLeaderboards(@RequestParam String leagueName, @RequestParam String leaderboard) {
-		return leagueDaoImpl.getLeaderboardLadderResults(leagueName, leaderboard);
+		return leagueDao.getTop5Leaderboards(leagueName, leaderboard);
 	}
 	
 	@GetMapping("/leaderboard-ladder")
 	public List<LeaderBoardEntity> getLeaderboardByLeagueVariation(@RequestParam String leagueName, @RequestParam String leaderboard) {
-			return leaderboardRepository.getLeaderboardLadderResults(leagueName, leaderboard);	
+		return leagueDao.getTop100ByLeaderboard(leagueName, leaderboard);
 	}
 	
 	@GetMapping("/custom-league")

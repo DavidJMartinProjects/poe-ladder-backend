@@ -19,9 +19,15 @@ public class LeagueDaoImpl implements LeagueDao {
 	LeagueService leagueService;
 
 	@Override
-	public List<LeaderBoardEntity> getLeaderboardLadderResults(String leagueName, String leaderboard) {
-		logger.info("getLeaderboardLadderResults() : DAO called : request params : leagueName = {} and leaderboard = {}", leagueName, leaderboard);
-		return leagueService.getLeaderboards(leagueName, leaderboard);
+	public List<LeaderBoardEntity> getTop5Leaderboards(String leagueName, String leaderboard) {
+		logger.info("getTop5Leaderboards() : DAO called : request params : leagueName = {} and leaderboard = {}", leagueName, leaderboard);
+		return leagueService.getTop5Leaderboards(leagueName, leaderboard);
+	}	
+	
+	@Override
+	public List<LeaderBoardEntity> getTop100ByLeaderboard(String leagueName, String leaderboard) {
+		logger.info("getTop100Leaderboards() : DAO called : request params : leagueName = {} and leaderboard = {}", leagueName, leaderboard);
+		return leagueService.getTop100ByLeaderboard(leagueName, leaderboard);
 	}	
 	
 }

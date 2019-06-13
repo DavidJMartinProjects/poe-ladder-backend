@@ -30,13 +30,20 @@ public class LeagueServiceImpl implements LeagueService {
 
 	@Override
 	@Cacheable("leaderboards")
-	public List<LeaderBoardEntity> getLeaderboards(String leagueName, String leaderboard) {		
-		logger.info("getLeaderboards() : Calling DB.");
+	public List<LeaderBoardEntity> getTop5Leaderboards(String leagueName, String leaderboard) {		
+		logger.info("getTop5Leaderboards() : Calling DB Respository.");
 		List<LeaderBoardEntity> leaderboardResults = new ArrayList<>();
 		for (String leagueVariation : leagueNameService.getLeagueVariationsListByLeagueName(leagueName)) {
-			leaderboardResults.addAll(leaderboardRepository.getLeaderboardEntryResults(leagueVariation, leaderboard, leaderboardResultsLimitConfig.getResultslimit()));	
+			leaderboardResults.addAll(leaderboardRepository.getTop5ByLeague(leagueVariation, leaderboard, leaderboardResultsLimitConfig.getResultslimit()));	
 		}
 		return leaderboardResults;	
+	}
+	
+	@Override
+	@Cacheable("leaderboardsTop100")
+	public List<LeaderBoardEntity> getTop100ByLeaderboard(String leagueName, String leaderboard) {		
+		logger.info("getTop100Leaderboards() : Calling DB Respository.");
+		return leaderboardRepository.getTop100ByLeaderboard(leagueName, leaderboard);	
 	}
 
 }

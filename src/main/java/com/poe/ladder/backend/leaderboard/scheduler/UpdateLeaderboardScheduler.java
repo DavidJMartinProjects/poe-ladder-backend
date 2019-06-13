@@ -32,6 +32,7 @@ public class UpdateLeaderboardScheduler {
 		} finally {
 			LOG.info("clearing cache and sleeping for garbage collection.");
 			clearCache("leaderboards");
+			clearCache("leaderboardsTop100");
 			java.lang.Thread.sleep(10000);
 			Runtime.getRuntime().gc();	
 			LOG.info("garbage collection complete. leaderboard polling operation completed successfully.");

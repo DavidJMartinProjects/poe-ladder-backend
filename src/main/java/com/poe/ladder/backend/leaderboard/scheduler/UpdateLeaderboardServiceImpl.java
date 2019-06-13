@@ -60,8 +60,7 @@ public class UpdateLeaderboardServiceImpl implements UpdateLeaderboardService {
 		if(!previousLeaderboardEntities.isEmpty()) {
 			latestLeaderboardEntities = leagueComparisonService.compareLeague(previousLeaderboardEntities, latestLeaderboardEntities);
 		} 
-		previousLeaderboardEntities = latestLeaderboardEntities;
-				
+		previousLeaderboardEntities = latestLeaderboardEntities;				
 		persistEntityToDb(latestLeaderboardEntities);
 	}
 

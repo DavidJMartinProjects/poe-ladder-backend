@@ -1,15 +1,16 @@
 package com.poe.ladder.backend.leagues.web;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.poe.ladder.backend.application.TimestampUtil;
 import com.poe.ladder.backend.external.api.requests.LeaderboardApiRequestService;
 import com.poe.ladder.backend.external.api.requests.urls.LeaderboardUrlsService;
 import com.poe.ladder.backend.external.api.response.domain.Entry;
 import com.poe.ladder.backend.external.api.response.mapper.LeaderboardMappingServiceImpl;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
+import com.poe.ladder.backend.util.TimestampUtil;
 
 @Component
 public class CustomLeagueServiceImpl implements CustomLeagueService {
@@ -31,4 +32,4 @@ public class CustomLeagueServiceImpl implements CustomLeagueService {
 	}
 
 }
-	
+		

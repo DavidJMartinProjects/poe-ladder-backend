@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.application;
+package com.poe.ladder.backend.util;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
@@ -14,4 +14,4 @@ public class TimestampUtil {
 	}
 
 }
-	
+		

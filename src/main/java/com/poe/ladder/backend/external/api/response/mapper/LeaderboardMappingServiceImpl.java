@@ -14,6 +14,7 @@ import com.poe.ladder.backend.leaderboard.domain.LeaderboardType;
 import com.poe.ladder.backend.leaderboard.progressbar.ProgressBarService;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
 import com.poe.ladder.backend.leagues.business.LeagueNameService;
+import com.poe.ladder.backend.util.MappingUtil;
 
 @Component
 public class LeaderboardMappingServiceImpl implements LeaderboardMappingService {
@@ -28,7 +29,7 @@ public class LeaderboardMappingServiceImpl implements LeaderboardMappingService 
 	ProgressBarService progressBarService;
 
 	@Autowired
-	FormatUtil formatUtil;
+	MappingUtil formatUtil;
 
 	private List<LeaderBoardEntity> leaderBoardEntityList;	
 	
@@ -72,13 +73,18 @@ public class LeaderboardMappingServiceImpl implements LeaderboardMappingService 
 		leaderboardEntity.setAccount(responseEntry.getAccount().getName());
 		leaderboardEntity.setOnline(responseEntry.getOnline().toString());
 		leaderboardEntity.setAscendancy((responseEntry.getCharacter().getClass_()));
+		mapLeagueSpecificFields(leaderboardType, responseEntry, leaderboardEntity);
+		return leaderboardEntity;
+	}
+
+	private void mapLeagueSpecificFields(LeaderboardType leaderboardType, Entry responseEntry, LeaderBoardEntity leaderboardEntity) {
 		if (leaderboardType == LeaderboardType.DELVE) {
 			leaderboardEntity.setDepth(responseEntry.getCharacter().getDepth().getSolo().toString());
 			leaderboardEntity.setDead(responseEntry.getDead().toString());
 		} else if (leaderboardType == LeaderboardType.UBERLAB) {
 			leaderboardEntity.setTime(responseEntry.getTime());
 			leaderboardEntity.setTimeFormatted(responseEntry.getTime());
-		} else {				
+		} else if(leaderboardType == LeaderboardType.RACETO100) {				
 			leaderboardEntity.setDead(responseEntry.getDead().toString());
 			leaderboardEntity.setLevel(responseEntry.getCharacter().getLevel().toString());
 			String experience = responseEntry.getCharacter().getExperience().toString();
@@ -88,11 +94,10 @@ public class LeaderboardMappingServiceImpl implements LeaderboardMappingService 
 			String formattedXp = formatExperience(experience);
 			leaderboardEntity.setExperience(formattedXp);
 		}
-		return leaderboardEntity;
 	}
 
 	private String formatExperience(String xp) {
-		return formatUtil.formatStringToDouble(xp);
+		return MappingUtil.formatStringToDouble(xp);
 	}	
 	
 }

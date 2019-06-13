@@ -14,14 +14,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.poe.ladder.backend.application.TimestampUtil;
 import com.poe.ladder.backend.external.api.requests.LeaderboardApiRequestService;
 import com.poe.ladder.backend.external.api.requests.urls.LeaderboardUrlsService;
 import com.poe.ladder.backend.external.api.response.domain.Entry;
 import com.poe.ladder.backend.external.api.response.mapper.LeaderboardMappingService;
 import com.poe.ladder.backend.leaderboard.comparison.LeagueComparisonService;
 import com.poe.ladder.backend.leaderboard.repository.LeaderboardRepository;
-import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;		
+import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
+import com.poe.ladder.backend.util.TimestampUtil;		
 	
 @Service
 public class UpdateLeaderboardServiceImpl implements UpdateLeaderboardService {		

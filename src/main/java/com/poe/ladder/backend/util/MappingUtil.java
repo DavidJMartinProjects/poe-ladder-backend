@@ -1,18 +1,19 @@
-package com.poe.ladder.backend.external.api.response.mapper;
+package com.poe.ladder.backend.util;
 
 import java.text.DecimalFormat;
 
 import org.springframework.stereotype.Component;
 
 @Component
-public class FormatUtilImpl implements FormatUtil {
+public class MappingUtil {
 
-    private DecimalFormat formatter = new DecimalFormat("#,###");
+    private static DecimalFormat formatter = new DecimalFormat("#,###");
 
-    public String formatStringToDouble(String number) {
+    public static String formatStringToDouble(String number) {
         String numberAsString = number.replaceAll(",", "");
         Double numberAsDouble = Double.parseDouble(numberAsString);
         return formatter.format(numberAsDouble);
     }
+    
+}	
 	
-}

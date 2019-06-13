@@ -7,7 +7,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.poe.ladder.backend.leaderboard.domain.LeagueName;
+import com.poe.ladder.backend.leaderboard.domain.League;
 import com.poe.ladder.backend.leagues.config.LeagueNamesConfig;
 import com.poe.ladder.backend.leagues.config.LeagueVariationsConfig;
 
@@ -21,11 +21,11 @@ public class LeagueNameServiceImpl implements LeagueNameService {
 	LeagueNamesConfig leagueNamesConfig;
 
 	@Override
-	public List<LeagueName> getCurrentLeagues() {		
+	public List<League> getCurrentLeagues() {		
 		Map<String, List<String>> leagueVariationMap = leagueVariationsConfig.getLeagueVariations();
-		List<LeagueName> leagueNamesList = new ArrayList<>();
+		List<League> leagueNamesList = new ArrayList<>();
 		for (Map.Entry<String, List<String>> leagueEntry : leagueVariationMap.entrySet()) {
-			leagueNamesList.add(new LeagueName(leagueEntry.getKey()));
+			leagueNamesList.add(new League(leagueEntry.getKey()));
 		}
 		if (leagueNamesList.isEmpty()) {
 			throw new RuntimeException("RuntimeException encountered : League Variations not found for leagueName : ");
@@ -34,12 +34,12 @@ public class LeagueNameServiceImpl implements LeagueNameService {
 	}	
 
 	@Override
-	public List<LeagueName> getLeagueVariationNames() {
+	public List<League> getLeagueVariationNames() {
 		Map<String, List<String>> leagueVariationMap = leagueVariationsConfig.getLeagueVariations();
-		List<LeagueName> leagueVariationsList = new ArrayList<>();
+		List<League> leagueVariationsList = new ArrayList<>();
 		for (Map.Entry<String, List<String>> leagueEntry : leagueVariationMap.entrySet()) {
 			for(String leagueVariation : leagueEntry.getValue()) {
-				leagueVariationsList.add(new LeagueName(leagueVariation));
+				leagueVariationsList.add(new League(leagueVariation));
 			}
 		}
 		if (leagueVariationsList.isEmpty()) {

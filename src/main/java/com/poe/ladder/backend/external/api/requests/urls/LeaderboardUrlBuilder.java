@@ -49,9 +49,9 @@ public class LeaderboardUrlBuilder {
 	private void buildUrls() {
 		LOG.info("buildUrls(): request received to build leaderboard Urls");
 		for (LeagueName leagueName : leagueNames) {
-			buildDelveUrls(leagueName.getLeagueName());
-			buildUberLabUrls(leagueName.getLeagueName());
-			buildRaceTo100Urls(leagueName.getLeagueName());
+			buildDelveUrls(leagueName.getTheLeagueName());
+			buildUberLabUrls(leagueName.getTheLeagueName());
+			buildRaceTo100Urls(leagueName.getTheLeagueName());
 		}
 	}
 	

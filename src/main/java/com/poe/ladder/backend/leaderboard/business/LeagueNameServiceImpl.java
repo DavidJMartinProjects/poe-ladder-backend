@@ -27,7 +27,7 @@ public class LeagueNameServiceImpl implements LeagueNameService {
 		for (Map.Entry<String, List<String>> leagueEntry : leagueVariationMap.entrySet()) {
 			leagueNamesList.add(new LeagueName(leagueEntry.getKey()));
 		}
-		if (leagueNamesList.size() == 0) {
+		if (leagueNamesList.isEmpty()) {
 			throw new RuntimeException("RuntimeException encountered : League Variations not found for leagueName : ");
 		}
 		return leagueNamesList;
@@ -38,10 +38,11 @@ public class LeagueNameServiceImpl implements LeagueNameService {
 		Map<String, List<String>> leagueVariationMap = leagueVariationsConfig.getLeagueVariations();
 		List<LeagueName> leagueVariationsList = new ArrayList<>();
 		for (Map.Entry<String, List<String>> leagueEntry : leagueVariationMap.entrySet()) {
-			for(String leagueVariation : leagueEntry.getValue())
-			leagueVariationsList.add(new LeagueName(leagueVariation));
+			for(String leagueVariation : leagueEntry.getValue()) {
+				leagueVariationsList.add(new LeagueName(leagueVariation));
+			}
 		}
-		if (leagueVariationsList.size() == 0) {
+		if (leagueVariationsList.isEmpty()) {
 			throw new RuntimeException("RuntimeException encountered : League Variations not found for leagueName : ");
 		}
 		return leagueVariationsList;
@@ -49,13 +50,13 @@ public class LeagueNameServiceImpl implements LeagueNameService {
 
 	public List<String> getLeagueVariationsListByLeagueName(String leagueName) {
 		Map<String, List<String>> leagueVariationMap = leagueVariationsConfig.getLeagueVariations();
-		List<String> leagueVariationsList = new ArrayList<String>();
+		List<String> leagueVariationsList = new ArrayList<>();
 		for (Map.Entry<String, List<String>> leagueEntry : leagueVariationMap.entrySet()) {
 			if (leagueEntry.getKey().equals(leagueName)) {
 				leagueVariationsList = leagueEntry.getValue();
 			}
 		}
-		if (leagueVariationsList.size() == 0) {
+		if (leagueVariationsList.isEmpty()) {
 			throw new RuntimeException("RuntimeException encountered : League Variations not found for leagueName : " + leagueName);
 		}
 		return leagueVariationsList;

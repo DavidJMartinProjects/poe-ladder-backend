@@ -10,11 +10,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProgressBarServiceImpl implements ProgressBarService {
 
-	private Double nextLevelXpValue;
-	private Double totalXpForCurrentLevel;
-	private Double percentage;
-	private Double currentLevelXpValue;
-		
 	private Map<Integer, Double> levelXpValues = new HashMap<>();
 	
 	@PostConstruct
@@ -125,13 +120,13 @@ public class ProgressBarServiceImpl implements ProgressBarService {
 		Integer currentLevel = Integer.parseInt(level);
 		Double currentXpValue = Double.parseDouble(xpValue);;
 		if (currentLevel != 100) {
-			currentLevelXpValue = levelXpValues.get(currentLevel);
-			nextLevelXpValue = levelXpValues.get(currentLevel + 1);
-			totalXpForCurrentLevel = nextLevelXpValue - currentLevelXpValue;
-			percentage = ((currentXpValue - currentLevelXpValue)*100)/totalXpForCurrentLevel;
-			return new String(String.format("%.1f", percentage) + "%");
+			Double currentLevelXpValue = levelXpValues.get(currentLevel);
+			Double nextLevelXpValue = levelXpValues.get(currentLevel + 1);
+			Double totalXpForCurrentLevel = nextLevelXpValue - currentLevelXpValue;
+			Double percentage = ((currentXpValue - currentLevelXpValue)*100)/totalXpForCurrentLevel;
+			return String.format("%.1f", percentage) + "%";
 		}
-		return new String("100%");	
+		return "100%";	
 	}
 
 }

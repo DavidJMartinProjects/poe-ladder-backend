@@ -2,17 +2,18 @@ package com.poe.ladder.backend.leaderboard.domain;
 
 public class LeagueName {
 
-	String leagueName;
-	
+	private String theLeagueName;
+
 	public LeagueName(String leagueName) {
-		this.leagueName = leagueName;
+		this.theLeagueName = leagueName;
 	}
-	
-	public String getLeagueName() {
-		return leagueName;
+
+	public String getTheLeagueName() {
+		return theLeagueName;
 	}
-	public void setLeagueName(String leagueName) {
-		this.leagueName = leagueName;
+
+	public void setTheLeagueName(String theLeagueName) {
+		this.theLeagueName = theLeagueName;
 	}
 	
 }

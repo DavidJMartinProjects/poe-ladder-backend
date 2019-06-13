@@ -26,27 +26,27 @@ public class LeaderboardApiRequestServiceImpl implements LeaderboardApiRequestSe
 	private HttpEntity<String> entity;
 	private RestTemplate restTemplate;
 	
-	private final static Logger LOG = LoggerFactory.getLogger(LeaderboardApiRequestServiceImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(LeaderboardApiRequestServiceImpl.class);
 	
 	@PostConstruct
-	public void init() throws InterruptedException {
+	public void init() {
 		entity = httpEntityBuilder.getConfiguredHttpEntity();
 		restTemplate = new RestTemplate();
 	}	
 
 	@Override
 	public List<Entry> requestLeaderboardFromPoeApi(String url)  {
-		List<Entry> responseList = new ArrayList<Entry>();
+		List<Entry> responseEntriesList = new ArrayList<>();
 		try {
 			sleepBeforeNextApiRequest();
 			LOG.info("requestLeaderboardFromPoeApi() : performing httprequest to {}", url);
 			ResponseEntity<ResponseEntry> leaderboardApiRequest = restTemplate.exchange(url, HttpMethod.GET, entity, ResponseEntry.class);
-			ResponseEntry leaderboardApiResponse = leaderboardApiRequest.getBody();
-			responseList = leaderboardApiResponse.getEntries();
+			ResponseEntry leaderboardApiResponseBody = leaderboardApiRequest.getBody();
+			responseEntriesList = leaderboardApiResponseBody.getEntries();
 		} catch (Exception ex) {
 			LOG.info("poe api response error.");
 		}
-		return responseList;
+		return responseEntriesList;
 	}
 	
 	private void sleepBeforeNextApiRequest() {

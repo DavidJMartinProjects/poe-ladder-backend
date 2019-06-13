@@ -32,7 +32,7 @@ public class LeaderboardApiRequestServiceImpl implements LeaderboardApiRequestSe
 	public void init() throws InterruptedException {
 		entity = httpEntityBuilder.getConfiguredHttpEntity();
 		restTemplate = new RestTemplate();
-	}
+	}	
 
 	@Override
 	public List<Entry> requestLeaderboardFromPoeApi(String url)  {

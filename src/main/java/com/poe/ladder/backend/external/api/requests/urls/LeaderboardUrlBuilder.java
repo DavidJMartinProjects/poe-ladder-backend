@@ -12,8 +12,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.poe.ladder.backend.leaderboard.business.LeagueNameService;
 import com.poe.ladder.backend.leaderboard.domain.LeagueName;
-import com.poe.ladder.backend.leagues.business.LeagueNameService;
 
 @Component
 public class LeaderboardUrlBuilder {

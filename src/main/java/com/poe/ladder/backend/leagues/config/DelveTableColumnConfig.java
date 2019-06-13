@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.leaderboard.config;
+package com.poe.ladder.backend.leagues.config;
 
 import java.util.List;
 
@@ -6,10 +6,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ConfigurationProperties(prefix = "datatables.leaderboard.uberlab")
-public class UberLabTableColumnConfig {
+@ConfigurationProperties(prefix = "datatables.leaderboard.delve")
+public class DelveTableColumnConfig {
 	
-	List<String> tableColumns;	
+	private List<String> tableColumns;
 
 	public List<String> getTableColumns() {
 		return tableColumns;
@@ -19,4 +19,4 @@ public class UberLabTableColumnConfig {
 		this.tableColumns = tableColumns;
 	}
 
-}
+}	

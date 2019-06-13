@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.poe.ladder.backend.leaderboard.business.LeagueNameService;
 import com.poe.ladder.backend.leaderboard.domain.LeagueName;
-import com.poe.ladder.backend.leagues.business.LeagueNameService;
 
 @RestController
 public class LeagueNameControllerImpl implements LeagueNameController {

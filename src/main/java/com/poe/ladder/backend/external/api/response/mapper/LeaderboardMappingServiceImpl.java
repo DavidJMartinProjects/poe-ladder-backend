@@ -10,10 +10,10 @@ import org.springframework.stereotype.Component;
 
 import com.poe.ladder.backend.external.api.requests.urls.LeaderboardApiUrlsConfig;
 import com.poe.ladder.backend.external.api.response.domain.Entry;
+import com.poe.ladder.backend.leaderboard.business.LeagueNameService;
 import com.poe.ladder.backend.leaderboard.domain.LeaderboardType;
 import com.poe.ladder.backend.leaderboard.progressbar.ProgressBarService;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
-import com.poe.ladder.backend.leagues.business.LeagueNameService;
 import com.poe.ladder.backend.util.MappingUtil;
 
 @Component

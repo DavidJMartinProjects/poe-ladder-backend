@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 
 import com.poe.ladder.backend.leaderboard.repository.LeaderboardRepository;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
-import com.poe.ladder.backend.leagues.business.LeagueNameService;
 import com.poe.ladder.backend.leagues.config.LeaderboardResultsLimitConfig;
 
 @Service	

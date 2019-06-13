@@ -7,10 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.poe.ladder.backend.leaderboard.business.CustomLeagueService;
+import com.poe.ladder.backend.leaderboard.business.LeagueNameService;
 import com.poe.ladder.backend.leaderboard.dao.LeagueDao;
 import com.poe.ladder.backend.leaderboard.repository.LeaderboardRepository;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
-import com.poe.ladder.backend.leagues.business.LeagueNameService;
 import com.poe.ladder.backend.leagues.config.LeaderboardResultsLimitConfig;
 
 @RestController

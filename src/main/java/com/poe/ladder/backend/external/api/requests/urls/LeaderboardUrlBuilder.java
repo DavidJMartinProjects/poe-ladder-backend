@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.poe.ladder.backend.leaderboard.business.LeagueNameService;
-import com.poe.ladder.backend.leaderboard.domain.League;
+import com.poe.ladder.backend.leaderboard.domain.LeagueName;
 
 @Component
 public class LeaderboardUrlBuilder {
@@ -24,7 +24,7 @@ public class LeaderboardUrlBuilder {
 	@Autowired
 	LeaderboardApiUrlsConfig urlsConfig;
 	
-	private List<League> leagueNames;
+	private List<LeagueName> leagueNames;
 	private Map<String, String> delveUrls;
 	private Map<String, String> uberLabUrls;
 	private Map<String, String> raceTo100Urls;
@@ -48,10 +48,10 @@ public class LeaderboardUrlBuilder {
 
 	private void buildUrls() {
 		LOG.info("buildUrls(): request received to build leaderboard Urls");
-		for (League leagueName : leagueNames) {
-			buildDelveUrls(leagueName.getTheLeagueName());
-			buildUberLabUrls(leagueName.getTheLeagueName());
-			buildRaceTo100Urls(leagueName.getTheLeagueName());
+		for (LeagueName leagueName : leagueNames) {
+			buildDelveUrls(leagueName.getLeagueName());
+			buildUberLabUrls(leagueName.getLeagueName());
+			buildRaceTo100Urls(leagueName.getLeagueName());
 		}
 	}
 	

@@ -2,11 +2,11 @@ package com.poe.ladder.backend.leaderboard.business;
 
 import java.util.List;
 
-import com.poe.ladder.backend.leaderboard.domain.League;
+import com.poe.ladder.backend.leaderboard.domain.LeagueName;
 
 public interface LeagueNameService {	
-	public List<League> getCurrentLeagues();
-	public List<League>  getLeagueVariationNames();
+	public List<LeagueName> getCurrentLeagues();
+	public List<LeagueName>  getLeagueVariationNames();
 	public List<String> getLeagueVariationsListByLeagueName(String leagueName);
 }
 		

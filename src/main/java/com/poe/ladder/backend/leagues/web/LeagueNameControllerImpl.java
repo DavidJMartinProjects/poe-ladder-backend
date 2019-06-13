@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.poe.ladder.backend.leaderboard.business.LeagueNameService;
-import com.poe.ladder.backend.leaderboard.domain.League;
+import com.poe.ladder.backend.leaderboard.domain.LeagueName;
 
 @RestController
 public class LeagueNameControllerImpl implements LeagueNameController {
@@ -24,12 +24,12 @@ public class LeagueNameControllerImpl implements LeagueNameController {
 
 	@CrossOrigin(origins = "http://localhost:4200")
 	@RequestMapping("/current-leagues")
-	public List<League> getCurrentLeagues() {
+	public List<LeagueName> getCurrentLeagues() {
 		return leagueNameService.getLeagueVariationNames();
 	}
 	
 	@RequestMapping("/league-names")
-	public List<League> getLeagueNames() {
+	public List<LeagueName> getLeagueNames() {
 		return leagueNameService.getCurrentLeagues();
 	}
 

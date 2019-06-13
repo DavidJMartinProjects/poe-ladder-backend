@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.poe.ladder.backend.leaderboard.domain.LeagueName;
-import com.poe.ladder.backend.leagues.config.LeagueNamesConfig;
 import com.poe.ladder.backend.leagues.config.LeagueVariationsConfig;
 
 @Service
@@ -17,10 +16,7 @@ public class LeagueNameServiceImpl implements LeagueNameService {
 	@Autowired
 	LeagueVariationsConfig leagueVariationsConfig;
 	
-	@Autowired
-	LeagueNamesConfig leagueNamesConfig;
-
-	@Override
+	@Override	
 	public List<LeagueName> getCurrentLeagues() {		
 		Map<String, List<String>> leagueVariationMap = leagueVariationsConfig.getLeagueVariations();
 		List<LeagueName> leagueNamesList = new ArrayList<>();

@@ -11,26 +11,6 @@
 #      password: password
 #      initialization-mode: always
 
-leagues:
-   currentLeagues: 
-    #- Standard
-    #- Hardcore
-    #- SSF Standard
-    #- SSF Hardcore
-    - Synthesis
-    - Hardcore Synthesis
-    - SSF Synthesis
-    - SSF Synthesis HC
-    - Synthesis Event (SRE001)
-    - Synthesis Event HC (SRE002)
-    - SSF Synthesis Event (SRE003)
-    - SSF Synthesis Event HC (SRE004)  
-    
-   leagueNames:
-    - Standard
-    - Synthesis
-    - Synthesis Event
-
 activeleagues:
    leagueVariations.[Standard]: Standard, Hardcore, SSF Standard, SSF Hardcore
    leagueVariations.[Legion]: Legion, Hardcore Legion, SSF Legion, SSF Legion HC  

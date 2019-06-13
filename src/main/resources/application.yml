@@ -1,3 +1,4 @@
+#configuration for local postgres db
 #spring:   
 #   jpa:
 #     show-sql: true

@@ -40,7 +40,7 @@ public class UpdateLeaderboardServiceImpl implements UpdateLeaderboardService {
 	
 	private List<LeaderBoardEntity> previousLeaderboardEntities = new ArrayList<>();	
 	private List<Map<String, String>> leaderboardUrls;
-	private final static Logger LOG = LoggerFactory.getLogger(UpdateLeaderboardServiceImpl.class);
+	private static final Logger LOG = LoggerFactory.getLogger(UpdateLeaderboardServiceImpl.class);
 	
 	@PostConstruct
 	public void init() {

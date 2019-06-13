@@ -30,13 +30,17 @@ public class UpdateLeaderboardScheduler {
 		} catch (InterruptedException ex) {
 			throw new RuntimeException("pollLeaderboards encountered an InterruptedException :  " + ex);
 		} finally {
-			LOG.info("clearing cache and sleeping for garbage collection.");
-			clearCache("leaderboards");
-			clearCache("leaderboardsTop100");
-			java.lang.Thread.sleep(10000);
-			Runtime.getRuntime().gc();	
-			LOG.info("garbage collection complete. leaderboard polling operation completed successfully.");
+			sleepAndClearCache();
 		}
+	}
+
+	private void sleepAndClearCache() throws InterruptedException {
+		LOG.info("clearing cache and sleeping for garbage collection.");
+		clearCache("leaderboards");
+		clearCache("leaderboardsTop100");
+		java.lang.Thread.sleep(10000);
+		Runtime.getRuntime().gc();	
+		LOG.info("garbage collection complete. leaderboard polling operation completed successfully.");
 	}
 
 	public void clearCache(String cacheName) {

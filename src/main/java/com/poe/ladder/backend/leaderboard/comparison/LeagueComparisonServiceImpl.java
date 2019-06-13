@@ -25,8 +25,7 @@ public class LeagueComparisonServiceImpl implements LeagueComparisonService {
 				comparedLeagueList = new ArrayList<>(newLeagueData);
 				if(newLeagueDataEntry.getCharacterId().equals(oldLeagueDataEntry.getCharacterId())
 					&& newLeagueDataEntry.getLeague().equals(oldLeagueDataEntry.getLeague())
-					&& newLeagueDataEntry.getLeaderboard().equals(oldLeagueDataEntry.getLeaderboard())) {					 
-						
+					&& newLeagueDataEntry.getLeaderboard().equals(oldLeagueDataEntry.getLeaderboard())) {		
 					comparedLeagueList.add(performComparison(oldLeagueDataEntry, newLeagueDataEntry));
 				} else {
 					comparedLeagueList.add(newLeagueDataEntry);

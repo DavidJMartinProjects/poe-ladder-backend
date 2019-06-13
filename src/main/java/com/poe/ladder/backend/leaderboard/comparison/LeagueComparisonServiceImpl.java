@@ -20,13 +20,13 @@ public class LeagueComparisonServiceImpl implements LeagueComparisonService {
 		
 		List<LeaderBoardEntity> comparedLeagueList = new ArrayList<>();
 		for (LeaderBoardEntity newLeagueDataEntry : newLeagueData) {
+			LOG.info("compareLeague() called : attempting to compare league data to determine rank differences");
 			for (LeaderBoardEntity oldLeagueDataEntry : oldLeagueData) {
 				comparedLeagueList = new ArrayList<>(newLeagueData);
 				if(newLeagueDataEntry.getCharacterId().equals(oldLeagueDataEntry.getCharacterId())
 					&& newLeagueDataEntry.getLeague().equals(oldLeagueDataEntry.getLeague())
-					&& newLeagueDataEntry.getLeaderboard().equals(oldLeagueDataEntry.getLeaderboard())) {	
-					LOG.info("compareLeague() called : attempting to compare league data to determine rank differences for league : {} - {}", 
-						oldLeagueDataEntry.getLeague(), oldLeagueDataEntry.getLeaderboard());
+					&& newLeagueDataEntry.getLeaderboard().equals(oldLeagueDataEntry.getLeaderboard())) {					 
+						
 					comparedLeagueList.add(performComparison(oldLeagueDataEntry, newLeagueDataEntry));
 				} else {
 					comparedLeagueList.add(newLeagueDataEntry);

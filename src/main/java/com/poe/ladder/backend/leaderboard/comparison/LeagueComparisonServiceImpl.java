@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.poe.ladder.backend.leaderboard.domain.LeaderboardType;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
+import com.poe.ladder.backend.util.MappingUtil;
 
 @Service
 public class LeagueComparisonServiceImpl implements LeagueComparisonService {
@@ -48,27 +49,6 @@ public class LeagueComparisonServiceImpl implements LeagueComparisonService {
 		return comparedleagueEntry;
 	}
 	
-	private String calcXpDifference(LeaderBoardEntity oldXp, LeaderBoardEntity newXp) {
-		String oldXpAsString="0";		
-		if(oldXp != null) {
-			oldXpAsString = removeCommasFromXpValue(oldXp.getExperience());
-		} 		
-		String newXpAsString="0";
-		if(newXp != null) {
-			newXpAsString = removeCommasFromXpValue(newXp.getExperience());
-		}		
-		return formatXpDifference(performCalculation(oldXpAsString, newXpAsString));		
-	}
-	
-	private String removeCommasFromXpValue(String xpValue) {
-		return xpValue.replaceAll(",", "");
-	}
-	
-	private String formatXpDifference(String xpDifference) {
-		Double xpDifferenceAsDouble = Double.parseDouble(xpDifference);
-		return String.format("%.2fM", xpDifferenceAsDouble/ 1000000.0);		
-	}
-
 	private String calcTimeDifference(LeaderBoardEntity oldLeagueDataEntry, LeaderBoardEntity newLeagueDataEntry) {
 		return performCalculation(oldLeagueDataEntry.getTime(), newLeagueDataEntry.getTime());
 	}
@@ -78,22 +58,26 @@ public class LeagueComparisonServiceImpl implements LeagueComparisonService {
 	}
 	
 	private String calcRankDifference(LeaderBoardEntity oldEntry, LeaderBoardEntity newEntry) {
-		return formatRank(performCalculation(newEntry.getRank(), oldEntry.getRank()));
+		return MappingUtil.formatRank(performCalculation(newEntry.getRank(), oldEntry.getRank()));
 	}	
+	
+	private String calcXpDifference(LeaderBoardEntity oldXp, LeaderBoardEntity newXp) {
+		String oldXpAsString="0";		
+		if(oldXp != null) {
+			oldXpAsString = MappingUtil.removeCommasFromXpValue(oldXp.getExperience());
+		} 		
+		String newXpAsString="0";
+		if(newXp != null) {
+			newXpAsString = MappingUtil.removeCommasFromXpValue(newXp.getExperience());
+		}		
+		return MappingUtil.formatXpDifference(performCalculation(oldXpAsString, newXpAsString));		
+	}
 	
 	private String performCalculation(String oldValue, String newValue) {
 		Long oldValueAsLong = Long.parseLong(oldValue);
 		Long newValueAsLong = Long.parseLong(newValue);
 		Long difference = newValueAsLong - oldValueAsLong;
 		return difference.toString();
-	}
-		
-	private String formatRank(String rankDifference) {
-		Long difference = Long.parseLong(rankDifference);
-		if(difference > 0) {
-			return "+" + difference;
-		}
-		return rankDifference;
 	}
 	
 }

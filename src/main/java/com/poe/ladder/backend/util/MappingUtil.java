@@ -15,5 +15,22 @@ public class MappingUtil {
         return formatter.format(numberAsDouble);
     }
     
+    public static String removeCommasFromXpValue(String xpValue) {
+		return xpValue.replaceAll(",", "");
+	}
+	
+    public static String formatXpDifference(String xpDifference) {
+		Double xpDifferenceAsDouble = Double.parseDouble(xpDifference);
+		return String.format("%.2fM", xpDifferenceAsDouble/ 1000000.0);		
+	}
+    
+    public static String formatRank(String rankDifference) {
+		Long difference = Long.parseLong(rankDifference);
+		if(difference > 0) {
+			return "+" + difference;
+		}
+		return rankDifference;
+	}
+    
 }	
 	

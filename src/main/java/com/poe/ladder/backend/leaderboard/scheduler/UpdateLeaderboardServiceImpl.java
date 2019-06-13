@@ -1,9 +1,6 @@
 package com.poe.ladder.backend.leaderboard.scheduler;
 
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -33,7 +30,7 @@ public class UpdateLeaderboardServiceImpl implements UpdateLeaderboardService {
 	LeaderboardApiRequestService leaderboardApiRequestService;	
 
 	@Autowired
-	LeaderboardMappingService leaderboardMappingService;		
+	LeaderboardMappingService leaderboardMappingService;			
 	
 	@Autowired
 	LeaderboardRepository leaderboardRepository;	

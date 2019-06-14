@@ -3,3 +3,9 @@ http://api.pathofexile.com/leagues?type=event
 
 list of current leagues
 http://api.pathofexile.com/leagues?type=main
+
+get characters items
+https://www.pathofexile.com/character-window/get-items?character=[Charname]&accountName=[AccountName]
+
+poe api swagger
+https://app.swaggerhub.com/apis/Chuanhsing/poe/1.0.0#/default/get_character_window_get_items

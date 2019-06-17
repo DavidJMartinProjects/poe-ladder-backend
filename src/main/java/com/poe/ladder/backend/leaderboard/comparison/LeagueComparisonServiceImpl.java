@@ -51,15 +51,15 @@ public class LeagueComparisonServiceImpl implements LeagueComparisonService {
 	}
 	
 	private String calcTimeDifference(LeaderBoardEntity oldLeagueDataEntry, LeaderBoardEntity newLeagueDataEntry) {
-		return performCalculation(oldLeagueDataEntry.getTime(), newLeagueDataEntry.getTime());
+		return calculateDifference(oldLeagueDataEntry.getTime(), newLeagueDataEntry.getTime());
 	}
 	
 	private String calcDepthDifference(LeaderBoardEntity oldLeagueDataEntry, LeaderBoardEntity newLeagueDataEntry) {
-		return performCalculation(oldLeagueDataEntry.getRank(), newLeagueDataEntry.getRank());		
+		return calculateDifference(oldLeagueDataEntry.getRank(), newLeagueDataEntry.getRank());		
 	}
 	
 	private String calcRankDifference(LeaderBoardEntity oldEntry, LeaderBoardEntity newEntry) {
-		return MappingUtil.formatRank(performCalculation(newEntry.getRank(), oldEntry.getRank()));
+		return MappingUtil.formatRank(calculateDifference(newEntry.getRank(), oldEntry.getRank()));
 	}	
 	
 	private String calcXpDifference(LeaderBoardEntity oldXp, LeaderBoardEntity newXp) {
@@ -71,10 +71,10 @@ public class LeagueComparisonServiceImpl implements LeagueComparisonService {
 		if(newXp != null) {
 			newXpAsString = MappingUtil.removeCommasFromXpValue(newXp.getExperience());
 		}		
-		return MappingUtil.formatXpDifference(performCalculation(oldXpAsString, newXpAsString));		
+		return MappingUtil.formatXpDifference(calculateDifference(oldXpAsString, newXpAsString));		
 	}
 	
-	private String performCalculation(String oldValue, String newValue) {
+	private String calculateDifference(String oldValue, String newValue) {
 		Long oldValueAsLong = Long.parseLong(oldValue);
 		Long newValueAsLong = Long.parseLong(newValue);
 		Long difference = newValueAsLong - oldValueAsLong;

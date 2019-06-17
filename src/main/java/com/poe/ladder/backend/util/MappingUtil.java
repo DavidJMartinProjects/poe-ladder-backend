@@ -20,7 +20,10 @@ public class MappingUtil {
 	}
 	
     public static String formatXpDifference(String xpDifference) {
-		Double xpDifferenceAsDouble = Double.parseDouble(xpDifference);
+    	Double xpDifferenceAsDouble = Double.parseDouble(xpDifference);
+    	if(xpDifferenceAsDouble == 0) {
+    		return "";
+    	}		
 		return String.format("%.2fM", xpDifferenceAsDouble/ 1000000.0);		
 	}
     

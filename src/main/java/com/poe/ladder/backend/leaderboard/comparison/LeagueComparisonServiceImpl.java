@@ -17,10 +17,9 @@ public class LeagueComparisonServiceImpl implements LeagueComparisonService {
 	private static final Logger LOG = LoggerFactory.getLogger(LeagueComparisonServiceImpl.class);
 	
 	public List<LeaderBoardEntity> compareLeague(List<LeaderBoardEntity> oldLeagueData, List<LeaderBoardEntity> newLeagueData) {
-		
+		LOG.info("compareLeague() called : attempting to compare league data to determine rank differences");
 		List<LeaderBoardEntity> comparedLeagueList = new ArrayList<>();
 		for (LeaderBoardEntity newLeagueDataEntry : newLeagueData) {
-			LOG.info("compareLeague() called : attempting to compare league data to determine rank differences");
 			for (LeaderBoardEntity oldLeagueDataEntry : oldLeagueData) {
 				comparedLeagueList = new ArrayList<>(newLeagueData);
 				if(newLeagueDataEntry.getCharacterId().equals(oldLeagueDataEntry.getCharacterId())

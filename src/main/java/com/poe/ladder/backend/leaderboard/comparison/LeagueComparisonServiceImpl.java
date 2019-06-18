@@ -39,13 +39,13 @@ public class LeagueComparisonServiceImpl implements LeagueComparisonService {
 	
 	private LeaderBoardEntity performComparison(LeaderBoardEntity oldLeagueDataEntry, LeaderBoardEntity newLeagueDataEntry) {
 		LeaderBoardEntity comparedleagueEntry = newLeagueDataEntry;	
-		comparedleagueEntry.setRankDifference(leagueComparisonUtil.calcRankDifference(oldLeagueDataEntry, newLeagueDataEntry));
+		comparedleagueEntry.setRankDifference(leagueComparisonUtil.compareRankDifference(oldLeagueDataEntry, newLeagueDataEntry));
 		if(comparedleagueEntry.getLeaderboard().equals(LeaderboardType.RACETO100.toString())) {			
 			comparedleagueEntry.setExperienceDifference(leagueComparisonUtil.calcXpDifference(oldLeagueDataEntry, newLeagueDataEntry));			
 		} else if(comparedleagueEntry.getLeaderboard().equals(LeaderboardType.DELVE.toString())) {
-			comparedleagueEntry.setDepthDifference(leagueComparisonUtil.calcDepthDifference(oldLeagueDataEntry, newLeagueDataEntry));
+			comparedleagueEntry.setDepthDifference(leagueComparisonUtil.compareDepthDifference(oldLeagueDataEntry, newLeagueDataEntry));
 		} else if(comparedleagueEntry.getLeaderboard().equals(LeaderboardType.UBERLAB.toString())) {
-			comparedleagueEntry.setTimeDifference(leagueComparisonUtil.calcTimeDifference(oldLeagueDataEntry, newLeagueDataEntry));
+			comparedleagueEntry.setTimeDifference(leagueComparisonUtil.compareTimeDifference(oldLeagueDataEntry, newLeagueDataEntry));
 		}
 		return comparedleagueEntry;
 	}

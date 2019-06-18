@@ -8,15 +8,15 @@ import com.poe.ladder.backend.util.MappingUtil;
 @Component
 public class LeagueComparisonUtil {
 	
-	public String calcTimeDifference(LeaderBoardEntity oldLeagueDataEntry, LeaderBoardEntity newLeagueDataEntry) {
+	public String compareTimeDifference(LeaderBoardEntity oldLeagueDataEntry, LeaderBoardEntity newLeagueDataEntry) {
 		return calculateDifference(oldLeagueDataEntry.getTime(), newLeagueDataEntry.getTime());
 	}
 	
-	public String calcDepthDifference(LeaderBoardEntity oldLeagueDataEntry, LeaderBoardEntity newLeagueDataEntry) {
+	public String compareDepthDifference(LeaderBoardEntity oldLeagueDataEntry, LeaderBoardEntity newLeagueDataEntry) {
 		return calculateDifference(oldLeagueDataEntry.getRank(), newLeagueDataEntry.getRank());		
 	}
 	
-	public String calcRankDifference(LeaderBoardEntity oldEntry, LeaderBoardEntity newEntry) {
+	public String compareRankDifference(LeaderBoardEntity oldEntry, LeaderBoardEntity newEntry) {
 		return MappingUtil.formatRank(calculateDifference(newEntry.getRank(), oldEntry.getRank()));
 	}	
 	

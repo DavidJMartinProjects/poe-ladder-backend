@@ -1,20 +1,6 @@
-#configuration for local postgres db
-#spring:   
-#   jpa:
-#     show-sql: true
-#     hibernate:
-#       ddl-auto: create   
-       
-#   datasource:
-#      platform: postgres
-#      url: jdbc:postgresql://localhost:5432/poeladder
-#      username: user
-#      password: password
-#      initialization-mode: always
-
 activeleagues:
-   leagueVariations.[Standard]: Standard, Hardcore, SSF Standard, SSF Hardcore
    leagueVariations.[Legion]: Legion, Hardcore Legion, SSF Legion, SSF Legion HC  
+   leagueVariations.[Standard]: Standard, Hardcore, SSF Standard, SSF Hardcore
       
 leaderboard:   
    resultslimit: 5

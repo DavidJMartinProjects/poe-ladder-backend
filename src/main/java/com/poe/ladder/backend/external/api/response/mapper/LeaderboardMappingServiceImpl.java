@@ -12,7 +12,6 @@ import com.poe.ladder.backend.external.api.requests.urls.LeaderboardApiUrlsConfi
 import com.poe.ladder.backend.external.api.response.domain.Entry;
 import com.poe.ladder.backend.leaderboard.business.LeagueNameService;
 import com.poe.ladder.backend.leaderboard.domain.LeaderboardType;
-import com.poe.ladder.backend.leaderboard.progressbar.ProgressBarService;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
 import com.poe.ladder.backend.util.MappingUtil;
 
@@ -20,31 +19,26 @@ import com.poe.ladder.backend.util.MappingUtil;
 public class LeaderboardMappingServiceImpl implements LeaderboardMappingService {
 
 	@Autowired
-	LeaderboardApiUrlsConfig leaderboardApiUrlsConfig;
+	MappingUtil formatUtil;
 
 	@Autowired
 	LeagueNameService leagueNameService;
 	
 	@Autowired
-	ProgressBarService progressBarService;
+	LeaderboardMappingUtil leaderboardMappingUtil;
 
 	@Autowired
-	MappingUtil formatUtil;
+	LeaderboardApiUrlsConfig leaderboardApiUrlsConfig;
 
-	private List<LeaderBoardEntity> leaderBoardEntityList;	
-	
+	private List<LeaderBoardEntity> leaderBoardEntityList = new ArrayList<>();		
 	private static final Logger LOG = LoggerFactory.getLogger(LeaderboardMappingServiceImpl.class);
-
-	public LeaderboardMappingServiceImpl() {
-		leaderBoardEntityList = new ArrayList<>();
-	}
 
 	public List<LeaderBoardEntity> mapApiResponseToEntity(List<Entry> apiResponseList, String requestUrl, String leagueName, String timestamp) {
 		LOG.info("mapApiResponseToEntity(): request received to map api response to leaderboard entity");
 		leaderBoardEntityList.clear();		
 		LeaderboardType leaderboardType = determineLeaderboardType(requestUrl);
 		for (Entry responseEntry : apiResponseList) {
-			LeaderBoardEntity leaderboardEntity = mapToLeaderboardEntry(leagueName, leaderboardType, responseEntry, timestamp);
+			LeaderBoardEntity leaderboardEntity = leaderboardMappingUtil.mapToLeaderboardEntry(leagueName, leaderboardType, responseEntry, timestamp);
 			leaderBoardEntityList.add(leaderboardEntity);
 		}
 		return leaderBoardEntityList;
@@ -60,44 +54,5 @@ public class LeaderboardMappingServiceImpl implements LeaderboardMappingService 
 		}
 		return LeaderboardType.UNKNOWN;
 	}
-	
-	private LeaderBoardEntity mapToLeaderboardEntry(String leagueName, LeaderboardType leaderboardType, Entry responseEntry, String timestamp) {
-		LeaderBoardEntity leaderboardEntity = new LeaderBoardEntity();
-		leaderboardEntity.setTimeStamp(timestamp);
-		leaderboardEntity.setLeague(leagueName);
-		leaderboardEntity.setLeaderboard(leaderboardType.toString());
-		leaderboardEntity.setRank(responseEntry.getRank().toString());
-		leaderboardEntity.setRankDifference("0");
-		leaderboardEntity.setCharacterId(responseEntry.getCharacter().getId());
-		leaderboardEntity.setCharacter(responseEntry.getCharacter().getName());
-		leaderboardEntity.setAccount(responseEntry.getAccount().getName());
-		leaderboardEntity.setOnline(responseEntry.getOnline().toString());
-		leaderboardEntity.setAscendancy((responseEntry.getCharacter().getClass_()));
-		mapLeagueSpecificFields(leaderboardType, responseEntry, leaderboardEntity);
-		return leaderboardEntity;
-	}
-
-	private void mapLeagueSpecificFields(LeaderboardType leaderboardType, Entry responseEntry, LeaderBoardEntity leaderboardEntity) {
-		if (leaderboardType == LeaderboardType.DELVE) {
-			leaderboardEntity.setDepth(responseEntry.getCharacter().getDepth().getSolo().toString());
-			leaderboardEntity.setDead(responseEntry.getDead().toString());
-		} else if (leaderboardType == LeaderboardType.UBERLAB) {
-			leaderboardEntity.setTime(responseEntry.getTime());
-			leaderboardEntity.setTimeFormatted(responseEntry.getTime());
-		} else if(leaderboardType == LeaderboardType.RACETO100) {				
-			leaderboardEntity.setDead(responseEntry.getDead().toString());
-			leaderboardEntity.setLevel(responseEntry.getCharacter().getLevel().toString());
-			String experience = responseEntry.getCharacter().getExperience().toString();
-			String level = leaderboardEntity.getLevel();
-			String levelProgress = progressBarService.getProgressPercentage(level, experience);
-			leaderboardEntity.setProgress(levelProgress);
-			String formattedXp = formatExperience(experience);
-			leaderboardEntity.setExperience(formattedXp);
-		}
-	}
-
-	private String formatExperience(String xp) {
-		return MappingUtil.formatStringToDouble(xp);
-	}	
-	
+		
 }

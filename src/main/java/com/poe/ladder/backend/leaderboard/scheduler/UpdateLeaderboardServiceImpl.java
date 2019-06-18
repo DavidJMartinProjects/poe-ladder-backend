@@ -18,7 +18,7 @@ import com.poe.ladder.backend.external.api.response.mapper.LeaderboardMappingSer
 import com.poe.ladder.backend.leaderboard.comparison.LeagueComparisonService;
 import com.poe.ladder.backend.leaderboard.repository.LeaderboardRepository;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
-import com.poe.ladder.backend.util.TimestampUtil;		
+import com.poe.ladder.backend.util.TimestampUtils;		
 	
 @Service
 public class UpdateLeaderboardServiceImpl implements UpdateLeaderboardService {		
@@ -69,7 +69,7 @@ public class UpdateLeaderboardServiceImpl implements UpdateLeaderboardService {
 	}
 
 	private List<LeaderBoardEntity> mapApiResponseToEntityList(List<Entry> apiResponseList, String requestUrl, String leagueName) {
-		return leaderboardMappingService.mapApiResponseToEntity(apiResponseList, requestUrl, leagueName, TimestampUtil.getCurrentTimestamp());
+		return leaderboardMappingService.mapApiResponseToEntity(apiResponseList, requestUrl, leagueName, TimestampUtils.getCurrentTimestamp());
 	}
 
 	private void persistEntityToDb(List<LeaderBoardEntity> leaderboardEntries) {

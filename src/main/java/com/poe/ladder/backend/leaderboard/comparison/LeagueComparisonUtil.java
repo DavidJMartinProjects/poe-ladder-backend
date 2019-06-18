@@ -3,7 +3,7 @@ package com.poe.ladder.backend.leaderboard.comparison;
 import org.springframework.stereotype.Component;
 
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
-import com.poe.ladder.backend.util.MappingUtil;
+import com.poe.ladder.backend.util.FormattingUtils;
 
 @Component
 public class LeagueComparisonUtil {
@@ -17,19 +17,19 @@ public class LeagueComparisonUtil {
 	}
 	
 	public String compareRankDifference(LeaderBoardEntity oldEntry, LeaderBoardEntity newEntry) {
-		return MappingUtil.formatRank(calculateDifference(newEntry.getRank(), oldEntry.getRank()));
+		return FormattingUtils.formatRank(calculateDifference(newEntry.getRank(), oldEntry.getRank()));
 	}	
 	
 	public String calcXpDifference(LeaderBoardEntity oldXp, LeaderBoardEntity newXp) {
 		String oldXpAsString="0";		
 		if(oldXp != null) {
-			oldXpAsString = MappingUtil.removeCommasFromXpValue(oldXp.getExperience());
+			oldXpAsString = FormattingUtils.removeCommasFromXpValue(oldXp.getExperience());
 		} 		
 		String newXpAsString="0";
 		if(newXp != null) {
-			newXpAsString = MappingUtil.removeCommasFromXpValue(newXp.getExperience());
+			newXpAsString = FormattingUtils.removeCommasFromXpValue(newXp.getExperience());
 		}		
-		return MappingUtil.formatXpDifference(calculateDifference(oldXpAsString, newXpAsString));		
+		return FormattingUtils.formatXpDifference(calculateDifference(oldXpAsString, newXpAsString));		
 	}
 	
 	private String calculateDifference(String oldValue, String newValue) {

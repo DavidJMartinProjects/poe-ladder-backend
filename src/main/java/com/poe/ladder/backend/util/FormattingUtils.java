@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MappingUtil {
+public class FormattingUtils {
 
     private static DecimalFormat formatter = new DecimalFormat("#,###");
 

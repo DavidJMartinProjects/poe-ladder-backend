@@ -13,13 +13,13 @@ import com.poe.ladder.backend.external.api.response.domain.Entry;
 import com.poe.ladder.backend.leaderboard.business.LeagueNameService;
 import com.poe.ladder.backend.leaderboard.domain.LeaderboardType;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
-import com.poe.ladder.backend.util.MappingUtil;
+import com.poe.ladder.backend.util.FormattingUtils;
 
 @Component
 public class LeaderboardMappingServiceImpl implements LeaderboardMappingService {
 
 	@Autowired
-	MappingUtil formatUtil;
+	FormattingUtils formatUtil;
 
 	@Autowired
 	LeagueNameService leagueNameService;

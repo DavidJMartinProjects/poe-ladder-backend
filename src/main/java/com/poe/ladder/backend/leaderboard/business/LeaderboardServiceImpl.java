@@ -14,7 +14,7 @@ import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
 import com.poe.ladder.backend.leagues.config.LeaderboardResultsLimitConfig;
 
 @Service	
-public class LeagueServiceImpl implements LeagueService {
+public class LeaderboardServiceImpl implements LeaderboardService {
 	
 	@Autowired
 	LeaderboardRepository leaderboardRepository;
@@ -25,7 +25,7 @@ public class LeagueServiceImpl implements LeagueService {
 	@Autowired
 	LeagueNameService leagueNameService;
 	
-	Logger logger = LoggerFactory.getLogger(LeagueServiceImpl.class);
+	Logger logger = LoggerFactory.getLogger(LeaderboardServiceImpl.class);
 
 	@Override
 	@Cacheable("leaderboards")

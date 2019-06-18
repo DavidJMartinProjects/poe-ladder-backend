@@ -7,7 +7,7 @@ import com.poe.ladder.backend.external.api.response.domain.Entry;
 import com.poe.ladder.backend.leaderboard.domain.LeaderboardType;
 import com.poe.ladder.backend.leaderboard.progressbar.ProgressBarService;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
-import com.poe.ladder.backend.util.MappingUtil;
+import com.poe.ladder.backend.util.FormattingUtils;
 
 @Component
 public class LeaderboardMappingUtil {
@@ -51,7 +51,7 @@ public class LeaderboardMappingUtil {
 	}
 
 	private String formatExperience(String xp) {
-		return MappingUtil.formatStringToDouble(xp);
+		return FormattingUtils.formatStringToDouble(xp);
 	}
 
 }

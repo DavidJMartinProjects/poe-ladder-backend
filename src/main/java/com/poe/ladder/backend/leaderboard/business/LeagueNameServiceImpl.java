@@ -24,7 +24,7 @@ public class LeagueNameServiceImpl implements LeagueNameService {
 			leagueNamesList.add(new LeagueName(leagueEntry.getKey()));
 		}
 		if (leagueNamesList.isEmpty()) {
-			throw new RuntimeException("RuntimeException encountered : League Variations not found for leagueName : ");
+			throw new RuntimeException("getCurrentLeagues() encountered a RuntimeException : League Variations not found for leagueName");
 		}
 		return leagueNamesList;
 	}	
@@ -39,7 +39,7 @@ public class LeagueNameServiceImpl implements LeagueNameService {
 			}
 		}
 		if (leagueVariationsList.isEmpty()) {
-			throw new RuntimeException("RuntimeException encountered : League Variations not found for leagueName : ");
+			throw new RuntimeException("getLeagueVariationNames() encountered a RuntimeException : League Variations not found for leagueName");
 		}
 		return leagueVariationsList;
 	}
@@ -53,7 +53,7 @@ public class LeagueNameServiceImpl implements LeagueNameService {
 			}
 		}
 		if (leagueVariationsList.isEmpty()) {
-			throw new RuntimeException("RuntimeException encountered : League Variations not found for leagueName : " + leagueName);
+			throw new RuntimeException("getLeagueVariationsListByLeagueName() encountered a RuntimeException  : League Variations not found for leagueName : " + leagueName);
 		}
 		return leagueVariationsList;
 	}

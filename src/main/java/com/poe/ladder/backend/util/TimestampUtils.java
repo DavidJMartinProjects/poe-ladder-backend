@@ -7,7 +7,7 @@ import java.util.Date;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TimestampUtil {
+public class TimestampUtils {
 	
 	public static String getCurrentTimestamp() {
 		Date date = new Date();

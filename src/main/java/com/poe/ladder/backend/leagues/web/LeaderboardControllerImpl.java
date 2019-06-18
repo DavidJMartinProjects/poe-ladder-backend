@@ -33,12 +33,12 @@ public class LeaderboardControllerImpl implements LeaderboardController {
 	LeaderboardResultsLimitConfig leaderboardResultsLimitConfig;		
 
 	@GetMapping("/leaderboards")
-	public List<LeaderBoardEntity> getLeaderboards(@RequestParam String leagueName, @RequestParam String leaderboard) {
+	public List<LeaderBoardEntity> getTop5Leaderboards(@RequestParam String leagueName, @RequestParam String leaderboard) {
 		return leagueDao.getTop5Leaderboards(leagueName, leaderboard);
 	}
 	
 	@GetMapping("/leaderboard-ladder")
-	public List<LeaderBoardEntity> getLeaderboardByLeagueVariation(@RequestParam String leagueName, @RequestParam String leaderboard) {
+	public List<LeaderBoardEntity> getTop100ByLeaderboard(@RequestParam String leagueName, @RequestParam String leaderboard) {
 		return leagueDao.getTop100ByLeaderboard(leagueName, leaderboard);
 	}
 	

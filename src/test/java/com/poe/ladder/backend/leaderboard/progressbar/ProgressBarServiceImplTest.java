@@ -1,6 +1,6 @@
 package com.poe.ladder.backend.leaderboard.progressbar;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +13,7 @@ import com.poe.ladder.backend.application.PoeLadderBackendApplication;
 @RunWith(SpringRunner.class)
 @SpringBootTest( classes = PoeLadderBackendApplication.class)	
 public class ProgressBarServiceImplTest {
-	
+		
 	@Autowired
 	ProgressBarServiceImpl progressBarServiceImpl;
 

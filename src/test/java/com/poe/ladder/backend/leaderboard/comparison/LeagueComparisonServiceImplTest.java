@@ -8,18 +8,21 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.poe.ladder.backend.application.PoeLadderBackendApplication;
+import com.poe.ladder.backend.leaderboard.domain.LeaderboardType;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest( classes = PoeLadderBackendApplication.class)	
 public class LeagueComparisonServiceImplTest {
 	
-	private static final String TEST_LEADERBOARD = "test_leaderboard";
+	private static final String TEST_LEADERBOARD = LeaderboardType.RACETO100.toString();
 	private static final String TEST_LEAGUE_NAME = "test_leagueName";
 	private static final String TEST_CHARACTER_ID = "abc_123";
 	private static final String TEST_CHARACTER_NAME = "test_characterName";
@@ -29,14 +32,20 @@ public class LeagueComparisonServiceImplTest {
 	@Autowired
 	LeagueComparisonService leagueComparisonService;
 	
-	List<LeaderBoardEntity> oldLeagueEntryList = new ArrayList<>();
-	List<LeaderBoardEntity> newLeagueEntryList = new ArrayList<>();
+	List<LeaderBoardEntity> oldLeagueEntryList;
+	List<LeaderBoardEntity> newLeagueEntryList;	
+	LeaderBoardEntity oldLeagueEntry;
+	LeaderBoardEntity newLeagueEntry;
 	
-	LeaderBoardEntity oldLeagueEntry = new LeaderBoardEntity();
-	LeaderBoardEntity newLeagueEntry = new LeaderBoardEntity();
+	Logger logger = LoggerFactory.getLogger(LeagueComparisonServiceImplTest.class);
 	
 	@Before
 	public void init() {
+		oldLeagueEntryList = new ArrayList<>();
+		newLeagueEntryList = new ArrayList<>();	
+		oldLeagueEntry = new LeaderBoardEntity();
+		newLeagueEntry = new LeaderBoardEntity();
+		
 		oldLeagueEntry.setAccount(TEST_ACCOUNT_NAME);
 		oldLeagueEntry.setAscendancy(TEST_ASCENDANCY);
 		oldLeagueEntry.setCharacter(TEST_CHARACTER_NAME);
@@ -60,14 +69,14 @@ public class LeagueComparisonServiceImplTest {
 	
 	@Test
 	public void whenCompareLeagueIsCalled_ThenTheExpectedCharacterRankDifferenceIsDetermined() {	
-		List<LeaderBoardEntity> comparedLeague = leagueComparisonService.compareLeague(oldLeagueEntryList, newLeagueEntryList);
-		assertEquals("2", comparedLeague.get(0).getRankDifference());		
+		List<LeaderBoardEntity> leagueComparisonResults = leagueComparisonService.compareLeague(oldLeagueEntryList, newLeagueEntryList);
+		assertEquals("+2", leagueComparisonResults.get(0).getRankDifference());		
 	}
 	
 	@Test
 	public void whenCompareLeagueIsCalled_ThenTheExpectedCharacterExperienceDifferenceIsDetermined() {	
-		List<LeaderBoardEntity> comparedLeague = leagueComparisonService.compareLeague(oldLeagueEntryList, newLeagueEntryList);		
-		assertEquals("200000", comparedLeague.get(0).getExperienceDifference());
+		List<LeaderBoardEntity> leagueComparisonResults = leagueComparisonService.compareLeague(oldLeagueEntryList, newLeagueEntryList);	
+		assertEquals("0.20M", leagueComparisonResults.get(0).getExperienceDifference());
 	}
 
 }

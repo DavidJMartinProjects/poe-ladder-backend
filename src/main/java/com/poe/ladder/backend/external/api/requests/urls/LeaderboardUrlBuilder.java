@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 
 import com.poe.ladder.backend.leaderboard.business.LeagueNameService;
 import com.poe.ladder.backend.leaderboard.domain.LeagueName;
+import com.poe.ladder.backend.leagues.config.LeaderboardApiUrlsConfig;
 
 @Component
 public class LeaderboardUrlBuilder {

@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.external.api.requests.urls;
+package com.poe.ladder.backend.leagues.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

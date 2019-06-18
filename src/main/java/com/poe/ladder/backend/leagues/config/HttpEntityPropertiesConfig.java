@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.external.api.requests;
+package com.poe.ladder.backend.leagues.config;
 
 import java.util.List;
 import java.util.Map;

@@ -38,13 +38,14 @@ public class LeaderboardApiRequestServiceImpl implements LeaderboardApiRequestSe
 	public List<Entry> requestLeaderboardFromPoeApi(String url)  {
 		LOG.info("requestLeaderboardFromPoeApi() : httprequest to {}", url);
 		List<Entry> responseEntriesList = new ArrayList<>();
-		try {
-			sleepBeforeNextApiRequest();
+		try {			
 			ResponseEntity<ResponseEntry> leaderboardApiRequest = restTemplate.exchange(url, HttpMethod.GET, entity, ResponseEntry.class);
 			ResponseEntry leaderboardApiResponseBody = leaderboardApiRequest.getBody();
 			responseEntriesList = leaderboardApiResponseBody.getEntries();
 		} catch (Exception ex) {
 			LOG.info("poe api response error.");
+		} finally {
+			sleepBeforeNextApiRequest();
 		}
 		return responseEntriesList;
 	}

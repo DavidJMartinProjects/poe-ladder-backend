@@ -118,7 +118,7 @@ public class ProgressBarServiceImpl implements ProgressBarService {
 
 	public String getProgressPercentage(String level, String xpValue) {	
 		Integer currentLevel = Integer.parseInt(level);
-		Double currentXpValue = Double.parseDouble(xpValue);;
+		Double currentXpValue = Double.parseDouble(xpValue);
 		if (currentLevel != 100) {
 			Double currentLevelXpValue = levelXpValues.get(currentLevel);
 			Double nextLevelXpValue = levelXpValues.get(currentLevel + 1);

@@ -11,17 +11,13 @@ public class LeaderboardMappingUtilTest {
 	@Autowired
 	LeaderboardMappingUtil leaderboardMappingUtil;	
 
-	@Test
+	@Test(expected=NullPointerException.class)
 	public void whenMapToleaderboardEntryIsCalledWithNullleagueNameParam_thenNullPointerExceptionIsThrown() {
-		
 		String nullLeagueName = null;
 		Entry entry = new Entry();		
 		LeaderboardType leaderboardType = LeaderboardType.DELVE;
 		String timestamp = "18:00:00";
-		
 		leaderboardMappingUtil.mapToLeaderboardEntry(nullLeagueName, leaderboardType, entry, timestamp);
-		
 	}
 
 }
-//@NonNull String leagueName, @NonNull LeaderboardType leaderboardType, @NonNull Entry responseEntry, @NonNull String timestamp) {

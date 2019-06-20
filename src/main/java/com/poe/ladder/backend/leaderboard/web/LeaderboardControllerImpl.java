@@ -14,6 +14,8 @@ import com.poe.ladder.backend.leaderboard.dao.LeagueDao;
 import com.poe.ladder.backend.leaderboard.repository.LeaderboardRepository;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
 
+import lombok.NonNull;
+
 @RestController
 public class LeaderboardControllerImpl implements LeaderboardController {
 	
@@ -33,17 +35,17 @@ public class LeaderboardControllerImpl implements LeaderboardController {
 	LeaderboardResultsLimitConfig leaderboardResultsLimitConfig;		
 
 	@GetMapping("/leaderboards")
-	public List<LeaderBoardEntity> getTop5Leaderboards(@RequestParam String leagueName, @RequestParam String leaderboard) {
+	public List<LeaderBoardEntity> getTop5Leaderboards(@RequestParam @NonNull String leagueName, @RequestParam @NonNull String leaderboard) {
 		return leagueDao.getTop5Leaderboards(leagueName, leaderboard);
 	}
 	
 	@GetMapping("/leaderboard-ladder")
-	public List<LeaderBoardEntity> getTop100ByLeaderboard(@RequestParam String leagueName, @RequestParam String leaderboard) {
+	public List<LeaderBoardEntity> getTop100ByLeaderboard(@RequestParam @NonNull String leagueName, @RequestParam @NonNull String leaderboard) {
 		return leagueDao.getTop100ByLeaderboard(leagueName, leaderboard);
 	}
 	
 	@GetMapping("/custom-league")
-	public List<LeaderBoardEntity> getCustomLeagueLeaderboard(@RequestParam String leagueName) {
+	public List<LeaderBoardEntity> getCustomLeagueLeaderboard(@RequestParam @NonNull String leagueName) {
 		return customLeagueService.getCustomLeagueLeaderboard(leagueName);
 	}
 

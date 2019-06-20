@@ -8,6 +8,7 @@ import com.poe.ladder.backend.leaderboard.domain.LeaderboardType;
 import com.poe.ladder.backend.leaderboard.progressbar.ProgressBarService;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
 import com.poe.ladder.backend.leaderboard.util.FormattingUtils;
+import com.poe.ladder.backend.leaderboard.util.TimestampUtils;
 
 import lombok.NonNull;
 
@@ -28,7 +29,6 @@ public class LeaderboardMappingUtil {
 			.league(leagueName)
 			.leaderboard(leaderboardType.getValue())
 			.rank(responseEntry.getRank().toString())
-			.rankDifference("0")
 			.experienceDifference("0")
 			.characterId(responseEntry.getCharacter().getId())
 			.build();
@@ -43,7 +43,7 @@ public class LeaderboardMappingUtil {
 			leaderboardEntity.setDead(responseEntry.getDead().toString());
 		} else if (leaderboardType == LeaderboardType.UBERLAB) {
 			leaderboardEntity.setTime(responseEntry.getTime());
-			leaderboardEntity.setTimeFormatted(responseEntry.getTime());
+			leaderboardEntity.setTimeFormatted(TimestampUtils.formatSecondsToMinutes(responseEntry.getTime()));
 		} else if(leaderboardType == LeaderboardType.RACETO100) {				
 			leaderboardEntity.setDead(responseEntry.getDead().toString());
 			leaderboardEntity.setLevel(responseEntry.getCharacter().getLevel().toString());

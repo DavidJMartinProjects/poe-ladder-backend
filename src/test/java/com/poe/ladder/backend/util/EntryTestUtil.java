@@ -10,7 +10,6 @@ import com.poe.ladder.backend.external.api.response.domain.Entry;
 
 public class EntryTestUtil {
 	
-
 	List<Entry> entriesList =  new ArrayList<>();
 	Entry entryOne;
 	Entry entryTwo;

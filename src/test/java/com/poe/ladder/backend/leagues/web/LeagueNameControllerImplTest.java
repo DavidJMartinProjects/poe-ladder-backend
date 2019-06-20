@@ -41,7 +41,15 @@ public class LeagueNameControllerImplTest {
 		.andExpect(jsonPath("$[0].leagueName").value("Standard"))
 		.andExpect(jsonPath("$[1].leagueName").value("Hardcore"))
 		.andExpect(jsonPath("$[2].leagueName").value("SSF Standard"))
-		.andExpect(jsonPath("$[3].leagueName").value("SSF Hardcore"));
+		.andExpect(jsonPath("$[3].leagueName").value("SSF Hardcore"))
+		.andExpect(jsonPath("$[4].leagueName").value("Synthesis"))
+		.andExpect(jsonPath("$[5].leagueName").value("Hardcore Synthesis"))
+		.andExpect(jsonPath("$[6].leagueName").value("SSF Synthesis"))
+		.andExpect(jsonPath("$[7].leagueName").value("SSF Synthesis HC"))
+		.andExpect(jsonPath("$[8].leagueName").value("Synthesis Event (SRE001)"))
+		.andExpect(jsonPath("$[9].leagueName").value("Synthesis Event HC (SRE002)"))
+		.andExpect(jsonPath("$[10].leagueName").value("SSF Synthesis Event (SRE003)"))
+		.andExpect(jsonPath("$[11].leagueName").value("SSF Synthesis Event HC (SRE004)"));		
 	}
 	
 }	

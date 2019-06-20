@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 
 public class TimestampUtilTest {
 	
+	private static final String MMMM_DD_YYYY_HH_MM_SS = "MMMM dd YYYY, HH:mm:ss";
 	Logger logger = LoggerFactory.getLogger(TimestampUtilTest.class);
 	
 	@Test
@@ -20,7 +21,7 @@ public class TimestampUtilTest {
 	public String getFormattedDate() {
 		Date date = new Date();
 		Timestamp ts=new Timestamp(date.getTime());  
-		SimpleDateFormat formatter = new SimpleDateFormat("MMMM dd YYYY, HH:mm:ss");  
+		SimpleDateFormat formatter = new SimpleDateFormat(MMMM_DD_YYYY_HH_MM_SS);  
 		return formatter.format(ts);
 	}
 

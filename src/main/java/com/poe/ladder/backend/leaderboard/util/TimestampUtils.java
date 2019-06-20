@@ -15,6 +15,13 @@ public class TimestampUtils {
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  
 		return formatter.format(ts);
 	}
+	
+	public static String formatSecondsToMinutes(String timeInSeconds) {
+		Integer theTime = new Integer(timeInSeconds);
+		int minutes = theTime/60;
+		int seconds = theTime%60;
+		return ""+minutes+"min "+seconds+"sec";
+	}
 
 }
 		

@@ -17,7 +17,8 @@ import org.springframework.web.filter.CorsFilter;
 	"com.poe.ladder.backend.external.api", 
 	"com.poe.ladder.backend.external.api.response",	
 	"com.poe.ladder.backend.leaderboard.repository",
-	"com.poe.ladder.backend.caching"
+	"com.poe.ladder.backend.caching",
+	"com.poe.ladder.backend.leaderboard.exception"
 })
 @EnableJpaRepositories("com.poe.ladder.backend.leaderboard.repository")
 @EntityScan("com.poe.ladder.backend.leaderboard.repository.entity")

@@ -12,7 +12,7 @@ import com.poe.ladder.backend.external.api.requests.urls.LeaderboardUrlsService;
 import com.poe.ladder.backend.external.api.response.domain.Entry;
 import com.poe.ladder.backend.external.api.response.mapper.LeaderboardMappingServiceImpl;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
-import com.poe.ladder.backend.util.TimestampUtils;
+import com.poe.ladder.backend.leaderboard.util.TimestampUtils;
 
 @Component
 public class CustomLeagueServiceImpl implements CustomLeagueService {

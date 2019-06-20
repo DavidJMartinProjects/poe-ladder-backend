@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
+import com.poe.ladder.backend.leaderboard.config.LeaderboardResultsLimitConfig;
 import com.poe.ladder.backend.leaderboard.repository.LeaderboardRepository;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
-import com.poe.ladder.backend.leagues.config.LeaderboardResultsLimitConfig;
 
 @Service	
 public class LeaderboardServiceImpl implements LeaderboardService {

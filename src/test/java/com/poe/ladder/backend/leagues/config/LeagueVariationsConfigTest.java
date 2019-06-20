@@ -7,6 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.poe.ladder.backend.application.PoeLadderBackendApplication;
+import com.poe.ladder.backend.leaderboard.config.LeagueVariationsConfig;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest( classes = PoeLadderBackendApplication.class)		

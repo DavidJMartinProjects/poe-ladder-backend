@@ -3,7 +3,7 @@ package com.poe.ladder.backend.leaderboard.comparison;
 import org.springframework.stereotype.Component;
 
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
-import com.poe.ladder.backend.util.FormattingUtils;
+import com.poe.ladder.backend.leaderboard.util.FormattingUtils;
 
 @Component
 public class LeagueComparisonUtil {

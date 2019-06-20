@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.leagues.config;
+package com.poe.ladder.backend.leaderboard.config;
 
 import java.util.List;
 import java.util.Map;

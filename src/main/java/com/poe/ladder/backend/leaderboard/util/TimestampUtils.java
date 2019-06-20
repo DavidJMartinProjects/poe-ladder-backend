@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.util;
+package com.poe.ladder.backend.leaderboard.util;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;

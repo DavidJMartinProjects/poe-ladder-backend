@@ -9,8 +9,8 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.poe.ladder.backend.leaderboard.config.LeagueVariationsConfig;
 import com.poe.ladder.backend.leaderboard.domain.LeagueName;
-import com.poe.ladder.backend.leagues.config.LeagueVariationsConfig;
 
 @Service
 public class LeagueNameServiceImpl implements LeagueNameService {

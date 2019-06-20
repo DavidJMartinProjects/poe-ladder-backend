@@ -10,7 +10,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 
-import com.poe.ladder.backend.leagues.config.HttpEntityPropertiesConfig;
+import com.poe.ladder.backend.leaderboard.config.HttpEntityPropertiesConfig;
 
 @Component
 public class HttpEntityBuilder {	

@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.leagues.config;
+package com.poe.ladder.backend.leaderboard.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

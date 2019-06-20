@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.caching;
+package com.poe.ladder.backend.leaderboard.caching;
 
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;

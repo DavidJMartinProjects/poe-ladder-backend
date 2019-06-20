@@ -9,10 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.poe.ladder.backend.external.api.response.mapper.LeaderboardMappingServiceImpl;
+import com.poe.ladder.backend.leaderboard.config.DelveTableColumnConfig;
+import com.poe.ladder.backend.leaderboard.config.RaceTableColumnConfig;
+import com.poe.ladder.backend.leaderboard.config.UberLabTableColumnConfig;
 import com.poe.ladder.backend.leaderboard.web.TableColumn;
-import com.poe.ladder.backend.leagues.config.DelveTableColumnConfig;
-import com.poe.ladder.backend.leagues.config.RaceTableColumnConfig;
-import com.poe.ladder.backend.leagues.config.UberLabTableColumnConfig;
 
 @Service
 public class TableColumnsServiceImpl implements TableColumnsService {

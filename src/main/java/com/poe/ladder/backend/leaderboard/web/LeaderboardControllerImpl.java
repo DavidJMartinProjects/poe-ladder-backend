@@ -1,4 +1,4 @@
-package com.poe.ladder.backend.leagues.web;
+package com.poe.ladder.backend.leaderboard.web;
 
 import java.util.List;
 
@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.poe.ladder.backend.leaderboard.business.CustomLeagueService;
 import com.poe.ladder.backend.leaderboard.business.LeagueNameService;
+import com.poe.ladder.backend.leaderboard.config.LeaderboardResultsLimitConfig;
 import com.poe.ladder.backend.leaderboard.dao.LeagueDao;
 import com.poe.ladder.backend.leaderboard.repository.LeaderboardRepository;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
-import com.poe.ladder.backend.leagues.config.LeaderboardResultsLimitConfig;
 
 @RestController
 public class LeaderboardControllerImpl implements LeaderboardController {

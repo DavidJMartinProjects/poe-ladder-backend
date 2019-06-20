@@ -7,7 +7,7 @@ import com.poe.ladder.backend.external.api.response.domain.Entry;
 import com.poe.ladder.backend.leaderboard.domain.LeaderboardType;
 import com.poe.ladder.backend.leaderboard.progressbar.ProgressBarService;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
-import com.poe.ladder.backend.util.FormattingUtils;
+import com.poe.ladder.backend.leaderboard.util.FormattingUtils;
 
 import lombok.NonNull;
 

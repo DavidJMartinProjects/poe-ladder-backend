@@ -18,7 +18,7 @@ import com.poe.ladder.backend.external.api.response.mapper.LeaderboardMappingSer
 import com.poe.ladder.backend.leaderboard.comparison.LeagueComparisonService;
 import com.poe.ladder.backend.leaderboard.repository.LeaderboardRepository;
 import com.poe.ladder.backend.leaderboard.repository.entity.LeaderBoardEntity;
-import com.poe.ladder.backend.util.TimestampUtils;		
+import com.poe.ladder.backend.leaderboard.util.TimestampUtils;		
 	
 @Service
 public class UpdateLeaderboardServiceImpl implements UpdateLeaderboardService {		

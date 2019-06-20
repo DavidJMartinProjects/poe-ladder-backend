@@ -20,7 +20,7 @@ public class LeaderboardMappingUtil {
 	
 	public LeaderBoardEntity mapToLeaderboardEntry(@NonNull String leagueName, @NonNull LeaderboardType leaderboardType, @NonNull Entry responseEntry, @NonNull String timestamp) {
 		
-		LeaderBoardEntity leaderboardEntity = LeaderBoardEntity.builder()
+		LeaderBoardEntity leaderboardEntity = LeaderBoardEntity.builder()			
 			.character(responseEntry.getCharacter().getName())
 			.account(responseEntry.getAccount().getName())
 			.online(responseEntry.getOnline().toString())

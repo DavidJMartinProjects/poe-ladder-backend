@@ -10,14 +10,30 @@ public class LeaderboardMappingUtilTest {
 	
 	@Autowired
 	LeaderboardMappingUtil leaderboardMappingUtil;	
+	
+	private String LeagueName = "Synthesis";
+	private Entry entry = new Entry();		
+	private LeaderboardType leaderboardType = LeaderboardType.DELVE;
+	private String timestamp = "18:00:00";
 
 	@Test(expected=NullPointerException.class)
 	public void whenMapToleaderboardEntryIsCalledWithNullleagueNameParam_thenNullPointerExceptionIsThrown() {
-		String nullLeagueName = null;
-		Entry entry = new Entry();		
-		LeaderboardType leaderboardType = LeaderboardType.DELVE;
-		String timestamp = "18:00:00";
-		leaderboardMappingUtil.mapToLeaderboardEntry(nullLeagueName, leaderboardType, entry, timestamp);
+		leaderboardMappingUtil.mapToLeaderboardEntry(null, leaderboardType, entry, timestamp);
+	}
+	
+	@Test(expected=NullPointerException.class)
+	public void whenMapToleaderboardEntryIsCalledWithNullLeaderboardTypeParam_thenNullPointerExceptionIsThrown() {
+		leaderboardMappingUtil.mapToLeaderboardEntry(LeagueName, null, entry, timestamp);
+	}
+	
+	@Test(expected=NullPointerException.class)
+	public void whenMapToleaderboardEntryIsCalledWithNullEntryParam_thenNullPointerExceptionIsThrown() {
+		leaderboardMappingUtil.mapToLeaderboardEntry(LeagueName, leaderboardType, null, timestamp);
+	}
+	
+	@Test(expected=NullPointerException.class)
+	public void whenMapToleaderboardEntryIsCalledWithNullTimestampParam_thenNullPointerExceptionIsThrown() {
+		leaderboardMappingUtil.mapToLeaderboardEntry(LeagueName, leaderboardType, entry, null);
 	}
 
 }

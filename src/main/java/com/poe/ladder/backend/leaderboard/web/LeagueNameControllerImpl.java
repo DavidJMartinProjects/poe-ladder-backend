@@ -22,12 +22,12 @@ public class LeagueNameControllerImpl implements LeagueNameController {
 	}
 
 	@RequestMapping("/current-leagues")
-	public List<LeagueName> getCurrentLeagues() {
+	public List<LeagueName> getLeagueVariationNames() {
 		return leagueNameService.getLeagueVariationNames();
 	}
 	
 	@RequestMapping("/league-names")
-	public List<LeagueName> getLeagueNames() {
+	public List<LeagueName> getCurrentLeagues() {
 		return leagueNameService.getCurrentLeagues();
 	}
 

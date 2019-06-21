@@ -29,7 +29,7 @@ public class LeaderboardMappingUtil {
 			.leaderboard(leaderboardType.getValue())
 			.rank(responseEntry.getRank().toString())
 			.rankDifference("0")
-			.experienceDifference("0")
+//			.experienceDifference("0")
 			.characterId(responseEntry.getCharacter().getId())
 			.build();
 		

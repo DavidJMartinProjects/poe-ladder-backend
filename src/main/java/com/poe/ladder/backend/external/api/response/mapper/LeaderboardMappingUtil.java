@@ -28,7 +28,7 @@ public class LeaderboardMappingUtil {
 			.league(leagueName)
 			.leaderboard(leaderboardType.getValue())
 			.rank(responseEntry.getRank().toString())
-			.rankDifference(" ")
+			.rankDifference("0")
 			.experienceDifference("0")
 			.characterId(responseEntry.getCharacter().getId())
 			.build();

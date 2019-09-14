@@ -1,5 +1,6 @@
 activeleagues:
-   leagueVariations.[Legion]: Legion, Hardcore Legion, SSF Legion, SSF Legion HC  
+   leagueVariations.[Blight]: Blight, Hardcore Blight, SSF Blight, SSF Blight HC   
+   leagueVariations.[Legion]: Legion, Hardcore Legion, SSF Legion, SSF Legion HC
    leagueVariations.[Standard]: Standard, Hardcore, SSF Standard, SSF Hardcore
       
 leaderboard:   

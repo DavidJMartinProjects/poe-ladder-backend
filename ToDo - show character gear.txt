@@ -1,0 +1,5 @@
+https://www.pathofexile.com/character-window/get-characters?&accountName=[AccountName]
+https://www.pathofexile.com/character-window/get-items?character=[Charname]&accountName=[AccountName]
+https://www.pathofexile.com/character-window/get-passive-skills?character=[Charname]&accountName=[AccountName]
+
+https://www.pathofexile.com/character-window/get-items?character=Legion_Trickster_Dude&accountName=Vladtepest
